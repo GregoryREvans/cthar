@@ -87,14 +87,14 @@ bowtab = {
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 8) (padding . 2))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 6) (padding . 2))
         \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #2
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		\override TextSpanner.Y-offset = 1
-		proportionalNotationDuration = #(ly:make-moment 1 40)
+		proportionalNotationDuration = #(ly:make-moment 1 50)
         autoBeaming = ##f
         tupletFullLength = ##t
     }
