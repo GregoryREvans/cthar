@@ -5061,6 +5061,7 @@
                     }
                     {
                         % [Voice 5 measure 3] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -5119,6 +5120,7 @@
                     }
                     {
                         % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -5223,6 +5225,7 @@
                     }
                     {
                         % [Voice 5 measure 11] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -5729,6 +5732,7 @@
                     }
                     {
                         % [Voice 5 measure 31] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -5844,6 +5848,7 @@
                     }
                     {
                         % [Voice 5 measure 35] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -5966,6 +5971,7 @@
                     }
                     {
                         % [Voice 5 measure 40] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -6058,6 +6064,7 @@
                         }
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -6104,6 +6111,7 @@
                         }
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -6235,6 +6243,7 @@
                     }
                     {
                         % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -6313,6 +6322,7 @@
                     }
                     {
                         % [Voice 2 measure 6] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -6424,6 +6434,7 @@
                     }
                     {
                         % [Voice 2 measure 11] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -6988,6 +6999,7 @@
                     }
                     {
                         % [Voice 2 measure 31] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -7097,6 +7109,7 @@
                     }
                     {
                         % [Voice 2 measure 35] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -7208,6 +7221,7 @@
                     }
                     {
                         % [Voice 2 measure 40] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -7333,6 +7347,7 @@
                         }
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -7382,6 +7397,7 @@
                         ]
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -7672,7 +7688,7 @@
                         }
                     }
                     {
-                      \once \override Dots.transparent = ##t
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -12510,6 +12526,7 @@
                         }
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -12567,6 +12584,7 @@
                     }
                     {
                         % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                         \!
                         r2
@@ -12658,6 +12676,7 @@
                     }
                     {
                         % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -13247,6 +13266,7 @@
                     }
                     {
                         % [Voice 6 measure 32] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -13291,6 +13311,7 @@
                         }
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -13347,6 +13368,7 @@
                     }
                     {
                         % [Voice 6 measure 36] %! COMMENT_MEASURE_NUMBERS
+                         \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -13471,6 +13493,7 @@
                         }
                     }
                     {
+                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
