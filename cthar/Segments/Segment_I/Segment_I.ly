@@ -476,7 +476,6 @@
                     }
                     {
                         % [Voice 1 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -775,7 +774,6 @@
                     }
                     {
                         % [Voice 1 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -1215,7 +1213,6 @@
                     }
                     {
                         % [Voice 1 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -3540,7 +3537,6 @@
                     }
                     {
                         % [Voice 1 measure 31] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -3891,7 +3887,6 @@
                     }
                     {
                         % [Voice 1 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -4295,7 +4290,6 @@
                     }
                     {
                         % [Voice 1 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -4638,7 +4632,6 @@
                         }
                     }
                     {
-                      \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -4782,7 +4775,6 @@
                         }
                     }
                     {
-                      \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -5061,7 +5053,7 @@
                     }
                     {
                         % [Voice 5 measure 3] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -5120,7 +5112,7 @@
                     }
                     {
                         % [Voice 5 measure 6] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -5225,7 +5217,7 @@
                     }
                     {
                         % [Voice 5 measure 11] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -5732,7 +5724,7 @@
                     }
                     {
                         % [Voice 5 measure 31] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -5848,7 +5840,7 @@
                     }
                     {
                         % [Voice 5 measure 35] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -5971,7 +5963,7 @@
                     }
                     {
                         % [Voice 5 measure 40] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -6064,7 +6056,7 @@
                         }
                     }
                     {
-                       \once \override Dots.transparent = ##t
+                      \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -6111,7 +6103,7 @@
                         }
                     }
                     {
-                       \once \override Dots.transparent = ##t
+                      \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -6243,7 +6235,7 @@
                     }
                     {
                         % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -6322,7 +6314,7 @@
                     }
                     {
                         % [Voice 2 measure 6] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -6434,7 +6426,7 @@
                     }
                     {
                         % [Voice 2 measure 11] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -6733,30 +6725,28 @@
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 24/25 {
+                        \times 12/11 {
                             % [Voice 2 measure 22] %! COMMENT_MEASURE_NUMBERS
-                            ef16.
-                            \p
-                            ~
-                            ef16
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            eqf16.
-                            - \accent
-                            e16
-                            ~
-                            e16.
-                            eqs16
-                            - \accent
-                            ~
-                            eqs32
-                            f8
-                            - \accent
-                            ~
-                            f16
-                            fqs16.
+                            <b, e>16
                             \mp
-                            - \accent
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            g8
+
+                            <g f'>16
+
+                            b,8.
+
+                            <g f'>16
+
+                            <g f'>16
+
+                            ~
+                            <g f'>16
+                            g16
+                            \ff
+
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
@@ -6768,45 +6758,51 @@
                     }
                     {
                         % [Voice 2 measure 23] %! COMMENT_MEASURE_NUMBERS
-                        fs32
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
+                        <g f'>8
+                        \mp
+
+                        - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        gqf8..
-                        - \accent
-                        g8
-                        - \accent
-                        gqf8
-                        - \accent
+                        b,16
+
+                        <b, e>16
+
+                        g16
+
+                        f'16
+
                         ~
-                        gqf16
-                        fs16
-                        - \accent
-                        ~
-                        fs32
-                        fqs16.
-                        \mp
-                        - \accent
+                        f'16
+                        g16
+
+                        <g f'>8.
+
+                        f'16
+                        \ff
+
                         - \tweak stencil #constante-hairpin
                         \<
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
+                        \times 16/17 {
                             % [Voice 2 measure 24] %! COMMENT_MEASURE_NUMBERS
-                            cs16
-                            \fff
-                            - \tenuto
-                            \>
-                            e,8
-                            - \tenuto
-                            <e, fs>16
-                            - \tenuto
-                            <c fs>8.
-                            \mf
-                            - \tenuto
+                            ef16.
+                            \p
+                            ~
+                            ef16
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            eqf16.
+                            - \accent
+                            e32
+                            ~
+                            e8
+                            eqs16.
+                            - \accent
+                            f32
+                            \mp
+                            - \accent
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
@@ -6855,329 +6851,37 @@
                     }
                     {
                         \clef "bass"
-                        fs16
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        c16
-                        - \tenuto
-                        ~
-                        c16
-                        fs16
-                        - \tenuto
-                        ~
-                        fs8
-                        <e, fs>16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c'16
-                        - \tenuto
-                        ~
-                        c'16
-                        fs16
-                        - \tenuto
-                    }
-                    {
-                        \times 8/9 {
-                            % [Voice 2 measure 27] %! COMMENT_MEASURE_NUMBERS
-                            <c fs>8.
-                            - \tenuto
-                            e,16
-                            - \tenuto
-                            cs8
-                            - \tenuto
-                            <c, cs>8.
-                            \mf
-                            - \tenuto
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
-                        }
-                    }
-                    {
-                        r4
-                        \!
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 32/31 {
-                            % [Voice 2 measure 28] %! COMMENT_MEASURE_NUMBERS
-                            fs16
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            fqs16.
-                            - \accent
-                            f8
-                            ~
-                            f32
-                            fqs16.
-                            - \accent
-                            fs8.
-                            - \accent
-                            fqs8
-                            - \accent
-                            f8..
-                            - \accent
-                            eqs32
-                            ~
-                        }
-                    }
-                    {
-                        % [Voice 2 measure 29] %! COMMENT_MEASURE_NUMBERS
-                        eqs16.
-                        f32
-                        ~
-                        f8
-                        ]
-                    }
-                    {
-                        r4
-                        \!
-                    }
-                    {
-                        \times 8/9 {
-                            c,16
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            cs16
-                            - \tenuto
-                            e,16
-                            - \tenuto
-                            <c, cs>8
-                            - \tenuto
-                            cs16
-                            - \tenuto
-                            e,8.
-                            - \tenuto
-                        }
-                    }
-                    {
-                        % [Voice 2 measure 30] %! COMMENT_MEASURE_NUMBERS
-                        <e, fs>16
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        ~
-                        <c fs>16
-                        fs16
-                        - \tenuto
-                        ~
-                        fs8
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        ~
-                        c16
-                        fs16
-                        - \tenuto
-                        c'8.
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <c fs>8
-                        - \tenuto
-                        e,8
-                        \mf
-                        - \tenuto
+                        fqs8
+                        \p
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
-                    }
-                    {
-                        % [Voice 2 measure 31] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
-                        r2.
-                        \!
+                        ~
+                        [
+                        fqs32
+                        fs16.
+                        - \accent
+                        ~
+                        fs32
+                        gqf8..
+                        - \accent
+                        g8
+                        - \accent
+                        gqf8
+                        ~
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 16/15 {
-                            % [Voice 2 measure 32] %! COMMENT_MEASURE_NUMBERS
-                            cs16
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            <c, cs>16
-                            - \tenuto
-                            c,16
-                            - \tenuto
-                            cs16
-                            - \tenuto
-                            e,16
-                            - \tenuto
-                            ~
-                            e,16
-                            <c, cs>16
-                            - \tenuto
-                            cs8.
-                            - \tenuto
-                            e,16
-                            - \tenuto
-                            <e, fs>8
-                            - \tenuto
-                            <c fs>8
-                            \mf
-                            - \tenuto
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
-                        }
-                    }
-                    {
-                        r4
-                        \!
-                    }
-                    {
-                        % [Voice 2 measure 33] %! COMMENT_MEASURE_NUMBERS
-                        r4
-                    }
-                    {
-                        fs16
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        c8
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c'16
-                        - \tenuto
-                        ~
-                        c'8
-                        fs16
-                        - \tenuto
-                        <c fs>16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
-                    }
-                    {
-                        r4
-                        \!
-                    }
-                    {
-                        \times 16/17 {
-                            % [Voice 2 measure 34] %! COMMENT_MEASURE_NUMBERS
-                            eqs32
-                            \p
+                            % [Voice 2 measure 27] %! COMMENT_MEASURE_NUMBERS
+                            gqf16
+                            fs16.
                             - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            e16
+                            fqs16.
+                            ~
+                            fqs16
+                            fs16.
                             - \accent
-                            ~
-                            e32
-                            eqs32
-                            ~
-                            eqs8
-                            e16.
-                            - \accent
-                            eqf32
-                            ~
-                            eqf8
-                            ]
-                        }
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        % [Voice 2 measure 35] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
-                        r2.
-                    }
-                    {
-                        % [Voice 2 measure 36] %! COMMENT_MEASURE_NUMBERS
-                        \clef "treble"
-                        b'8
-                        \mp
-
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
-                        [
-                        g''8
-                        \ff
-
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        % [Voice 2 measure 37] %! COMMENT_MEASURE_NUMBERS
-                        r2
-                    }
-                    {
-                        \clef "bass"
-                        ef16.
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        [
-                        dqs32
-                        - \accent
-                        ~
-                        dqs8
-                        ~
-                        dqs32
-                        d16.
-                        - \accent
-                        ~
-                        d32
-                        dqs16.
-                        ~
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 24/23 {
-                            % [Voice 2 measure 38] %! COMMENT_MEASURE_NUMBERS
-                            dqs8
-                            ef32
-                            - \accent
-                            ~
-                            ef16.
-                            dqs32
-                            - \accent
-                            ~
-                            dqs8
-                            ~
-                            dqs32
-                            ef16.
-                            - \accent
-                            eqf8
-                            ~
-                            eqf32
-                            ef32
+                            fqs16
                             \mp
                             - \accent
                             - \tweak stencil #constante-hairpin
@@ -7190,66 +6894,73 @@
                         \!
                     }
                     {
-                        % [Voice 2 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        dqs16
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        [
-                        d16
-                        ~
-                        d16.
-                        dqs32
-                        - \accent
-                        ~
-                        dqs16
-                        ef8.
-                        - \accent
-                        dqs8
-                        - \accent
-                        d8
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                        \times 16/17 {
+                            % [Voice 2 measure 28] %! COMMENT_MEASURE_NUMBERS
+                            <b, g>8
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            e8.
+
+                            <b, e>16
+
+                            g16
+
+                            <g f'>16
+
+                            b,16
+
+                            ~
+                            b,16
+                            <g f'>16
+
+                            <g f'>8.
+
+                            g16
+
+                            <g f'>8
+
+                        }
+                    }
+                    {
+                        \times 4/5 {
+                            % [Voice 2 measure 29] %! COMMENT_MEASURE_NUMBERS
+                            b,8.
+
+                            <b, e>16
+
+                            g16
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
                         r4
                         \!
                     }
                     {
-                        % [Voice 2 measure 40] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
-                        r2.
-                    }
-                    {
-                        \times 4/5 {
-                            e,16
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            cs8
-                            - \tenuto
-                            ~
-                            cs16
-                            <c, cs>16
-                            \mf
-                            - \tenuto
-                            - \tweak stencil #constante-hairpin
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 4/3 {
+                            \clef "treble"
+                            b'8
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
                             \<
+                            [
+                            g''8
+
+                            b'8
+
                         }
                     }
                     {
-                        % [Voice 2 measure 41] %! COMMENT_MEASURE_NUMBERS
-                        \clef "treble"
-                        b'16
-                        \mp
-
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
+                        % [Voice 2 measure 30] %! COMMENT_MEASURE_NUMBERS
                         f'16
 
                         af16
@@ -7271,17 +6982,27 @@
 
                         af16
 
+                        \clef "treble"
                         f'16
 
-                        \clef "treble"
                         b'16
 
                         g''16
 
-                        \ottava #1
                         d'''16
 
+                        \ottava #1
                         cs''''16
+
+                        ef''''16
+
+                        fs''''16
+
+                        ef''''16
+
+                        fs''''16
+
+                        ef''''16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -7289,7 +7010,276 @@
                         ]
                     }
                     {
+                        % [Voice 2 measure 31] %! COMMENT_MEASURE_NUMBERS
                         \ottava #0
+                        r2.
+                        \!
+                    }
+                    {
+                        % [Voice 2 measure 32] %! COMMENT_MEASURE_NUMBERS
+                        \clef "bass"
+                        f16.
+                        \p
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        [
+                        fqs32
+                        - \accent
+                        ~
+                        fqs16
+                        fs16
+                        - \accent
+                        ~
+                        fs8
+                        fqs8
+                        - \accent
+                        f8..
+                        - \accent
+                        eqs32
+                        - \accent
+                        ~
+                        eqs16.
+                        f32
+                        ~
+                        f8
+                        ]
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
+                        % [Voice 2 measure 33] %! COMMENT_MEASURE_NUMBERS
+                        r4
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 6/7 {
+                            \clef "treble"
+                            \ottava #1
+                            cs''''8
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            d'''8
+
+                            \ottava #0
+                            g''8
+
+                            d'''8
+
+                            g''8
+
+                            b'8
+
+                            g''8
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
+                        % [Voice 2 measure 34] %! COMMENT_MEASURE_NUMBERS
+                        \clef "bass"
+                        f'16
+                        \mp
+
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        [
+                        g16
+
+                        ~
+                        g16
+                        <g f'>16
+
+                        f'8.
+
+                        <b, g>16
+                        \ff
+
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
+                    }
+                    {
+                        r2
+                        \!
+                    }
+                    {
+                        % [Voice 2 measure 35] %! COMMENT_MEASURE_NUMBERS
+                        r2.
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 4/3 {
+                            % [Voice 2 measure 36] %! COMMENT_MEASURE_NUMBERS
+                            e8
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            <b, e>16
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
+                    }
+                    {
+                        r2
+                        \!
+                    }
+                    {
+                        % [Voice 2 measure 37] %! COMMENT_MEASURE_NUMBERS
+                        r2
+                    }
+                    {
+                        g8
+                        \mp
+
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        [
+                        <g f'>16
+
+                        b,16
+
+                        <g f'>16
+
+                        <g f'>16
+
+                        ~
+                        <g f'>16
+                        g16
+
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 2 measure 38] %! COMMENT_MEASURE_NUMBERS
+                            <g f'>8.
+
+                            b,16
+
+                            <b, e>16
+
+                            ~
+                            <b, e>16
+                            g8.
+
+                            f'16
+
+                            g16
+
+                            <g f'>16
+
+                            f'16
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 2 measure 39] %! COMMENT_MEASURE_NUMBERS
+                            <b, g>16
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            e16
+
+                            <b, e>8.
+
+                            g16
+
+                            <g f'>16
+
+                            ~
+                            <g f'>16
+                            b,8.
+
+                            <g f'>16
+
+                            <g f'>16
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
+                        % [Voice 2 measure 40] %! COMMENT_MEASURE_NUMBERS
+                        r2.
+                    }
+                    {
+                        cs16
+                        \fff
+                        - \tenuto
+                        \>
+                        [
+                        e,8
+                        - \tenuto
+                        <e, fs>16
+                        \mf
+                        - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
+                            % [Voice 2 measure 41] %! COMMENT_MEASURE_NUMBERS
+                            \clef "treble"
+                            d'''8
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            g''8
+
+                            b'8
+
+                            g''8
+
+                            b'8
+
+                            g''8
+
+                            d'''8
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
+                    }
+                    {
                         r4
                         \!
                     }
@@ -7298,56 +7288,45 @@
                         r2
                     }
                     {
-                        \times 16/17 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             \clef "bass"
-                            dqf16.
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            d8
-                            - \accent
-                            dqs8.
-                            - \accent
-                            ef16.
-                            - \accent
-                            eqf32
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                        }
-                    }
-                    {
-                        \times 8/9 {
-                            % [Voice 2 measure 43] %! COMMENT_MEASURE_NUMBERS
-                            c,16
+                            <c fs>8.
                             \fff
                             - \tenuto
                             \>
-                            cs16
+                            [
+                            fs16
                             - \tenuto
-                            e,16
-                            - \tenuto
-                            ~
-                            e,16
-                            <c, cs>16
-                            - \tenuto
-                            cs16
+                            c16
                             - \tenuto
                             ~
-                            cs8
-                            e,16
-                            \mf
-                            - \tenuto
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
+                            c16
+                            fs16
+                            ~
                         }
                     }
                     {
-                       \once \override Dots.transparent = ##t
+                        % [Voice 2 measure 43] %! COMMENT_MEASURE_NUMBERS
+                        fs8
+                        <e, fs>16
+                        - \tenuto
+                        c16
+                        - \tenuto
+                        fs16
+                        - \tenuto
+                        c'16
+                        - \tenuto
+                        ~
+                        c'16
+                        fs16
+                        \mf
+                        - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
+                    }
+                    {
                         r2.
                         \!
                     }
@@ -7356,48 +7335,53 @@
                         r2
                     }
                     {
-                        \times 4/5 {
-                            \clef "treble"
-                            \ottava #1
-                            ef''''8
-                            \mp
+                        \clef  "treble"
+                        \ottava #1
+                        cs''''16
+                        \mp
 
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            [
-                            fs''''8
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        [
+                        d'''16
 
-                            ef''''8
+                        \ottava #0
+                        g''16
 
-                            fs''''8
+                        d'''16
 
-                            ef''''8
-                            \ff
+                        g''16
 
+                        d'''16
+
+                        g''16
+
+                        d'''16
+                        \ff
+
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    {
+                        \times 8/9 {
+                            % [Voice 2 measure 45] %! COMMENT_MEASURE_NUMBERS
+                            \clef "bass"
+                            eqs32
+                            \p
+                            - \accent
                             - \tweak stencil #constante-hairpin
                             \<
+                            e16
+                            - \accent
+                            ~
+                            e32
+                            eqs16
+                            ~
+                            eqs16.
+                            ]
                         }
                     }
                     {
-                        % [Voice 2 measure 45] %! COMMENT_MEASURE_NUMBERS
-                        \clef "bass"
-                        \ottava #0
-                        ef8
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        dqs16.
-                        - \accent
-                        d32
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
-                    }
-                    {
-                       \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -7406,55 +7390,59 @@
                         r4
                     }
                     {
-                        <e, fs>8
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        <c fs>8
-                        - \tenuto
-                        ~
-                        <c fs>16
-                        fs16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <e, fs>8
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        ~
-                        fs8
-                        c'16
-                        - \tenuto
-                        fs16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        \times 16/17 {
+                            <c fs>8.
+                            \fff
+                            - \tenuto
+                            \>
+                            [
+                            e,16
+                            - \tenuto
+                            cs16
+                            - \tenuto
+                            ~
+                            cs16
+                            <c, cs>8.
+                            - \tenuto
+                            c,16
+                            - \tenuto
+                            cs16
+                            - \tenuto
+                            e,16
+                            - \tenuto
+                            <c, cs>16
+                            - \tenuto
+                            ~
+                            <c, cs>16
+                            cs16
+                            - \tenuto
+                            e,8
+                            \mf
+                            - \tenuto
+                            - \tweak stencil #constante-hairpin
+                            \<
+                        }
                     }
                     {
-                        % [Voice 2 measure 47] %! COMMENT_MEASURE_NUMBERS
-                        \clef "treble"
-                        \ottava #1
-                        cs''''8
-                        \mp
+                        \times 2/3 {
+                            % [Voice 2 measure 47] %! COMMENT_MEASURE_NUMBERS
+                            \clef "treble"
+                            g''8
+                            \mp
 
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
-                        d'''8
-                        \ff
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            b'8
 
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                            f'8
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
-                        \ottava #0
                         r1
                         \!
                     }
@@ -7469,7 +7457,7 @@
                 {
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
+                        \times 12/13 {
                             % [Voice 3 measure 1] %! COMMENT_MEASURE_NUMBERS
                             \set Staff.shortInstrumentName =
                             \markup { B.H. }
@@ -7499,23 +7487,22 @@
                                             2
                                             5
                                 }
-                            a'''8
-                            ~
+                            a'''16
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #-0.4
+                            \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            2
+                                            3
                                             5
                                 }
                             a'''16
+                            ~
                             - \tweak style #'line
                             \glissando
-                            ^ \parenthesize \downbow
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -7528,6 +7515,7 @@
                             a'''16
                             - \tweak style #'line
                             \glissando
+                            ^ \parenthesize \downbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -7537,7 +7525,7 @@
                                             4
                                             5
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #2.0
@@ -7562,7 +7550,7 @@
                                             4
                                             5
                                 }
-                            a'''8
+                            a'''16
                             - \tweak style #'zigzag
                             \glissando
                             ^ \downbow
@@ -7592,6 +7580,32 @@
                             ~
                             - \tweak style #'line
                             \glissando
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
                         }
                         \tweak Y-offset #1.2
                         \tweak stencil #ly:text-interface::print
@@ -7602,39 +7616,26 @@
                                         4
                                         5
                             }
-                        a'''8
-                        - \tweak style #'line
+                        a'''8.
+                        - \tweak style #'dotted-line
                         \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #2.0
+                        \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
+                                        3
                                         5
                             }
                         a'''16
-                        ~
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
+                        ^ \downbow
                     }
                     {
-                        \times 4/5 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 4/3 {
                             % [Voice 3 measure 2] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
@@ -7645,36 +7646,83 @@
                                             4
                                             5
                                 }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                        }
+                    }
+                    {
+                        r2.
+                        \!
+                    }
+                    {
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \downbow
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
                             a'''16
                             - \tweak style #'dotted-line
                             \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \downbow
+                            ^ \upbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -7684,16 +7732,34 @@
                                             4
                                             5
                                 }
+                            a'''8
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
                             a'''16
-                        }
-                    }
-                    {
-                       \once \override Dots.transparent = ##t
-                        r2.
-                        \!
-                    }
-                    {
-                        \times 4/5 {
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -7717,35 +7783,9 @@
                                             5
                                 }
                             a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
                             ~
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -7756,120 +7796,27 @@
                                             5
                                 }
                             a'''16
-                            - \tweak style #'dotted-line
+                            - \tweak style #'line
                             \glissando
-                            ^ \downbow
+                            ^ \parenthesize \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
                         }
                     }
                     {
-                        % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''8
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                    }
-                    {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
+                        \times 12/13 {
                             % [Voice 3 measure 4] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
@@ -7880,7 +7827,7 @@
                                             4
                                             5
                                 }
-                            a'''8
+                            a'''16
                             - \tweak style #'zigzag
                             \glissando
                             ^ \downbow
@@ -7906,7 +7853,71 @@
                                             4
                                             5
                                 }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
                             a'''8.
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''16
+                            ~
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #0.4
@@ -7921,7 +7932,7 @@
                             a'''16
                             - \tweak style #'line
                             \glissando
-                            ^ \downbow
+                            ^ \parenthesize \downbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -7931,31 +7942,118 @@
                                             4
                                             5
                                 }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
+                            a'''16
                         }
                     }
                     {
                         % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                         r2
                     }
                     {
                         % [Voice 3 measure 6] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        ~
+                        - \tweak style #'dotted-line
+                        \glissando
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \parenthesize \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''8.
+                        - \tweak style #'line
+                        \glissando
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -7963,121 +8061,6 @@
                                 \vcenter
                                     \fraction
                                         2
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
                                         5
                             }
                         a'''16
@@ -8088,46 +8071,8 @@
                         \!
                     }
                     {
-                        \times 8/9 {
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -8137,7 +8082,7 @@
                                             1
                                             5
                                 }
-                            a'''16
+                            a'''8
                             - \tweak style #'line
                             \glissando
                             ^ \downbow
@@ -8150,7 +8095,7 @@
                                             2
                                             5
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #0.4
@@ -8174,114 +8119,39 @@
                                             4
                                             5
                                 }
-                            a'''8
+                            a'''16
                             - \tweak style #'zigzag
                             \glissando
                         }
                     }
                     {
-                        \times 8/9 {
-                            % [Voice 3 measure 8] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            ~
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
-                        }
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
-                        r2.
-                    }
-                    {
+                        % [Voice 3 measure 8] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        ~
+                        - \tweak style #'line
+                        \glissando
                         \tweak Y-offset #1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -8294,7 +8164,7 @@
                         a'''16
                         - \tweak style #'line
                         \glissando
-                        ^ \upbow
+                        ^ \parenthesize \upbow
                         \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -8302,24 +8172,25 @@
                                 \vcenter
                                     \fraction
                                         3
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
                                         5
                             }
                         a'''16
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''8.
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \upbow
                         \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -8330,64 +8201,112 @@
                                         5
                             }
                         a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 3 measure 10] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #-2.0
+                        r2
+                        \!
+                    }
+                    {
+                        % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
+                        r2.
+                    }
+                    {
+                        \times 8/9 {
+                            \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            0
-                                            1
+                                            4
+                                            5
                                 }
                             a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
                             - \tweak style #'dotted-line
                             \glissando
-                            ^ \parenthesize \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'dotted-line
+                            \glissando
+                        }
+                    }
+                    {
+                        \times 16/17 {
+                            % [Voice 3 measure 10] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -8400,7 +8319,7 @@
                             a'''16
                             - \tweak style #'dotted-line
                             \glissando
-                            ^ \upbow
+                            ^ \parenthesize \upbow
                             \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -8410,8 +8329,8 @@
                                             0
                                             1
                                 }
-                            a'''8
-                            - \tweak style #'line
+                            a'''16
+                            - \tweak style #'dotted-line
                             \glissando
                             ^ \downbow
                             \tweak Y-offset #-1.2
@@ -8424,7 +8343,7 @@
                                             5
                                 }
                             a'''8.
-                            - \tweak style #'line
+                            - \tweak style #'dotted-line
                             \glissando
                             ^ \upbow
                             \tweak Y-offset #-2.0
@@ -8440,57 +8359,6 @@
                             - \tweak style #'line
                             \glissando
                             ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -8504,23 +8372,113 @@
                             ~
                             - \tweak style #'line
                             \glissando
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
                         }
                     }
                     {
                         % [Voice 3 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -8530,7 +8488,7 @@
                                         2
                                         5
                             }
-                        a'''16
+                        a'''8.
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
@@ -8544,22 +8502,8 @@
                                         5
                             }
                         a'''16
-                        ~
                         - \tweak style #'dotted-line
                         \glissando
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \upbow
                         \tweak Y-offset #-2.0
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -8569,7 +8513,7 @@
                                         0
                                         1
                             }
-                        a'''8.
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
@@ -8582,10 +8526,23 @@
                                         1
                                         5
                             }
+                        a'''8
+                        ~
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
                         a'''16
                         - \tweak style #'line
                         \glissando
-                        ^ \upbow
+                        ^ \parenthesize \upbow
                         \tweak Y-offset #-2.0
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -8633,7 +8590,7 @@
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
+                        \times 12/11 {
                             % [Voice 3 measure 13] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
@@ -8644,7 +8601,7 @@
                                             1
                                             5
                                 }
-                            a'''16
+                            a'''8
                             - \tweak style #'dotted-line
                             \glissando
                             ^ \downbow
@@ -8695,23 +8652,9 @@
                                             1
                                             5
                                 }
-                            a'''16
-                            ~
+                            a'''8
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \downbow
                             \tweak Y-offset #-0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -8721,33 +8664,7 @@
                                             2
                                             5
                                 }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
+                            a'''8
                         }
                     }
                     {
@@ -8756,122 +8673,165 @@
                         \!
                     }
                     {
-                        \times 16/17 {
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            ~
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \parenthesize \downbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''16
+                        ~
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \upbow
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''16
+                        ~
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \downbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''8.
+                    }
+                    {
+                        % [Voice 3 measure 15] %! COMMENT_MEASURE_NUMBERS
+                        r2
+                        \!
+                    }
+                    {
+                        \times 8/9 {
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -8907,81 +8867,75 @@
                                             1
                                 }
                             a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'dotted-line
+                            \glissando
                         }
                     }
                     {
-                        % [Voice 3 measure 15] %! COMMENT_MEASURE_NUMBERS
-                        r2
-                        \!
-                    }
-                    {
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        \times 16/17 {
                             % [Voice 3 measure 16] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9066,23 +9020,9 @@
                                             1
                                             5
                                 }
-                            a'''16
-                            ~
+                            a'''8.
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
                             \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9105,13 +9045,27 @@
                                             1
                                             5
                                 }
-                            a'''8
+                            a'''16
+                            ~
                             - \tweak style #'dotted-line
                             \glissando
                         }
                     }
                     {
                         % [Voice 3 measure 17] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \parenthesize \downbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -9172,7 +9126,7 @@
                                         0
                                         1
                             }
-                        a'''8
+                        a'''16
                     }
                     {
                         r2
@@ -9183,7 +9137,8 @@
                         r1
                     }
                     {
-                        \times 16/17 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 16/15 {
                             % [Voice 3 measure 19] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
@@ -9207,46 +9162,7 @@
                                             2
                                             5
                                 }
-                            a'''8
-                            ~
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
                             a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''8
                             - \tweak style #'dotted-line
                             \glissando
                             ^ \upbow
@@ -9260,6 +9176,45 @@
                                             5
                                 }
                             a'''8.
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''8
+                            ~
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #-2.0
@@ -9274,7 +9229,7 @@
                             a'''16
                             - \tweak style #'line
                             \glissando
-                            ^ \downbow
+                            ^ \parenthesize \downbow
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9309,7 +9264,7 @@
                                             1
                                             5
                                 }
-                            a'''8
+                            a'''16
                             - \tweak style #'zigzag
                             \glissando
                             \tweak Y-offset #-2.0
@@ -9322,131 +9277,26 @@
                                             1
                                 }
                             a'''16
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
                             ~
-                            - \tweak style #'line
+                            - \tweak style #'zigzag
                             \glissando
                         }
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                            % [Voice 3 measure 20] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                        }
+                        % [Voice 3 measure 20] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #-2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        0
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \parenthesize \downbow
                         \tweak Y-offset #-1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -9469,10 +9319,23 @@
                                         0
                                         1
                             }
-                        a'''8.
-                        - \tweak style #'dotted-line
+                        a'''8
+                        ~
+                        - \tweak style #'line
                         \glissando
-                        ^ \downbow
+                        \tweak Y-offset #-2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        0
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \downbow
                         \tweak Y-offset #-1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -9483,7 +9346,7 @@
                                         5
                             }
                         a'''16
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
@@ -9494,40 +9357,143 @@
                                         2
                                         5
                             }
-                        a'''16
-                        ~
+                        a'''8
                         - \tweak style #'dotted-line
                         \glissando
-                        \tweak Y-offset #-0.4
+                        ^ \upbow
+                        \tweak Y-offset #-1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
-                                        2
+                                        1
                                         5
                             }
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''8.
+                        - \tweak style #'line
                         \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #0.4
+                        \tweak Y-offset #-2.0
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
-                                        3
-                                        5
+                                        0
+                                        1
                             }
                         a'''16
-                        ~
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
+                        ^ \downbow
+                        \times 8/9 {
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \parenthesize \downbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                        }
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 4/3 {
+                        \times 4/5 {
                             % [Voice 3 measure 21] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
@@ -9541,7 +9507,6 @@
                             a'''8
                             - \tweak style #'dotted-line
                             \glissando
-                            ^ \parenthesize \downbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9551,7 +9516,7 @@
                                             4
                                             5
                                 }
-                            a'''16
+                            a'''8.
                         }
                     }
                     {
@@ -9593,12 +9558,26 @@
                                         3
                                         5
                             }
-                        a'''8
+                        a'''16
                         - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        ~
+                        - \tweak style #'zigzag
                         \glissando
                     }
                     {
-                        \times 16/17 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 16/15 {
                             % [Voice 3 measure 22] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #-0.4
                             \tweak stencil #ly:text-interface::print
@@ -9612,58 +9591,19 @@
                             a'''16
                             - \tweak style #'zigzag
                             \glissando
-                            ^ \downbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'zigzag
-                            \glissando
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'zigzag
-                            \glissando
                             ^ \parenthesize \downbow
-                            \tweak Y-offset #1.2
+                            \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            4
+                                            3
                                             5
                                 }
                             a'''16
-                            - \tweak style #'line
+                            - \tweak style #'zigzag
                             \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9676,33 +9616,6 @@
                             a'''8.
                             - \tweak style #'line
                             \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9726,6 +9639,71 @@
                                             5
                                 }
                             a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''8
+                            ~
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #0.4
@@ -9738,39 +9716,68 @@
                                             5
                                 }
                             a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
                             ~
                             - \tweak style #'line
                             \glissando
                         }
                     }
                     {
+                        % [Voice 3 measure 23] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \upbow
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''8
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
                         \times 4/5 {
-                            % [Voice 3 measure 23] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #-0.4
+                            \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            2
-                                            5
+                                            0
+                                            1
                                 }
-                            a'''8
-                            - \tweak style #'line
+                            a'''16
+                            - \tweak style #'dotted-line
                             \glissando
-                            ^ \parenthesize \upbow
+                            ^ \downbow
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9783,6 +9790,7 @@
                             a'''16
                             - \tweak style #'dotted-line
                             \glissando
+                            ^ \upbow
                             \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -9792,44 +9800,41 @@
                                             0
                                             1
                                 }
-                            a'''8
+                            a'''16
+                            ~
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \parenthesize \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'line
+                            \glissando
                         }
                     }
                     {
-                        r4
-                        \!
-                    }
-                    {
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                    }
-                    {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
+                        \times 12/13 {
                             % [Voice 3 measure 24] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
@@ -9840,7 +9845,84 @@
                                             1
                                             5
                                 }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \downbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
                             a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8.
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #-0.4
@@ -9869,74 +9951,23 @@
                             ~
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
                         }
                     }
                     {
                         % [Voice 3 measure 25] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \downbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -9947,32 +9978,6 @@
                                         5
                             }
                         a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''16
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
@@ -9998,65 +10003,54 @@
                                         2
                                         5
                             }
-                        a'''8
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
                     }
                     {
                         r4
                         \!
                     }
                     {
-                        \times 8/9 {
-                            \tweak Y-offset #-1.2
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
+                            \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            1
+                                            3
                                             5
                                 }
                             a'''16
                             - \tweak style #'line
                             \glissando
                             ^ \downbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \downbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10065,80 +10059,24 @@
                                         \fraction
                                             4
                                             5
-                                }
-                            a'''16
-                            ~
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'dotted-line
-                            \glissando
-                        }
-                    }
-                    {
-                        \times 16/17 {
-                            % [Voice 3 measure 26] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \parenthesize \downbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
                                 }
                             a'''16
                             - \tweak style #'dotted-line
                             \glissando
                             ^ \upbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10149,9 +10087,8 @@
                                             5
                                 }
                             a'''16
-                            - \tweak style #'line
+                            - \tweak style #'dotted-line
                             \glissando
-                            ^ \downbow
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10163,136 +10100,61 @@
                                 }
                             a'''16
                             ~
-                            - \tweak style #'line
+                            - \tweak style #'dotted-line
                             \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'zigzag
-                            \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'zigzag
-                            \glissando
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
                         }
                     }
                     {
-                        % [Voice 3 measure 27] %! COMMENT_MEASURE_NUMBERS
-                        r4
-                        \!
-                    }
-                    {
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-1.2
+                        % [Voice 3 measure 26] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #2.0
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
                                         1
-                                        5
+                                        1
                             }
                         a'''16
                         - \tweak style #'dotted-line
                         \glissando
-                        ^ \downbow
-                        \tweak Y-offset #-0.4
+                        ^ \parenthesize \upbow
+                        \tweak Y-offset #1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
-                                        2
+                                        4
                                         5
                             }
-                        a'''8
+                        a'''8.
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
                         - \tweak style #'line
                         \glissando
                         \tweak Y-offset #0.4
@@ -10307,7 +10169,6 @@
                         a'''16
                         - \tweak style #'line
                         \glissando
-                        ^ \upbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -10317,15 +10178,116 @@
                                         2
                                         5
                             }
-                        a'''8.
+                        a'''16
+                        ~
+                        - \tweak style #'zigzag
+                        \glissando
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \parenthesize \upbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        \tweak Y-offset #-2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        0
+                                        1
+                            }
+                        a'''8
+                        ~
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
+                        \tweak Y-offset #-2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        0
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \downbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''8
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 3 measure 28] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 3 measure 27] %! COMMENT_MEASURE_NUMBERS
+                        r4
+                        \!
+                    }
+                    {
+                        \times 8/9 {
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10338,6 +10300,32 @@
                             a'''16
                             - \tweak style #'line
                             \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10347,9 +10335,14 @@
                                             4
                                             5
                                 }
-                            a'''8
+                            a'''16
                             - \tweak style #'line
                             \glissando
+                        }
+                    }
+                    {
+                        \times 16/17 {
+                            % [Voice 3 measure 28] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10359,7 +10352,33 @@
                                             1
                                             1
                                 }
-                            a'''8
+                            a'''8.
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
                             ~
                             - \tweak style #'dotted-line
                             \glissando
@@ -10385,23 +10404,22 @@
                                             4
                                             5
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'dotted-line
                             \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
+                            \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            1
-                                            1
+                                            3
+                                            5
                                 }
                             a'''16
-                            - \tweak style #'dotted-line
+                            - \tweak style #'line
                             \glissando
-                            ^ \upbow
+                            ^ \downbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10412,8 +10430,9 @@
                                             5
                                 }
                             a'''16
-                            - \tweak style #'dotted-line
+                            - \tweak style #'line
                             \glissando
+                            ^ \upbow
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10421,48 +10440,59 @@
                                     \vcenter
                                         \fraction
                                             3
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
                                             5
                                 }
                             a'''16
                             ~
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #0.4
+                            \tweak Y-offset #-0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            3
+                                            2
                                             5
                                 }
                             a'''16
                             - \tweak style #'line
                             \glissando
-                            ^ \parenthesize \downbow
-                            \tweak Y-offset #1.2
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            4
+                                            1
                                             5
                                 }
                             a'''16
-                            - \tweak style #'line
+                            - \tweak style #'zigzag
                             \glissando
-                            ^ \upbow
-                            \tweak Y-offset #0.4
+                            \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
                                 \center-align
                                     \vcenter
                                         \fraction
-                                            3
-                                            5
+                                            0
+                                            1
                                 }
-                            a'''8.
+                            a'''8
                         }
                     }
                     {
@@ -10471,6 +10501,19 @@
                         \!
                     }
                     {
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -10483,71 +10526,19 @@
                         a'''16
                         - \tweak style #'line
                         \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-1.2
+                        \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
-                                        1
+                                        3
                                         5
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'zigzag
-                        \glissando
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \parenthesize \upbow
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'zigzag
-                        \glissando
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
                             }
                         a'''8
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
                         - \tweak style #'line
                         \glissando
+                        ^ \upbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -10557,9 +10548,10 @@
                                         2
                                         5
                             }
-                        a'''16
-                        - \tweak style #'line
+                        a'''8.
+                        - \tweak style #'dotted-line
                         \glissando
+                        ^ \downbow
                         \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -10583,9 +10575,21 @@
                                         5
                             }
                         a'''16
-                        ~
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
                         \tweak Y-offset #-0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -10595,20 +10599,7 @@
                                         2
                                         5
                             }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
-                        a'''16
+                        a'''8
                     }
                     {
                         % [Voice 3 measure 30] %! COMMENT_MEASURE_NUMBERS
@@ -10616,45 +10607,8 @@
                         \!
                     }
                     {
-                        \times 8/9 {
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10664,17 +10618,23 @@
                                             3
                                             5
                                 }
-                            a'''8.
-                        }
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                            % [Voice 3 measure 31] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''8
+                            ~
+                            - \tweak style #'dotted-line
+                            \glissando
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10687,7 +10647,7 @@
                             a'''16
                             - \tweak style #'dotted-line
                             \glissando
-                            ^ \downbow
+                            ^ \parenthesize \downbow
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10710,45 +10670,108 @@
                                             4
                                             5
                                 }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
                             a'''8
-                            - \tweak style #'dotted-line
-                            \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
+                        }
+                    }
+                    {
+                        r2
+                        \!
+                    }
+                    {
+                        % [Voice 3 measure 31] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''8.
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        0
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''8.
+                    }
+                    {
+                        % [Voice 3 measure 32] %! COMMENT_MEASURE_NUMBERS
+                        r2.
+                        \!
+                    }
+                    {
+                        \times 8/9 {
                             \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10771,10 +10794,23 @@
                                             1
                                             5
                                 }
-                            a'''16
-                            ~
+                            a'''8
                             - \tweak style #'line
                             \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10785,9 +10821,8 @@
                                             5
                                 }
                             a'''16
-                            - \tweak style #'line
+                            - \tweak style #'dotted-line
                             \glissando
-                            ^ \parenthesize \downbow
                             \tweak Y-offset #-0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10798,110 +10833,8 @@
                                             5
                                 }
                             a'''16
-                        }
-                    }
-                    {
-                        % [Voice 3 measure 32] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
-                        r2.
-                        \!
-                    }
-                    {
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
-                            % [Voice 3 measure 33] %! COMMENT_MEASURE_NUMBERS
+                            - \tweak style #'line
+                            \glissando
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10911,21 +10844,52 @@
                                             3
                                             5
                                 }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                        }
+                    }
+                    {
+                        \times 8/9 {
+                            % [Voice 3 measure 33] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
                             a'''8.
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
+                            ^ \downbow
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10936,22 +10900,9 @@
                                             1
                                 }
                             a'''16
-                            ~
-                            - \tweak style #'line
+                            - \tweak style #'dotted-line
                             \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
+                            ^ \upbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -10961,7 +10912,7 @@
                                             4
                                             5
                                 }
-                            a'''16
+                            a'''8
                         }
                     }
                     {
@@ -10982,8 +10933,60 @@
                                         1
                                         1
                             }
+                        a'''8.
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
                         a'''8
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
                         ^ \upbow
                         \tweak Y-offset #1.2
@@ -10996,116 +10999,26 @@
                                         5
                             }
                         a'''16
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        \tweak Y-offset #2.0
+                        \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
                             \center-align
                                 \vcenter
                                     \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
+                                        3
                                         5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
                             }
                         a'''8.
-                        - \tweak style #'line
+                        - \tweak style #'zigzag
                         \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
+                        ^ \downbow
                     }
                     {
-                        \times 8/9 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             % [Voice 3 measure 35] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \downbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11116,22 +11029,9 @@
                                             5
                                 }
                             a'''16
-                            ~
                             - \tweak style #'zigzag
                             \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \parenthesize \upbow
+                            ^ \upbow
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11141,7 +11041,7 @@
                                             3
                                             5
                                 }
-                            a'''16
+                            a'''8
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #-0.4
@@ -11153,7 +11053,7 @@
                                             2
                                             5
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'line
                             \glissando
                             ^ \downbow
@@ -11164,18 +11064,6 @@
                                     \vcenter
                                         \fraction
                                             3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
                                             5
                                 }
                             a'''16
@@ -11187,7 +11075,6 @@
                     }
                     {
                         % [Voice 3 measure 36] %! COMMENT_MEASURE_NUMBERS
-                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
@@ -11195,127 +11082,43 @@
                         r4
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''8.
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #-2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            0
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \downbow
-                        }
-                    }
-                    {
-                        % [Voice 3 measure 38] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \upbow
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        2
+                                        5
+                            }
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
                         \tweak Y-offset #-1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -11326,7 +11129,32 @@
                                         5
                             }
                         a'''16
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #-2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        0
+                                        1
+                            }
+                        a'''8.
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        \tweak Y-offset #-1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
                         \glissando
                         ^ \upbow
                         \tweak Y-offset #-2.0
@@ -11340,7 +11168,7 @@
                             }
                         a'''16
                         ~
-                        - \tweak style #'line
+                        - \tweak style #'dotted-line
                         \glissando
                         \tweak Y-offset #-2.0
                         \tweak stencil #ly:text-interface::print
@@ -11352,7 +11180,7 @@
                                         1
                             }
                         a'''16
-                        - \tweak style #'line
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \parenthesize \downbow
                         \tweak Y-offset #-1.2
@@ -11365,116 +11193,13 @@
                                         5
                             }
                         a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''8
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''8
                         ~
-                        - \tweak style #'zigzag
+                        - \tweak style #'dotted-line
                         \glissando
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \parenthesize \upbow
-                        \tweak Y-offset #-2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        0
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        \tweak Y-offset #-1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #-0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        2
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 3 measure 39] %! COMMENT_MEASURE_NUMBERS
+                        \times 16/17 {
+                            % [Voice 3 measure 38] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11487,7 +11212,153 @@
                             a'''8
                             - \tweak style #'dotted-line
                             \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
                             ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'zigzag
+                            \glissando
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #-2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            0
+                                            1
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                        }
+                    }
+                    {
+                        \times 16/17 {
+                            % [Voice 3 measure 39] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #-1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
                             \tweak Y-offset #-0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11510,10 +11381,23 @@
                                             1
                                             5
                                 }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #-0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            2
+                                            5
+                                }
                             a'''8
-                            ~
                             - \tweak style #'line
                             \glissando
+                            ^ \upbow
                             \tweak Y-offset #-1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11526,7 +11410,6 @@
                             a'''16
                             - \tweak style #'line
                             \glissando
-                            ^ \parenthesize \upbow
                             \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11536,7 +11419,7 @@
                                             0
                                             1
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'line
                             \glissando
                             ^ \downbow
@@ -11550,22 +11433,9 @@
                                             5
                                 }
                             a'''16
-                            ~
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #-1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
+                            ^ \upbow
                             \tweak Y-offset #-2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11588,7 +11458,7 @@
                                             0
                                             1
                                 }
-                            a'''8
+                            a'''16
                             - \tweak style #'line
                             \glissando
                             ^ \parenthesize \downbow
@@ -11601,7 +11471,7 @@
                                             1
                                             5
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'dotted-line
                             \glissando
                             ^ \upbow
@@ -11643,7 +11513,7 @@
                                         2
                                         5
                             }
-                        a'''8
+                        a'''16
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
@@ -11656,7 +11526,7 @@
                                         1
                                         5
                             }
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
@@ -11676,137 +11546,60 @@
                         \!
                     }
                     {
-                        \times 4/5 {
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''8
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \upbow
-                        }
+                        \tweak Y-offset #0.4
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        3
+                                        5
+                            }
+                        a'''4
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
                     }
                     {
-                        \times 8/9 {
-                            % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8.
-                            - \tweak style #'zigzag
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                        }
-                    }
-                    {
-                      \once \override Dots.transparent = ##t
-                        r2.
-                        \!
-                    }
-                    {
-                        % [Voice 3 measure 42] %! COMMENT_MEASURE_NUMBERS
-                        r4
-                    }
-                    {
+                        % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        ~
+                        - \tweak style #'zigzag
+                        \glissando
+                        \tweak Y-offset #2.0
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        1
+                                        1
+                            }
+                        a'''16
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \parenthesize \upbow
                         \tweak Y-offset #1.2
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -11817,7 +11610,7 @@
                                         5
                             }
                         a'''8.
-                        - \tweak style #'line
+                        - \tweak style #'zigzag
                         \glissando
                         ^ \downbow
                         \tweak Y-offset #2.0
@@ -11842,78 +11635,166 @@
                                         4
                                         5
                             }
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
-                        a'''8
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        \tweak Y-offset #0.4
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        3
-                                        5
-                            }
                         a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
+                    }
+                    {
+                        r2.
+                        \!
+                    }
+                    {
+                        % [Voice 3 measure 42] %! COMMENT_MEASURE_NUMBERS
+                        r4
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
+                        \times 12/13 {
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''8
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            ~
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                        }
+                    }
+                    {
+                        \times 8/9 {
                             % [Voice 3 measure 43] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
                             \tweak Y-offset #2.0
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -11950,19 +11831,6 @@
                                             1
                                 }
                             a'''8.
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
                         }
                     }
                     {
@@ -11970,6 +11838,19 @@
                         \!
                     }
                     {
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
                         \tweak Y-offset #2.0
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -11992,13 +11873,14 @@
                                         4
                                         5
                             }
-                        a'''8
+                        a'''16
                         ~
                         - \tweak style #'zigzag
                         \glissando
                     }
                     {
-                        \times 8/9 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             % [Voice 3 measure 44] %! COMMENT_MEASURE_NUMBERS
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
@@ -12009,7 +11891,7 @@
                                             4
                                             5
                                 }
-                            a'''16
+                            a'''8
                             - \tweak style #'zigzag
                             \glissando
                             ^ \parenthesize \upbow
@@ -12050,32 +11932,6 @@
                                 }
                             a'''16
                             - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            3
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
                             \glissando
                             ^ \downbow
                             \tweak Y-offset #1.2
@@ -12099,154 +11955,6 @@
                         r2
                     }
                     {
-                        \times 8/9 {
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            ~
-                            - \tweak style #'line
-                            \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'line
-                            \glissando
-                            ^ \parenthesize \downbow
-                            \tweak Y-offset #2.0
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            1
-                                            1
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \upbow
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \downbow
-                        }
-                    }
-                    {
-                        % [Voice 3 measure 46] %! COMMENT_MEASURE_NUMBERS
-                        \tweak Y-offset #2.0
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        1
-                                        1
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        \tweak Y-offset #1.2
-                        \tweak stencil #ly:text-interface::print
-                        \tweak text \markup {
-                            \center-align
-                                \vcenter
-                                    \fraction
-                                        4
-                                        5
-                            }
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \upbow
                         \tweak Y-offset #0.4
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -12257,7 +11965,7 @@
                                         5
                             }
                         a'''16
-                        - \tweak style #'line
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \downbow
                         \tweak Y-offset #1.2
@@ -12294,10 +12002,23 @@
                                         4
                                         5
                             }
-                        a'''8
+                        a'''16
+                        ~
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
+                        \tweak Y-offset #1.2
+                        \tweak stencil #ly:text-interface::print
+                        \tweak text \markup {
+                            \center-align
+                                \vcenter
+                                    \fraction
+                                        4
+                                        5
+                            }
+                        a'''16
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \downbow
                         \tweak Y-offset #2.0
                         \tweak stencil #ly:text-interface::print
                         \tweak text \markup {
@@ -12307,16 +12028,175 @@
                                         1
                                         1
                             }
-                        a'''8
+                        a'''16
+                        ~
+                        - \tweak style #'line
+                        \glissando
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 3 measure 46] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''8
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''8
+                            - \tweak style #'dotted-line
+                            \glissando
+                            ^ \upbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'dotted-line
+                            \glissando
+                            \tweak Y-offset #0.4
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            3
+                                            5
+                                }
+                            a'''8.
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                        }
                     }
                     {
                         r2
                         \!
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        \times 16/17 {
                             % [Voice 3 measure 47] %! COMMENT_MEASURE_NUMBERS
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \downbow
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''8
+                            ~
+                            - \tweak style #'zigzag
+                            \glissando
+                            \tweak Y-offset #2.0
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            1
+                                            1
+                                }
+                            a'''16
+                            - \tweak style #'zigzag
+                            \glissando
+                            ^ \parenthesize \upbow
                             \tweak Y-offset #1.2
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -12364,7 +12244,7 @@
                                             3
                                             5
                                 }
-                            a'''16
+                            a'''8
                             - \tweak style #'line
                             \glissando
                             \tweak Y-offset #-0.4
@@ -12377,22 +12257,9 @@
                                             5
                                 }
                             a'''16
-                            ~
                             - \tweak style #'dotted-line
                             \glissando
-                            \tweak Y-offset #-0.4
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            2
-                                            5
-                                }
-                            a'''16
-                            - \tweak style #'dotted-line
-                            \glissando
-                            ^ \parenthesize \downbow
+                            ^ \downbow
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -12402,7 +12269,7 @@
                                             3
                                             5
                                 }
-                            a'''16
+                            a'''8.
                             - \tweak style #'line
                             \glissando
                             ^ \upbow
@@ -12415,7 +12282,7 @@
                                             2
                                             5
                                 }
-                            a'''8.
+                            a'''16
                             - \tweak style #'line
                             \glissando
                             ^ \downbow
@@ -12429,21 +12296,9 @@
                                             5
                                 }
                             a'''16
+                            ~
                             - \tweak style #'line
                             \glissando
-                            \tweak Y-offset #1.2
-                            \tweak stencil #ly:text-interface::print
-                            \tweak text \markup {
-                                \center-align
-                                    \vcenter
-                                        \fraction
-                                            4
-                                            5
-                                }
-                            a'''8
-                            - \tweak style #'line
-                            \glissando
-                            ^ \upbow
                             \tweak Y-offset #0.4
                             \tweak stencil #ly:text-interface::print
                             \tweak text \markup {
@@ -12453,7 +12308,20 @@
                                             3
                                             5
                                 }
-                            a'''8
+                            a'''16
+                            - \tweak style #'line
+                            \glissando
+                            ^ \parenthesize \downbow
+                            \tweak Y-offset #1.2
+                            \tweak stencil #ly:text-interface::print
+                            \tweak text \markup {
+                                \center-align
+                                    \vcenter
+                                        \fraction
+                                            4
+                                            5
+                                }
+                            a'''16
                         }
                     }
                     {
@@ -12473,7 +12341,7 @@
                 {
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
+                        \times 12/13 {
                             % [Voice 6 measure 1] %! COMMENT_MEASURE_NUMBERS
                             \set Staff.shortInstrumentName =
                             \markup { vc.II }
@@ -12497,101 +12365,102 @@
                                     msp.
                                 }
                             \startTextSpan
-                            a'''8
-                            ~
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''8
                             a'''16
                             a'''16
                             ~
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''16
                         }
-                        a'''8
+                        a'''8.
                         a'''16
-                        a'''16
-                        ~
                     }
                     {
-                        \times 4/5 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 4/3 {
                             % [Voice 6 measure 2] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
                             a'''8
-                            ~
-                            a'''16
                             a'''16
                             \stopTextSpan
                             ]
                         }
                     }
                     {
-                       \once \override Dots.transparent = ##t
+                      \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
                     {
-                        \times 4/5 {
-                            a'''16
-                            [
-                            - \abjad-dashed-line-with-arrow
-                            - \tweak bound-details.left.text \markup {
-                                \concat
-                                    {
-                                        \upright
-                                            ord.
-                                        \hspace
-                                            #0.5
-                                    }
-                                }
-                            - \tweak bound-details.right.text \markup {
-                                \upright
-                                    st.
-                                }
-                            \startTextSpan
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''16
-                        }
-                    }
-                    {
-                        % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        a'''8.
-                        a'''16
                         a'''8
-                        a'''8
-                        ~
-                        a'''16
-                        a'''16
+                        [
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup {
+                            \concat
+                                {
+                                    \upright
+                                        ord.
+                                    \hspace
+                                        #0.5
+                                }
+                            }
+                        - \tweak bound-details.right.text \markup {
+                            \upright
+                                st.
+                            }
+                        \startTextSpan
                         a'''16
                         a'''16
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
-                            % [Voice 6 measure 4] %! COMMENT_MEASURE_NUMBERS
+                        \times 12/13 {
+                            % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
                             a'''8
                             a'''16
                             a'''8.
                             a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''8.
+                        }
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 6 measure 4] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
+                            a'''16
+                            a'''16
                             a'''8
-                            a'''8
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''16
                             \stopTextSpan
                             ]
                         }
                     }
                     {
                         % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                         \!
                         r2
                     }
                     {
                         % [Voice 6 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
+                        a'''8
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -12611,12 +12480,11 @@
                         a'''16
                         a'''16
                         a'''16
-                        a'''8
-                        a'''16
                         a'''16
                         ~
-                        a'''8
                         a'''16
+                        a'''16
+                        a'''8.
                         a'''16
                         \stopTextSpan
                         ]
@@ -12627,8 +12495,9 @@
                         \!
                     }
                     {
-                        \times 8/9 {
-                            a'''16
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
+                            a'''8
                             [
                             - \abjad-dashed-line-with-arrow
                             - \tweak bound-details.left.text \markup {
@@ -12645,30 +12514,22 @@
                                     ord.
                                 }
                             \startTextSpan
-                            a'''8
-                            ~
+                            a'''8.
                             a'''16
                             a'''16
-                            a'''16
-                            a'''16
-                            a'''8
                         }
                     }
                     {
-                        \times 8/9 {
-                            % [Voice 6 measure 8] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
-                            a'''8
-                            ~
-                            a'''16
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''8
-                            \stopTextSpan
-                            ]
-                        }
+                        % [Voice 6 measure 8] %! COMMENT_MEASURE_NUMBERS
+                        a'''16
+                        a'''16
+                        ~
+                        a'''16
+                        a'''16
+                        a'''8.
+                        a'''16
+                        \stopTextSpan
+                        ]
                     }
                     {
                         r2
@@ -12676,60 +12537,65 @@
                     }
                     {
                         % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
-                        a'''16
-                        [
-                        - \abjad-dashed-line-with-arrow
-                        - \tweak bound-details.left.text \markup {
-                            \concat
-                                {
-                                    \upright
-                                        st.
-                                    \hspace
-                                        #0.5
+                        \times 8/9 {
+                            a'''8
+                            [
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup {
+                                \concat
+                                    {
+                                        \upright
+                                            st.
+                                        \hspace
+                                            #0.5
+                                    }
                                 }
-                            }
-                        - \tweak bound-details.right.text \markup {
-                            \upright
-                                ord.
-                            }
-                        \startTextSpan
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''8
-                        a'''16
-                        a'''16
-                        ~
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 6 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            - \tweak bound-details.right.text \markup {
+                                \upright
+                                    ord.
+                                }
+                            \startTextSpan
+                            a'''16
+                            ~
                             a'''8
                             a'''16
-                            a'''8
-                            a'''8.
                             a'''16
-                            a'''16
-                            a'''16
-                            a'''8
                             a'''16
                             a'''16
                             ~
                         }
                     }
                     {
+                        \times 16/17 {
+                            % [Voice 6 measure 10] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''16
+                        }
+                    }
+                    {
                         % [Voice 6 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        a'''8
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
                         a'''8.
+                        a'''16
+                        a'''8
+                        a'''8
+                        ~
                         a'''16
                         a'''16
                         a'''16
@@ -12747,9 +12613,9 @@
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
+                        \times 12/11 {
                             % [Voice 6 measure 13] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
+                            a'''8
                             [
                             - \abjad-dashed-line-with-arrow
                             - \tweak bound-details.left.text \markup {
@@ -12769,12 +12635,8 @@
                             a'''16
                             a'''8.
                             a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''8.
-                            a'''16
-                            a'''16
+                            a'''8
+                            a'''8
                             \stopTextSpan
                             ]
                         }
@@ -12782,46 +12644,6 @@
                     {
                         % [Voice 6 measure 14] %! COMMENT_MEASURE_NUMBERS
                         r4
-                        \!
-                    }
-                    {
-                        \times 16/17 {
-                            a'''16
-                            [
-                            - \abjad-dashed-line-with-arrow
-                            - \tweak bound-details.left.text \markup {
-                                \concat
-                                    {
-                                        \upright
-                                            ord.
-                                        \hspace
-                                            #0.5
-                                    }
-                                }
-                            - \tweak bound-details.right.text \markup {
-                                \upright
-                                    st.
-                                }
-                            \startTextSpan
-                            a'''8
-                            a'''16
-                            a'''8.
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''8.
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''16
-                            \stopTextSpan
-                            ]
-                        }
-                    }
-                    {
-                        % [Voice 6 measure 15] %! COMMENT_MEASURE_NUMBERS
-                        r2
                         \!
                     }
                     {
@@ -12839,38 +12661,81 @@
                             }
                         - \tweak bound-details.right.text \markup {
                             \upright
-                                sp.
+                                st.
                             }
                         \startTextSpan
                         a'''16
-                        a'''8.
+                        a'''16
                         a'''16
                         a'''8
+                        a'''16
+                        a'''16
+                        ~
+                        a'''8
+                        a'''16
+                        a'''16
+                        ~
+                        a'''16
+                        a'''8.
+                        \stopTextSpan
+                        ]
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        % [Voice 6 measure 15] %! COMMENT_MEASURE_NUMBERS
+                        r2
+                        \!
+                    }
+                    {
+                        \times 8/9 {
+                            a'''16
+                            [
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup {
+                                \concat
+                                    {
+                                        \upright
+                                            ord.
+                                        \hspace
+                                            #0.5
+                                    }
+                                }
+                            - \tweak bound-details.right.text \markup {
+                                \upright
+                                    sp.
+                                }
+                            \startTextSpan
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                            a'''8.
+                        }
+                    }
+                    {
+                        \times 16/17 {
                             % [Voice 6 measure 16] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
+                            a'''8
                             a'''8.
                             a'''16
                             a'''16
                             a'''16
                             a'''8
                             a'''16
+                            a'''8.
+                            a'''16
                             a'''16
                             ~
-                            a'''8
-                            a'''16
-                            a'''8
                         }
                     }
                     {
                         % [Voice 6 measure 17] %! COMMENT_MEASURE_NUMBERS
+                        a'''16
                         a'''8.
                         a'''16
                         a'''16
                         a'''16
-                        a'''8
+                        a'''16
                         \stopTextSpan
                         ]
                     }
@@ -12883,7 +12748,8 @@
                         r1
                     }
                     {
-                        \times 16/17 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 16/15 {
                             % [Voice 6 measure 19] %! COMMENT_MEASURE_NUMBERS
                             a'''16
                             [
@@ -12902,49 +12768,49 @@
                                     ord.
                                 }
                             \startTextSpan
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''8
                             a'''8
                             ~
                             a'''16
                             a'''16
-                            a'''8
-                            a'''8.
                             a'''16
-                            a'''16
-                            a'''16
-                            a'''8
                             a'''16
                             a'''16
                             ~
                         }
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                            % [Voice 6 measure 20] %! COMMENT_MEASURE_NUMBERS
-                            a'''8
-                            a'''16
-                            a'''8
-                            a'''8.
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''8
-                        }
+                        % [Voice 6 measure 20] %! COMMENT_MEASURE_NUMBERS
                         a'''16
+                        a'''16
+                        a'''8
+                        ~
+                        a'''16
+                        a'''16
+                        a'''8
                         a'''8.
                         a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
-                        ~
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 4/3 {
-                            % [Voice 6 measure 21] %! COMMENT_MEASURE_NUMBERS
+                        \times 8/9 {
+                            a'''16
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''16
+                            a'''16
+                            ~
                             a'''8
                             a'''16
+                        }
+                    }
+                    {
+                        \times 4/5 {
+                            % [Voice 6 measure 21] %! COMMENT_MEASURE_NUMBERS
+                            a'''8
+                            a'''8.
                             \stopTextSpan
                             ]
                         }
@@ -12972,80 +12838,31 @@
                             }
                         \startTextSpan
                         a'''16
-                        a'''8
-                    }
-                    {
-                        \times 16/17 {
-                            % [Voice 6 measure 22] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
-                            a'''8
-                            ~
-                            a'''16
-                            a'''16
-                            a'''8
-                            a'''8.
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''8
-                            a'''16
-                            a'''16
-                            ~
-                        }
-                    }
-                    {
-                        \times 4/5 {
-                            % [Voice 6 measure 23] %! COMMENT_MEASURE_NUMBERS
-                            a'''8
-                            a'''16
-                            a'''8
-                            \stopTextSpan
-                            ]
-                        }
-                    }
-                    {
-                        r4
-                        \!
-                    }
-                    {
-                        a'''8.
-                        [
-                        - \abjad-dashed-line-with-arrow
-                        - \tweak bound-details.left.text \markup {
-                            \concat
-                                {
-                                    \upright
-                                        sp.
-                                    \hspace
-                                        #0.5
-                                }
-                            }
-                        - \tweak bound-details.right.text \markup {
-                            \upright
-                                msp.
-                            }
-                        \startTextSpan
                         a'''16
+                        a'''16
+                        ~
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
-                            % [Voice 6 measure 24] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
-                            a'''16
-                            a'''16
-                            ~
+                        \times 16/15 {
+                            % [Voice 6 measure 22] %! COMMENT_MEASURE_NUMBERS
                             a'''16
                             a'''16
                             a'''8.
                             a'''16
                             a'''8
+                            a'''8
+                            ~
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''16
+                            ~
                         }
                     }
                     {
-                        % [Voice 6 measure 25] %! COMMENT_MEASURE_NUMBERS
-                        a'''8.
-                        a'''16
+                        % [Voice 6 measure 23] %! COMMENT_MEASURE_NUMBERS
                         a'''16
                         a'''16
                         a'''8
@@ -13057,7 +12874,66 @@
                         \!
                     }
                     {
-                        \times 8/9 {
+                        \times 4/5 {
+                            a'''16
+                            [
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup {
+                                \concat
+                                    {
+                                        \upright
+                                            sp.
+                                        \hspace
+                                            #0.5
+                                    }
+                                }
+                            - \tweak bound-details.right.text \markup {
+                                \upright
+                                    msp.
+                                }
+                            \startTextSpan
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''16
+                            ~
+                        }
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 6 measure 24] %! COMMENT_MEASURE_NUMBERS
+                            a'''8
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            ~
+                        }
+                    }
+                    {
+                        % [Voice 6 measure 25] %! COMMENT_MEASURE_NUMBERS
+                        a'''16
+                        a'''8.
+                        a'''16
+                        a'''16
+                        a'''16
+                        a'''16
+                        \stopTextSpan
+                        ]
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             a'''16
                             [
                             - \abjad-dashed-line-with-arrow
@@ -13075,36 +12951,31 @@
                                     st.
                                 }
                             \startTextSpan
-                            a'''8
-                            ~
+                            a'''16
+                            a'''8.
                             a'''16
                             a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''8
                             ~
                         }
                     }
                     {
-                        \times 16/17 {
-                            % [Voice 6 measure 26] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''16
-                            a'''8.
-                            a'''16
-                            a'''8
-                            a'''8.
-                            a'''16
-                            \stopTextSpan
-                            ]
-                        }
+                        % [Voice 6 measure 26] %! COMMENT_MEASURE_NUMBERS
+                        a'''16
+                        a'''8.
+                        a'''16
+                        a'''16
+                        a'''16
+                        a'''16
+                        ~
+                        a'''16
+                        a'''16
+                        a'''8
+                        ~
+                        a'''16
+                        a'''16
+                        a'''8
+                        \stopTextSpan
+                        ]
                     }
                     {
                         % [Voice 6 measure 27] %! COMMENT_MEASURE_NUMBERS
@@ -13112,45 +12983,48 @@
                         \!
                     }
                     {
-                        a'''16
-                        [
-                        - \abjad-dashed-line-with-arrow
-                        - \tweak bound-details.left.text \markup {
-                            \concat
-                                {
-                                    \upright
-                                        ord.
-                                    \hspace
-                                        #0.5
+                        \times 8/9 {
+                            a'''8.
+                            [
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup {
+                                \concat
+                                    {
+                                        \upright
+                                            ord.
+                                        \hspace
+                                            #0.5
+                                    }
                                 }
-                            }
-                        - \tweak bound-details.right.text \markup {
-                            \upright
-                                sp.
-                            }
-                        \startTextSpan
-                        a'''16
-                        a'''8
-                        a'''16
-                        a'''8.
+                            - \tweak bound-details.right.text \markup {
+                                \upright
+                                    sp.
+                                }
+                            \startTextSpan
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                        }
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        \times 16/17 {
                             % [Voice 6 measure 28] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
-                            a'''8
-                            a'''8
-                            ~
-                            a'''16
-                            a'''16
-                            a'''16
+                            a'''8.
                             a'''16
                             a'''16
                             ~
-                            a'''16
                             a'''16
                             a'''8.
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''16
+                            a'''8
                             \stopTextSpan
                             ]
                         }
@@ -13179,18 +13053,12 @@
                             }
                         \startTextSpan
                         a'''16
-                        ~
-                        a'''16
-                        a'''16
-                        ~
                         a'''8
+                        a'''8.
                         a'''16
                         a'''16
                         a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
+                        a'''8
                         \stopTextSpan
                         ]
                     }
@@ -13200,8 +13068,9 @@
                         \!
                     }
                     {
-                        \times 8/9 {
-                            a'''8.
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
+                            a'''16
                             [
                             - \abjad-dashed-line-with-arrow
                             - \tweak bound-details.left.text \markup {
@@ -13218,9 +13087,11 @@
                                     ord.
                                 }
                             \startTextSpan
+                            a'''8
+                            ~
+                            a'''16
                             a'''16
                             a'''8
-                            a'''8.
                             \stopTextSpan
                             ]
                         }
@@ -13230,9 +13101,41 @@
                         \!
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                            % [Voice 6 measure 31] %! COMMENT_MEASURE_NUMBERS
+                        % [Voice 6 measure 31] %! COMMENT_MEASURE_NUMBERS
+                        a'''8.
+                        [
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup {
+                            \concat
+                                {
+                                    \upright
+                                        sp.
+                                    \hspace
+                                        #0.5
+                                }
+                            }
+                        - \tweak bound-details.right.text \markup {
+                            \upright
+                                msp.
+                            }
+                        \startTextSpan
+                        a'''16
+                        a'''16
+                        a'''16
+                        a'''8
+                        a'''16
+                        a'''8.
+                        \stopTextSpan
+                        ]
+                    }
+                    {
+                        % [Voice 6 measure 32] %! COMMENT_MEASURE_NUMBERS
+                        \once \override Dots.transparent = ##t
+                        r2.
+                        \!
+                    }
+                    {
+                        \times 8/9 {
                             a'''16
                             [
                             - \abjad-dashed-line-with-arrow
@@ -13240,78 +13143,37 @@
                                 \concat
                                     {
                                         \upright
-                                            sp.
+                                            ord.
                                         \hspace
                                             #0.5
                                     }
                                 }
                             - \tweak bound-details.right.text \markup {
                                 \upright
-                                    msp.
+                                    st.
                                 }
                             \startTextSpan
+                            a'''8
+                            a'''8.
                             a'''16
                             a'''16
+                            a'''16
+                        }
+                    }
+                    {
+                        \times 8/9 {
+                            % [Voice 6 measure 33] %! COMMENT_MEASURE_NUMBERS
                             a'''8
                             a'''16
                             a'''8.
                             a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''16
+                            a'''8
                             \stopTextSpan
                             ]
                         }
                     }
                     {
-                        % [Voice 6 measure 32] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
-                        r2.
-                        \!
-                    }
-                    {
-                        a'''8
-                        [
-                        - \abjad-dashed-line-with-arrow
-                        - \tweak bound-details.left.text \markup {
-                            \concat
-                                {
-                                    \upright
-                                        ord.
-                                    \hspace
-                                        #0.5
-                                }
-                            }
-                        - \tweak bound-details.right.text \markup {
-                            \upright
-                                st.
-                            }
-                        \startTextSpan
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
-                            % [Voice 6 measure 33] %! COMMENT_MEASURE_NUMBERS
-                            a'''8.
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''16
-                            \stopTextSpan
-                            ]
-                        }
-                    }
-                    {
-                       \once \override Dots.transparent = ##t
+                      \once \override Dots.transparent = ##t
                         r2.
                         \!
                     }
@@ -13320,7 +13182,7 @@
                         r4
                     }
                     {
-                        a'''8
+                        a'''8.
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -13340,23 +13202,17 @@
                         a'''16
                         a'''16
                         a'''16
-                        a'''16
-                        ~
-                        a'''16
+                        a'''8
                         a'''16
                         a'''8.
-                        a'''16
                     }
                     {
-                        \times 8/9 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             % [Voice 6 measure 35] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
                             a'''8
-                            a'''16
-                            ~
-                            a'''8
-                            a'''16
-                            a'''16
-                            a'''16
+                            a'''8.
                             a'''16
                             \stopTextSpan
                             ]
@@ -13368,11 +13224,127 @@
                     }
                     {
                         % [Voice 6 measure 36] %! COMMENT_MEASURE_NUMBERS
-                         \once \override Dots.transparent = ##t
+                        \once \override Dots.transparent = ##t
                         r2.
                     }
                     {
                         % [Voice 6 measure 37] %! COMMENT_MEASURE_NUMBERS
+                        r4
+                    }
+                    {
+                        a'''16
+                        [
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup {
+                            \concat
+                                {
+                                    \upright
+                                        msp.
+                                    \hspace
+                                        #0.5
+                                }
+                            }
+                        - \tweak bound-details.right.text \markup {
+                            \upright
+                                ord.
+                            }
+                        \startTextSpan
+                        a'''16
+                        a'''8
+                        a'''16
+                        a'''8.
+                        a'''16
+                        a'''16
+                        ~
+                        a'''16
+                        a'''16
+                        ~
+                    }
+                    {
+                        \times 16/17 {
+                            % [Voice 6 measure 38] %! COMMENT_MEASURE_NUMBERS
+                            a'''8
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''8.
+                        }
+                    }
+                    {
+                        \times 16/17 {
+                            % [Voice 6 measure 39] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            ~
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                        }
+                    }
+                    {
+                        % [Voice 6 measure 40] %! COMMENT_MEASURE_NUMBERS
+                        a'''16
+                        a'''8
+                        a'''16
+                        \stopTextSpan
+                        ]
+                    }
+                    {
+                        r2
+                        \!
+                    }
+                    {
+                        a'''4
+                        [
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup {
+                            \concat
+                                {
+                                    \upright
+                                        st.
+                                    \hspace
+                                        #0.5
+                                }
+                            }
+                        - \tweak bound-details.right.text \markup {
+                            \upright
+                                ord.
+                            }
+                        \startTextSpan
+                    }
+                    {
+                        % [Voice 6 measure 41] %! COMMENT_MEASURE_NUMBERS
+                        a'''16
+                        a'''16
+                        ~
+                        a'''16
+                        a'''8.
+                        a'''16
+                        a'''16
+                        \stopTextSpan
+                        ]
+                    }
+                    {
+                      \once \override Dots.transparent = ##t
+                        r2.
+                        \!
+                    }
+                    {
+                        % [Voice 6 measure 42] %! COMMENT_MEASURE_NUMBERS
                         r4
                     }
                     {
@@ -13385,16 +13357,17 @@
                                 \concat
                                     {
                                         \upright
-                                            msp.
+                                            sp.
                                         \hspace
                                             #0.5
                                     }
                                 }
                             - \tweak bound-details.right.text \markup {
                                 \upright
-                                    ord.
+                                    msp.
                                 }
                             \startTextSpan
+                            a'''8
                             a'''16
                             a'''8.
                             a'''16
@@ -13402,140 +13375,17 @@
                             ~
                             a'''16
                             a'''8.
-                            a'''16
-                            a'''16
-                        }
-                    }
-                    {
-                        % [Voice 6 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''8
-                        a'''8
-                        ~
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 6 measure 39] %! COMMENT_MEASURE_NUMBERS
-                            a'''8
-                            a'''16
-                            a'''8
-                            ~
-                            a'''16
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''16
-                            ~
-                            a'''8
-                            a'''16
-                            a'''16
-                            a'''16
-                        }
-                    }
-                    {
-                        % [Voice 6 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        a'''8
-                        a'''16
-                        a'''16
-                        \stopTextSpan
-                        ]
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        \times 4/5 {
-                            a'''8
-                            [
-                            - \abjad-dashed-line-with-arrow
-                            - \tweak bound-details.left.text \markup {
-                                \concat
-                                    {
-                                        \upright
-                                            st.
-                                        \hspace
-                                            #0.5
-                                    }
-                                }
-                            - \tweak bound-details.right.text \markup {
-                                \upright
-                                    ord.
-                                }
-                            \startTextSpan
-                            a'''16
-                            a'''8
                         }
                     }
                     {
                         \times 8/9 {
-                            % [Voice 6 measure 41] %! COMMENT_MEASURE_NUMBERS
-                            a'''8.
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''8
-                            a'''16
-                            \stopTextSpan
-                            ]
-                        }
-                    }
-                    {
-                       \once \override Dots.transparent = ##t
-                        r2.
-                        \!
-                    }
-                    {
-                        % [Voice 6 measure 42] %! COMMENT_MEASURE_NUMBERS
-                        r4
-                    }
-                    {
-                        a'''8.
-                        [
-                        - \abjad-dashed-line-with-arrow
-                        - \tweak bound-details.left.text \markup {
-                            \concat
-                                {
-                                    \upright
-                                        sp.
-                                    \hspace
-                                        #0.5
-                                }
-                            }
-                        - \tweak bound-details.right.text \markup {
-                            \upright
-                                msp.
-                            }
-                        \startTextSpan
-                        a'''16
-                        a'''8
-                        a'''8
-                        ~
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
                             % [Voice 6 measure 43] %! COMMENT_MEASURE_NUMBERS
+                            a'''16
+                            a'''16
+                            a'''16
                             a'''8
                             a'''16
                             a'''8.
-                            a'''16
                             \stopTextSpan
                             ]
                         }
@@ -13545,7 +13395,7 @@
                         \!
                     }
                     {
-                        a'''8
+                        a'''16
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -13563,16 +13413,16 @@
                             }
                         \startTextSpan
                         a'''8
+                        a'''16
                         ~
                     }
                     {
-                        \times 8/9 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
                             % [Voice 6 measure 44] %! COMMENT_MEASURE_NUMBERS
-                            a'''16
-                            a'''16
-                            a'''16
-                            a'''16
                             a'''8
+                            a'''16
+                            a'''16
                             a'''16
                             a'''8
                             \stopTextSpan
@@ -13588,56 +13438,54 @@
                         r2
                     }
                     {
-                        \times 8/9 {
-                            a'''16
-                            [
-                            - \abjad-dashed-line-with-arrow
-                            - \tweak bound-details.left.text \markup {
-                                \concat
-                                    {
-                                        \upright
-                                            ord.
-                                        \hspace
-                                            #0.5
-                                    }
+                        a'''16
+                        [
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup {
+                            \concat
+                                {
+                                    \upright
+                                        ord.
+                                    \hspace
+                                        #0.5
                                 }
-                            - \tweak bound-details.right.text \markup {
-                                \upright
-                                    sp.
-                                }
-                            \startTextSpan
-                            a'''16
-                            a'''16
-                            ~
-                            a'''16
-                            a'''8
-                            ~
-                            a'''16
-                            a'''16
-                            a'''16
-                        }
-                    }
-                    {
-                        % [Voice 6 measure 46] %! COMMENT_MEASURE_NUMBERS
+                            }
+                        - \tweak bound-details.right.text \markup {
+                            \upright
+                                sp.
+                            }
+                        \startTextSpan
+                        a'''8.
                         a'''16
                         a'''16
                         ~
                         a'''16
                         a'''16
-                        a'''8.
-                        a'''16
-                        a'''8
-                        a'''8
-                        \stopTextSpan
-                        ]
+                        ~
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 6 measure 46] %! COMMENT_MEASURE_NUMBERS
+                            a'''8
+                            a'''16
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                            a'''8.
+                            a'''16
+                            a'''16
+                            \stopTextSpan
+                            ]
+                        }
                     }
                     {
                         r2
                         \!
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        \times 16/17 {
                             % [Voice 6 measure 47] %! COMMENT_MEASURE_NUMBERS
                             a'''16
                             [
@@ -13656,17 +13504,20 @@
                                     ord.
                                 }
                             \startTextSpan
+                            a'''8
+                            ~
                             a'''16
                             a'''16
+                            a'''16
+                            a'''16
+                            a'''8
+                            a'''16
+                            a'''8.
                             a'''16
                             a'''16
                             ~
                             a'''16
                             a'''16
-                            a'''8.
-                            a'''16
-                            a'''8
-                            a'''8
                             \stopTextSpan
                             ]
                         }
@@ -13682,154 +13533,145 @@
                 \context Voice = "Voice 4"
                 {
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 24/23 {
-                            % [Voice 4 measure 1] %! COMMENT_MEASURE_NUMBERS
-                            \set Staff.shortInstrumentName =
-                            \markup { L.H. }
-                            \set Staff.instrumentName =
-                            \markup { "Left Hand" }
-                            \clef "bass"
-                            dqs8
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            ef16.
-                            - \accent
-                            dqs8.
-                            - \accent
-                            d8
-                            - \accent
-                            dqf8.
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                        }
+                        % [Voice 4 measure 1] %! COMMENT_MEASURE_NUMBERS
+                        \set Staff.shortInstrumentName =
+                        \markup { L.H. }
+                        \set Staff.instrumentName =
+                        \markup { "Left Hand" }
+                        \clef "bass"
+                        e16.
+                        \p
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        [
+                        eqf32
+                        ~
+                        eqf8
+                        ef16.
+                        - \accent
+                        dqs32
+                        - \accent
+                        ~
+                        dqs8
+                        ~
+                        dqs32
+                        d16.
+                        - \accent
+                        ~
+                        d32
+                        dqs16.
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     {
-                        <c fs>16
+                        <e, fs>8
                         \fff
                         - \tenuto
                         \>
-                        e,16
+                        <c fs>16
                         - \tenuto
-                        cs16
-                        - \tenuto
-                        <c, cs>16
+                        fs16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                     }
                     {
-                        % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
-                        cs32
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        cqs32
-                        - \accent
-                        ~
-                        cqs16.
-                        cs16.
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 8/7 {
+                            % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
+                            ef8
+                            \p
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            dqs16.
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
                         r2.
                         \!
                     }
                     {
-                        \times 8/9 {
-                            cqs16.
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            c16.
-                            - \accent
-                            cqs16.
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                        }
+                        ef32
+                        \p
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        [
+                        eqf32
+                        - \accent
+                        ~
+                        eqf8
+                        ~
+                        eqf32
+                        ef32
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     {
                         % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
                         \clef "treble"
-                        g''16
+                        af8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
-                        d'''16
+                        f'8
 
-                        g''16
+                        b'8
 
-                        b'16
+                        f'8
 
-                        g''16
+                        b'8
 
-                        d'''16
-
-                        g''16
-
-                        b'16
-
-                        g''16
-
-                        b'16
-
-                        g''16
-
-                        d'''16
+                        g''8
                         \ff
 
                         - \tweak stencil #constante-hairpin
                         \<
                     }
                     {
-                        % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
-                        \clef "bass"
-                        c16
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        cqs16
-                        - \accent
-                        ~
-                        cqs32
-                        c16.
-                        ~
-                        c16
-                        cqs16
-                        - \accent
-                        ~
-                        cqs32
-                        c16.
-                        - \accent
-                        ~
-                        c16.
-                        cqs32
-                        - \accent
-                        ~
-                        cqs16.
-                        cs32
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 24/25 {
+                            % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
+                            \clef "bass"
+                            dqs16
+                            \p
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            d16.
+                            ~
+                            d16
+                            dqs16.
+                            - \accent
+                            ef16.
+                            ~
+                            ef16
+                            dqs16.
+                            - \accent
+                            d16
+                            - \accent
+                            ~
+                            d8
+                            dqf32
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
                         % [Voice 4 measure 5] %! COMMENT_MEASURE_NUMBERS
@@ -13839,24 +13681,26 @@
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
+                        \times 12/11 {
                             % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
-                            c,8
+                            c16
                             \fff
                             - \tenuto
                             \>
                             [
-                            cs16
-                            - \tenuto
-                            e,8.
-                            - \tenuto
-                            <c, cs>16
-                            - \tenuto
-                            cs8
-                            - \tenuto
-                            e,8.
+                            fs8
                             - \tenuto
                             <e, fs>16
+                            - \tenuto
+                            c8.
+                            - \tenuto
+                            fs16
+                            - \tenuto
+                            c'16
+                            - \tenuto
+                            ~
+                            c'16
+                            fs16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -13870,38 +13714,42 @@
                         \!
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            dqf8.
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            d8
-                            - \accent
-                            dqs16.
-                            ~
-                            dqs16
-                            ~
-                        }
-                    }
-                    {
-                        % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
-                        dqs32
-                        ef16.
-                        - \accent
-                        eqf8
-                        ~
-                        eqf32
-                        ef16.
-                        - \accent
-                        dqs8
-                        \mp
+                        d16.
+                        \p
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
+                        [
+                        dqs32
+                        - \accent
+                        ~
+                        dqs8.
+                        ef16
+                        - \accent
+                        ~
+                        ef16
+                        eqf16
+                        ~
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 16/15 {
+                            % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
+                            eqf8
+                            ef32
+                            - \accent
+                            ~
+                            ef16
+                            dqs16.
+                            ~
+                            dqs16
+                            d16.
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
                         r2
@@ -13912,94 +13760,86 @@
                         r2.
                     }
                     {
-                        \times 8/9 {
-                            <c fs>16
+                        <c fs>8
+                        \fff
+                        - \tenuto
+                        \>
+                        [
+                        e,16
+                        - \tenuto
+                        cs16
+                        - \tenuto
+                        <c, cs>16
+                        - \tenuto
+                        c,16
+                        - \tenuto
+                        ~
+                        c,16
+                        cs16
+                        \mf
+                        - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    {
+                        % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
+                        dqs8
+                        \p
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ~
+                        dqs32
+                        ef16.
+                        - \accent
+                        dqs8.
+                        - \accent
+                        d16
+                        - \accent
+                        ~
+                        d16
+                        dqf8.
+                        - \accent
+                        ~
+                        dqf32
+                        cs16.
+                        - \accent
+                        ~
+                        cs32
+                        cqs16.
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
+                            e,8.
                             \fff
                             - \tenuto
                             \>
-                            [
-                            fs16
+                            <c, cs>16
                             - \tenuto
-                            c16
+                            cs16
                             - \tenuto
                             ~
-                            c16
-                            fs16
+                            cs16
+                            e,8.
                             - \tenuto
                             <e, fs>16
                             - \tenuto
-                            ~
-                            <e, fs>8
+                            <c fs>16
+                            - \tenuto
+                            fs16
+                            - \tenuto
                             c16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
                             \<
+                            ]
                         }
-                    }
-                    {
-                        \times 32/33 {
-                            % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
-                            ef32
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            eqf16
-                            - \accent
-                            ~
-                            eqf32
-                            ef32
-                            - \accent
-                            ~
-                            ef8
-                            ~
-                            ef32
-                            eqf32
-                            - \accent
-                            ~
-                            eqf16.
-                            ef8..
-                            - \accent
-                            dqs32
-                            - \accent
-                            ~
-                            dqs16.
-                            d8.
-                            - \accent
-                            dqs16
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                        }
-                    }
-                    {
-                        % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        fs8
-                        \fff
-                        - \tenuto
-                        \>
-                        c'8
-                        - \tenuto
-                        ~
-                        c'16
-                        fs16
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        e,16
-                        - \tenuto
-                        cs8
-                        - \tenuto
-                        <c, cs>16
-                        - \tenuto
-                        c,16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
                     }
                     {
                         r4
@@ -14011,24 +13851,28 @@
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/11 {
+                        \times 12/13 {
                             % [Voice 4 measure 13] %! COMMENT_MEASURE_NUMBERS
-                            cs8
+                            fs16
                             \fff
                             - \tenuto
                             \>
                             [
-                            e,16
-                            - \tenuto
-                            <c, cs>8
-                            - \tenuto
-                            cs8.
-                            - \tenuto
-                            e,16
-                            - \tenuto
                             <e, fs>16
                             - \tenuto
+                            c8.
+                            - \tenuto
+                            fs16
+                            - \tenuto
+                            c'16
+                            - \tenuto
+                            ~
+                            c'16
+                            fs8.
+                            - \tenuto
                             <c fs>16
+                            - \tenuto
+                            e,16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -14042,32 +13886,32 @@
                         \!
                     }
                     {
-                        fs8
+                        cs16
                         \fff
                         - \tenuto
                         \>
                         [
-                        c16
-                        - \tenuto
-                        fs16
+                        <c, cs>16
                         - \tenuto
                         ~
-                        fs8
-                        <e, fs>16
+                        <c, cs>16
+                        c,16
                         - \tenuto
-                        c16
-                        - \tenuto
-                        ~
-                        c16
-                        fs8.
-                        - \tenuto
-                        c'16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <c fs>16
+                        cs8.
                         - \tenuto
                         e,16
+                        - \tenuto
+                        <c, cs>8
+                        - \tenuto
+                        cs8
+                        - \tenuto
+                        ~
+                        cs16
+                        e,16
+                        - \tenuto
+                        <e, fs>16
+                        - \tenuto
+                        <c fs>16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -14080,77 +13924,81 @@
                         \!
                     }
                     {
-                        ef32
-                        \p
+                        \times 16/17 {
+                            cs16.
+                            \p
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            [
+                            cqs16.
+                            - \accent
+                            c32
+                            ~
+                            c8
+                            cqs16.
+                            - \accent
+                            c16.
+                            ~
+                        }
+                    }
+                    {
+                        % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
+                        c16
+                        cqs16
+                        - \accent
+                        ~
+                        cqs32
+                        c16.
+                        - \accent
+                        ~
+                        c16.
+                        cqs32
+                        - \accent
+                        ~
+                        cqs16.
+                        c32
+                        - \accent
+                        ~
+                        c8.
+                        cqs16
+                        - \accent
+                        ~
+                        cqs16
+                        cs8.
+                        \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        [
-                        eqf16.
-                        ~
-                        eqf16
-                        ef16
-                        - \accent
-                        ~
-                        ef32
-                        dqs16.
-                        ~
-                        dqs16
-                        d16
-                        ~
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 32/31 {
-                            % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
-                            d32
-                            dqf8.
-                            - \accent
-                            d8
-                            - \accent
-                            dqs8..
-                            - \accent
-                            ef32
-                            - \accent
-                            ~
-                            ef16.
-                            eqf32
-                            - \accent
-                            ~
-                            eqf8
-                            ~
-                            eqf32
-                            e16.
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                        }
-                    }
-                    {
-                        \times 4/5 {
-                            % [Voice 4 measure 17] %! COMMENT_MEASURE_NUMBERS
-                            \clef "treble"
-                            \ottava #1
-                            cs''''8
-                            \mp
+                        % [Voice 4 measure 17] %! COMMENT_MEASURE_NUMBERS
+                        \clef "treble"
+                        d'''16
+                        \mp
 
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            d'''8
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        g''16
 
-                            \ottava #0
-                            g''8
+                        d'''16
 
-                            d'''8
+                        \ottava #1
+                        cs''''16
 
-                            g''8
-                            \ff
+                        d'''16
 
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
-                        }
+                        cs''''16
+
+                        \ottava #0
+                        d'''16
+
+                        g''16
+                        \ff
+
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         r2
@@ -14161,37 +14009,36 @@
                         r1
                     }
                     {
-                        \times 16/17 {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 16/15 {
                             % [Voice 4 measure 19] %! COMMENT_MEASURE_NUMBERS
                             \clef "bass"
-                            cs16
+                            fs8
                             \fff
                             - \tenuto
                             \>
                             [
-                            <c, cs>16
+                            c16
                             - \tenuto
-                            c,8.
-                            - \tenuto
-                            cs16
-                            - \tenuto
-                            e,16
+                            fs8
                             - \tenuto
                             ~
-                            e,16
-                            <c, cs>8.
-                            - \tenuto
-                            cs16
-                            - \tenuto
-                            e,16
-                            - \tenuto
+                            fs16
                             <e, fs>16
                             - \tenuto
-                            <c fs>16
+                            c16
                             - \tenuto
                             ~
-                            <c fs>16
+                            c16
                             fs16
+                            - \tenuto
+                            ~
+                            fs8
+                            c'16
+                            - \tenuto
+                            fs16
+                            - \tenuto
+                            <c fs>16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -14199,46 +14046,54 @@
                         }
                     }
                     {
-                        % [Voice 4 measure 20] %! COMMENT_MEASURE_NUMBERS
-                        eqf8
-                        \p
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ~
-                        eqf32
-                        e16.
-                        - \accent
-                        eqs8
-                        ~
-                        eqs32
-                        e16.
-                        - \accent
-                        eqf8.
-                        - \accent
-                        ef16
-                        ~
-                        \times 16/17 {
-                            ef16
-                            eqf8..
-                            - \accent
-                            ef8
-                            - \accent
-                            dqs8
-                            \mp
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 24/23 {
+                            % [Voice 4 measure 20] %! COMMENT_MEASURE_NUMBERS
+                            dqf16.
+                            \p
                             - \accent
                             - \tweak stencil #constante-hairpin
                             \<
+                            d8
+                            ~
+                            d32
+                            dqs16.
+                            - \accent
+                            ef8
+                            ~
+                            ef32
+                            eqf16.
+                            - \accent
+                            ef8
+                            ~
                         }
+                        ef16
+                        dqs16
+                        - \accent
+                        ~
+                        dqs16
+                        ef16
+                        - \accent
+                        ~
+                        ef8
+                        ~
+                        ef32
+                        eqf16.
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     {
                         % [Voice 4 measure 21] %! COMMENT_MEASURE_NUMBERS
+                        \clef "treble"
                         \ottava #1
                         d'''8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
-                        g''8
+                        cs''''8
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -14251,135 +14106,123 @@
                         \!
                     }
                     {
-                        \times 4/5 {
-                            c8.
-                            \fff
-                            - \tenuto
-                            \>
-                            [
-                            fs16
-                            - \tenuto
-                            <e, fs>16
-                            ~
-                        }
-                    }
-                    {
-                        % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
-                        <e, fs>16
-                        c8.
+                        \clef "bass"
+                        e,8
+                        \fff
                         - \tenuto
-                        fs16
-                        - \tenuto
-                        c'16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        ~
-                        <c fs>16
-                        e,16
-                        - \tenuto
-                        cs8
-                        - \tenuto
-                        ~
+                        \>
+                        [
                         cs16
+                        - \tenuto
                         <c, cs>16
-                        - \tenuto
-                        c,8
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        ~
                     }
                     {
-                        % [Voice 4 measure 23] %! COMMENT_MEASURE_NUMBERS
-                        ef16
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        dqs16.
-                        - \accent
-                        d16.
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
-                    }
-                    {
-                        r4
-                        \!
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
-                            dqf16
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            d16.
-                            - \accent
-                            dqf16
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                        }
-                    }
-                    {
-                        % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
-                        \clef "treble"
-                        d'''16
-                        \mp
-
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
-                        g''16
-
-                        b'16
-
-                        f'16
-
-                        af16
-
-                        f'16
-
-                        b'16
-
-                        f'16
-
-                        b'16
-
-                        g''16
-
-                        d'''16
-
-                        g''16
-                        \ff
-
-                        - \tweak stencil #constante-hairpin
-                        \<
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
-                            % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
-                            \clef "bass"
-                            cs8.
-                            \fff
+                        \times 16/17 {
+                            % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
+                            <c, cs>8
+                            c,16
                             - \tenuto
-                            \>
-                            e,16
+                            cs8
+                            - \tenuto
+                            e,8.
                             - \tenuto
                             <c, cs>16
                             - \tenuto
                             cs16
                             - \tenuto
                             e,16
+                            - \tenuto
+                            <e, fs>8
+                            - \tenuto
+                            <c fs>16
+                            - \tenuto
+                            fs8.
+                            \mf
+                            - \tenuto
+                            - \tweak stencil #constante-hairpin
+                            \<
+                        }
+                    }
+                    {
+                        \times 8/9 {
+                            % [Voice 4 measure 23] %! COMMENT_MEASURE_NUMBERS
+                            ef32
+                            \p
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            eqf16
+                            - \accent
+                            ~
+                            eqf8
+                            ef16
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
+                    }
+                    {
+                        r4
+                        \!
+                    }
+                    {
+                        dqs32
+                        \p
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        [
+                        d32
+                        ~
+                        d8
+                        dqs16
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    {
+                        % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
+                        \clef "treble"
+                        d'''8
+                        \mp
+
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        g''8
+
+                        b'8
+
+                        f'8
+
+                        \clef "bass"
+                        af8
+
+                        bf,8
+                        \ff
+
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    {
+                        \times 8/9 {
+                            % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
+                            c16
+                            \fff
+                            - \tenuto
+                            \>
+                            fs8
+                            - \tenuto
+                            <e, fs>8.
+                            - \tenuto
+                            c16
+                            - \tenuto
+                            fs16
+                            - \tenuto
+                            c'16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -14392,50 +14235,54 @@
                         \!
                     }
                     {
-                        <e, fs>16
+                        fs8
                         \fff
                         - \tenuto
                         \>
                         [
                         <c fs>16
                         - \tenuto
-                        fs8.
+                        e,8.
                         - \tenuto
-                        c16
+                        cs16
                         - \tenuto
-                        fs8
+                        <c, cs>16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                     }
                     {
-                        % [Voice 4 measure 26] %! COMMENT_MEASURE_NUMBERS
-                        cs16.
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        dqf32
-                        - \accent
-                        ~
-                        dqf16
-                        cs16
-                        - \accent
-                        ~
-                        cs8
-                        cqs8
-                        - \accent
-                        c8..
-                        - \accent
-                        cqs32
-                        - \accent
-                        ~
-                        cqs16.
-                        cs32
-                        ~
-                        cs8
-                        ]
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 32/31 {
+                            % [Voice 4 measure 26] %! COMMENT_MEASURE_NUMBERS
+                            ef32
+                            \p
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            eqf16
+                            ~
+                            eqf16.
+                            ef16.
+                            - \accent
+                            dqs8.
+                            - \accent
+                            d8
+                            - \accent
+                            dqf8..
+                            - \accent
+                            d32
+                            - \accent
+                            ~
+                            d16.
+                            dqs32
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
                         % [Voice 4 measure 27] %! COMMENT_MEASURE_NUMBERS
@@ -14443,49 +14290,63 @@
                         \!
                     }
                     {
-                        \times 16/17 {
-                            dqf32
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            d16
-                            - \accent
-                            ~
-                            d32
-                            dqs32
-                            ~
-                            dqs8
-                            d16.
-                            - \accent
-                            dqf32
-                            ~
-                            dqf8
-                        }
+                        ef8
+                        \p
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ~
+                        [
+                        ef32
+                        eqf16.
+                        - \accent
+                        e8
+                        ~
+                        e32
+                        eqf16.
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 8/7 {
+                        \times 16/17 {
                             % [Voice 4 measure 28] %! COMMENT_MEASURE_NUMBERS
-                            \clef "treble"
-                            \ottava #1
-                            d'''8
+                            a,16
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
-                            cs''''8
+                            bf,16
 
-                            d'''8
+                            a,16
 
-                            cs''''8
+                            bf,16
 
-                            d'''8
+                            af16
 
-                            g''8
+                            bf,16
 
-                            d'''8
+                            a,16
+
+                            e,16
+
+                            a,16
+
+                            bf,16
+
+                            a,16
+
+                            bf,16
+
+                            a,16
+
+                            e,16
+
+                            a,16
+
+                            e,16
+
+                            a,16
                             \ff
 
                             - \tweak stencil #constante-hairpin
@@ -14495,34 +14356,32 @@
                     }
                     {
                         % [Voice 4 measure 29] %! COMMENT_MEASURE_NUMBERS
-                        \ottava #0
                         r4
                         \!
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                          \clef "bass"
-                            <e, fs>8.
+                        \times 12/11 {
+                            c,16
                             \fff
                             - \tenuto
                             \>
                             [
-                            c16
-                            - \tenuto
-                            fs16
-                            - \tenuto
-                            c'16
-                            - \tenuto
-                            fs16
+                            cs8
                             - \tenuto
                             ~
-                            fs16
-                            <c fs>16
+                            cs16
+                            e,16
                             - \tenuto
-                            e,8.
+                            <c, cs>16
                             - \tenuto
                             cs16
+                            - \tenuto
+                            e,8
+                            - \tenuto
+                            <e, fs>16
+                            - \tenuto
+                            <c fs>16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -14536,25 +14395,21 @@
                         \!
                     }
                     {
-                        d16.
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
+                        g8
+                        \mp
+
+                        - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        dqf32
-                        - \accent
+                        <g f'>16
+
+                        b,16
+
                         ~
-                        dqf8
-                        ~
-                        dqf32
-                        cs16.
-                        - \accent
-                        ~
-                        cs32
-                        dqf16.
-                        \mp
-                        - \accent
+                        b,16
+                        <b, e>8.
+                        \ff
+
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
@@ -14567,28 +14422,31 @@
                         \tweak text #tuplet-number::calc-fraction-text
                         \times 12/13 {
                             % [Voice 4 measure 31] %! COMMENT_MEASURE_NUMBERS
-                            <c, cs>8
-                            \fff
-                            - \tenuto
-                            \>
+                            g16
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
                             [
-                            c,8.
-                            - \tenuto
-                            cs16
-                            - \tenuto
-                            e,16
-                            - \tenuto
-                            <c, cs>16
-                            - \tenuto
-                            cs16
-                            - \tenuto
+                            f'16
+
+                            g16
+
+                            <g f'>8
+
+                            f'16
+
+                            <b, g>8.
+
+                            e16
+
+                            <b, e>16
+
                             ~
-                            cs16
-                            e,16
-                            - \tenuto
-                            <e, fs>8
-                            \mf
-                            - \tenuto
+                            <b, e>16
+                            g16
+                            \ff
+
                             - \tweak stencil #constante-hairpin
                             \<
                             ]
@@ -14600,50 +14458,44 @@
                         \!
                     }
                     {
-                        \clef "treble"
-                        \ottava #1
-                        cs''''8
-                        \mp
+                        \times 8/9 {
+                            <g f'>8
+                            \mp
 
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
-                        [
-                        d'''8
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            b,16
 
-                        \ottava #0
-                        g''8
+                            <g f'>16
 
-                        b'8
+                            <g f'>16
+
+                            g16
+
+                            ~
+                            g16
+                            <g f'>16
+
+                            b,16
+                            ~
+                        }
+                    }
+                    {
+                        % [Voice 4 measure 33] %! COMMENT_MEASURE_NUMBERS
+                        b,8
+                        <b, e>16
+
+                        g16
+
+                        ~
+                        g16
+                        f'8.
                         \ff
 
                         - \tweak stencil #constante-hairpin
                         \<
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 4 measure 33] %! COMMENT_MEASURE_NUMBERS
-                            \clef "bass"
-                            d8
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            dqs32
-                            - \accent
-                            ~
-                            dqs16.
-                            d16
-                            - \accent
-                            ~
-                            d8
-                            dqs32
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
-                        }
+                        ]
                     }
                     {
                         r2.
@@ -14654,58 +14506,47 @@
                         r4
                     }
                     {
-                        <c fs>16
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        fs16
-                        - \tenuto
-                        c8
-                        - \tenuto
-                        fs8.
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c'8
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                    }
-                    {
-                        \times 8/9 {
-                            % [Voice 4 measure 35] %! COMMENT_MEASURE_NUMBERS
-                            f'16
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/11 {
+                            g16
                             \mp
 
                             - \tweak stencil #abjad-flared-hairpin
                             \<
-                            af16
+                            [
+                            <g f'>16
 
-                            bf,16
+                            f'16
 
-                            a,16
+                            <b, g>8
 
-                            bf,16
+                            e16
 
-                            a,16
+                            <b, e>8.
 
-                            bf,16
+                            g16
 
-                            af16
-
-                            bf,16
-                            \ff
-
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
+                            <g f'>16
+                            ~
                         }
+                    }
+                    {
+                        % [Voice 4 measure 35] %! COMMENT_MEASURE_NUMBERS
+                        <g f'>16
+                        b,8.
+
+                        <g f'>16
+
+                        <g f'>16
+
+                        g16
+
+                        <g f'>16
+                        \ff
+
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
                     }
                     {
                         r4
@@ -14720,138 +14561,134 @@
                         r4
                     }
                     {
-                        d16
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        [
-                        dqf16
-                        ~
-                        dqf16.
-                        cs32
-                        - \accent
-                        ~
-                        cs16
-                        dqf16
-                        ~
-                        dqf16.
-                        cs32
-                        - \accent
-                        ~
-                        cs16
-                        cqs8.
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            b,16
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            <b, e>16
+
+                            g8.
+
+                            f'16
+
+                            g16
+
+                            ~
+                            g16
+                            <g f'>8.
+
+                            f'16
+
+                            <b, g>16
+
+                        }
                     }
                     {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        \times 16/17 {
                             % [Voice 4 measure 38] %! COMMENT_MEASURE_NUMBERS
-                            fs16
-                            \fff
-                            - \tenuto
-                            \>
-                            <c fs>8
-                            - \tenuto
+                            e16
+
+                            <b, e>8
+
+                            g16
+
+                            <g f'>8.
+
+                            b,16
+
+                            <g f'>16
+
                             ~
-                            <c fs>16
-                            e,16
-                            - \tenuto
-                            cs8
-                            - \tenuto
-                            <c, cs>8.
-                            - \tenuto
-                            c,16
-                            - \tenuto
-                            cs16
-                            - \tenuto
-                            e,16
-                            - \tenuto
-                            <c, cs>8
-                            - \tenuto
+                            <g f'>16
+                            <g f'>8.
+
+                            g16
+
+                            <g f'>16
+
+                            b,16
+
+                            <b, e>16
+                            ~
                         }
                     }
                     {
                         % [Voice 4 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        cs16
-                        - \tenuto
-                        e,8.
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        ~
-                        <c fs>16
-                        fs16
-                        - \tenuto
-                        ~
-                        fs8
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        ~
-                        c16
-                        fs16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                    }
-                    {
-                        % [Voice 4 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        a,8
-                        \mp
+                        <b, e>16
+                        g16
 
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
-                        e,8
+                        f'8
+
+                        ~
+                        f'16
+                        g16
+
+                        <g f'>8
+
+                        f'8.
+
+                        <b, g>16
+
+                        e16
+
+                        <b, e>16
+
+                        g8
                         \ff
 
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
+                    }
+                    {
+                        \times 8/9 {
+                            % [Voice 4 measure 40] %! COMMENT_MEASURE_NUMBERS
+                            e16.
+                            \p
+                            ~
+                            e16
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            eqs32
+                            - \accent
+                            ~
+                            eqs16
+                            e32
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            ]
+                        }
                     }
                     {
                         r2
                         \!
                     }
                     {
-                        \times 8/9 {
-                            c8
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            [
-                            cqs16
-                            ~
-                            cqs16.
-                            ~
-                        }
+                        e,8
+                        \mp
+
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        [
+                        a,8
+
                     }
                     {
                         % [Voice 4 measure 41] %! COMMENT_MEASURE_NUMBERS
-                        cqs16
-                        c16
-                        - \accent
-                        ~
-                        c16
-                        cqs8.
-                        - \accent
-                        c16.
-                        - \accent
-                        cqs32
-                        \mp
-                        - \accent
+                        e,8
+
+                        c,8
+
+                        e,8
+
+                        a,8
+                        \ff
+
                         - \tweak stencil #constante-hairpin
                         \<
                         ]
@@ -14866,45 +14703,138 @@
                     }
                     {
                         \tweak text #tuplet-number::calc-fraction-text
-                        \times 12/13 {
-                            c'8.
+                        \times 12/11 {
+                            fs16
                             \fff
                             - \tenuto
                             \>
                             [
+                            c8
+                            - \tenuto
+                            ~
+                            c16
                             fs16
                             - \tenuto
-                            <c fs>16
+                            <e, fs>8
                             - \tenuto
-                            ~
-                            <c fs>16
-                            e,8.
+                            c8.
                             - \tenuto
-                            cs16
+                            fs16
                             - \tenuto
-                            <c, cs>16
-                            - \tenuto
-                            c,16
-                            - \tenuto
-                            cs16
-                            ~
                         }
                     }
                     {
-                        \times 8/9 {
-                            % [Voice 4 measure 43] %! COMMENT_MEASURE_NUMBERS
-                            cs16
+                        % [Voice 4 measure 43] %! COMMENT_MEASURE_NUMBERS
+                        c'16
+                        - \tenuto
+                        fs16
+                        - \tenuto
+                        <c fs>8
+                        - \tenuto
+                        e,16
+                        - \tenuto
+                        cs8.
+                        \mf
+                        - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
+                    }
+                    {
+                        r2
+                        \!
+                    }
+                    {
+                        \times 4/5 {
+                            e,16
+                            \mp
+
+                            - \tweak stencil #abjad-flared-hairpin
+                            \<
+                            [
+                            c,16
+
+                            e,16
+
+                            a,16
+
+                            e,16
+                            \ff
+
+                            - \tweak stencil #constante-hairpin
+                            \<
+                        }
+                    }
+                    {
+                        % [Voice 4 measure 44] %! COMMENT_MEASURE_NUMBERS
+                        eqf8
+                        \p
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ~
+                        eqf32
+                        ef16.
+                        - \accent
+                        ~
+                        ef32
+                        eqf8..
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
+                    }
+                    {
+                        r2
+                        \!
+                    }
+                    {
+                        % [Voice 4 measure 45] %! COMMENT_MEASURE_NUMBERS
+                        r2
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 16/15 {
+                            ef8
+                            \p
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                            [
+                            dqs8.
+                            - \accent
+                            ef16.
+                            - \accent
+                            dqs16
+                            \mp
+                            - \accent
+                            - \tweak stencil #constante-hairpin
+                            \<
+                        }
+                    }
+                    {
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \times 12/13 {
+                            % [Voice 4 measure 46] %! COMMENT_MEASURE_NUMBERS
+                            <c, cs>16
+                            \fff
+                            - \tenuto
+                            \>
+                            c,8
+                            - \tenuto
+                            cs8.
+                            - \tenuto
                             e,16
                             - \tenuto
                             <c, cs>16
                             - \tenuto
-                            ~
-                            <c, cs>8
                             cs16
                             - \tenuto
                             e,8
                             - \tenuto
                             <e, fs>16
+                            - \tenuto
+                            <c fs>16
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin
@@ -14917,124 +14847,30 @@
                         \!
                     }
                     {
-                        a,8
-                        \mp
-
-                        - \tweak stencil #abjad-flared-hairpin
-                        \<
-                        [
-                        bf,8
-                        \ff
-
-                        - \tweak stencil #constante-hairpin
-                        \<
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
-                            % [Voice 4 measure 44] %! COMMENT_MEASURE_NUMBERS
-                            c8
-                            \p
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            cqs32
-                            - \accent
-                            ~
-                            cqs16
-                            cs16.
-                            ~
-                            cs16
-                            cqs16.
-                            \mp
-                            - \accent
-                            - \tweak stencil #constante-hairpin
-                            \<
-                            ]
-                        }
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        % [Voice 4 measure 45] %! COMMENT_MEASURE_NUMBERS
-                        r2
-                    }
-                    {
-                        c8.
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        [
-                        cqs16
-                        - \accent
-                        ~
-                        cqs16
-                        c8.
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                    }
-                    {
-                        % [Voice 4 measure 46] %! COMMENT_MEASURE_NUMBERS
-                        <c fs>8
-                        \fff
-                        - \tenuto
-                        \>
-                        fs16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        ~
-                        <e, fs>16
-                        c16
-                        - \tenuto
-                        fs8.
-                        - \tenuto
-                        c'16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
-                    }
-                    {
-                        r2
-                        \!
-                    }
-                    {
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \times 16/15 {
+                        \times 16/17 {
                             % [Voice 4 measure 47] %! COMMENT_MEASURE_NUMBERS
                             fs8
                             \fff
                             - \tenuto
                             \>
                             [
-                            <c fs>8.
+                            c16
                             - \tenuto
-                            e,16
+                            fs8
                             - \tenuto
-                            cs16
+                            <e, fs>8.
                             - \tenuto
-                            <c, cs>16
+                            c16
                             - \tenuto
-                            c,8
+                            fs16
                             - \tenuto
-                            cs16
+                            c'16
                             - \tenuto
-                            e,8
+                            fs8
                             - \tenuto
-                            ~
-                            e,16
-                            <c, cs>16
+                            <c fs>16
+                            - \tenuto
+                            e,8.
                             \mf
                             - \tenuto
                             - \tweak stencil #constante-hairpin

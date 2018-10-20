@@ -30,7 +30,7 @@ bowtab = {
 	%\accidentalStyle dodecaphonic
     indent = #5
 	%ragged-last = ##t
-    %ragged-right = ##t
+    ragged-right = ##t
     %left-margin = #15
 	\context {
         \name TimeSignatureContext
@@ -94,7 +94,7 @@ bowtab = {
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		\override TextSpanner.Y-offset = 1
-		proportionalNotationDuration = #(ly:make-moment 1 50)
+		proportionalNotationDuration = #(ly:make-moment 1 37)
         autoBeaming = ##f
         tupletFullLength = ##t
     }
@@ -130,7 +130,7 @@ bowtab = {
 		\override Tie.stencil = ##f
         \override TupletBracket.stencil = ##f
         \override TupletNumber.stencil = ##f
-		\RemoveEmptyStaves
+		%\RemoveEmptyStaves
     }
 
 	\context {
@@ -154,7 +154,7 @@ bowtab = {
         \override TimeSignature.stencil = ##f
 		\override Tie.stencil = ##f
         \override TupletBracket.positions = #'(3 . 3)
-		\RemoveEmptyStaves
+		%\RemoveEmptyStaves
     }
 
     \context {

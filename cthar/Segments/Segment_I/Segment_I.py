@@ -30,6 +30,9 @@ bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
 
 #Define Pitch Material
 
+def reduceMod7(rw):
+    return [(x % 8) for x in rw]
+
 def reduceMod9(rw):
     return [(x % 10) for x in rw]
 
@@ -91,6 +94,19 @@ for i in range(1, 1000):
 cello_random_walk_three = [abs(x) for x in cello_random_walk_three]
 cello_chord_three = [-24, -20, -15, -14, -4, 5, 11, 19, 26, 37, 39, 42, 39, 37, 26, 19, 11, 5, -4, -14, -15, -20, ]
 cello_notes_three = [cello_chord_three[x] for x in reduceMod21(cello_random_walk_three)]
+
+seed(4)
+cello_random_walk_four = []
+cello_random_walk_four.append(-1 if random() < 0.5 else 1)
+for i in range(1, 2000):
+    movement = -1 if random() < 0.5 else 1
+    value = cello_random_walk_four[i-1] + movement
+    cello_random_walk_four.append(value)
+cello_random_walk_four = [abs(x) for x in cello_random_walk_four]
+cello_chord_four = [-17, -8, -13, -5, 5, -5, -13, -8, ]
+map_2 = [2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, ]
+cello_notes_four_walk = [cello_chord_four[x] for x in reduceMod7(cello_random_walk_four)]
+cello_notes_four = grouper(cello_notes_four_walk, map_2)
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
@@ -194,6 +210,12 @@ cellomusicmaker_two = MusicMaker(
 cellomusicmaker_three = MusicMaker(
     rmaker=rmaker_three,
     pitches=cello_notes_three,
+    continuous=True,
+    attachment_handler=attachment_handler_three,
+)
+cellomusicmaker_four = MusicMaker(
+    rmaker=rmaker_two,
+    pitches=cello_notes_four,
     continuous=True,
     attachment_handler=attachment_handler_three,
 )
@@ -319,26 +341,26 @@ voice_2_timespan_list = abjad.TimespanList([
         [(76, 4), (78, 4), cellomusicmaker_three],
         [(78, 4), (81, 4), cellomusicmaker_two],
         [(82, 4), (84, 4), cellomusicmaker_two],
-        [(84, 4), (87, 4), cellomusicmaker_one],
-        [(88, 4), (91, 4), cellomusicmaker_one],
-        [(91, 4), (93, 4), cellomusicmaker_two],
+        [(84, 4), (87, 4), cellomusicmaker_four],#
+        [(88, 4), (91, 4), cellomusicmaker_four],
+        [(91, 4), (93, 4), cellomusicmaker_one],
         [(94, 4), (99, 4), cellomusicmaker_three],
-        [(100, 4), (103, 4), cellomusicmaker_two],
-        [(103, 4), (105, 4), cellomusicmaker_two],
-        [(106, 4), (110, 4), cellomusicmaker_one],
-        [(110, 4), (111, 4), cellomusicmaker_one],
-        [(112, 4), (114, 4), cellomusicmaker_two],
-        [(114, 4), (119, 4), cellomusicmaker_two],
-        [(122, 4), (126, 4), cellomusicmaker_two],
-        [(128, 4), (131, 4), cellomusicmaker_two],
-        [(132, 4), (134, 4), cellomusicmaker_one],
-        [(139, 4), (140, 4), cellomusicmaker_three],
-        [(144, 4), (146, 4), cellomusicmaker_one],
-        [(146, 4), (149, 4), cellomusicmaker_one],
-        [(150, 4), (153, 4), cellomusicmaker_one],
+        [(100, 4), (103, 4), cellomusicmaker_one],
+        [(103, 4), (105, 4), cellomusicmaker_one],
+        [(106, 4), (110, 4), cellomusicmaker_four],
+        [(110, 4), (111, 4), cellomusicmaker_four],
+        [(112, 4), (114, 4), cellomusicmaker_three],
+        [(114, 4), (119, 4), cellomusicmaker_three],
+        [(122, 4), (126, 4), cellomusicmaker_one],
+        [(128, 4), (131, 4), cellomusicmaker_three],
+        [(132, 4), (134, 4), cellomusicmaker_four],
+        [(139, 4), (140, 4), cellomusicmaker_four],
+        [(144, 4), (146, 4), cellomusicmaker_four],
+        [(146, 4), (149, 4), cellomusicmaker_four],
+        [(150, 4), (153, 4), cellomusicmaker_four],#
         [(157, 4), (158, 4), cellomusicmaker_two],
         [(158, 4), (162, 4), cellomusicmaker_three],
-        [(165, 4), (167, 4), cellomusicmaker_one],
+        [(165, 4), (167, 4), cellomusicmaker_two],
         [(167, 4), (169, 4), cellomusicmaker_two],
         [(174, 4), (176, 4), cellomusicmaker_three],
         [(176, 4), (177, 4), cellomusicmaker_one],
@@ -455,18 +477,18 @@ voice_4_timespan_list = abjad.TimespanList([
         [(104, 4), (106, 4), cellomusicmaker_one],
         [(106, 4), (110, 4), cellomusicmaker_three],
         [(111, 4), (114, 4), cellomusicmaker_two],
-        [(115, 4), (117, 4), cellomusicmaker_one],
-        [(119, 4), (122, 4), cellomusicmaker_two],
-        [(125, 4), (127, 4), cellomusicmaker_three],
-        [(127, 4), (129, 4), cellomusicmaker_one],
-        [(133, 4), (136, 4), cellomusicmaker_two],
-        [(136, 4), (138, 4), cellomusicmaker_three],
-        [(143, 4), (146, 4), cellomusicmaker_one],
-        [(146, 4), (150, 4), cellomusicmaker_two],
-        [(150, 4), (154, 4), cellomusicmaker_two],
-        [(154, 4), (155, 4), cellomusicmaker_three],
-        [(157, 4), (158, 4), cellomusicmaker_one],
-        [(158, 4), (160, 4), cellomusicmaker_one],
+        [(115, 4), (117, 4), cellomusicmaker_four],#
+        [(119, 4), (122, 4), cellomusicmaker_four],
+        [(125, 4), (127, 4), cellomusicmaker_four],
+        [(127, 4), (129, 4), cellomusicmaker_four],
+        [(133, 4), (136, 4), cellomusicmaker_four],
+        [(136, 4), (138, 4), cellomusicmaker_four],
+        [(143, 4), (146, 4), cellomusicmaker_four],
+        [(146, 4), (150, 4), cellomusicmaker_four],
+        [(150, 4), (154, 4), cellomusicmaker_four],#
+        [(154, 4), (155, 4), cellomusicmaker_one],
+        [(157, 4), (158, 4), cellomusicmaker_three],
+        [(158, 4), (160, 4), cellomusicmaker_three],
         [(164, 4), (167, 4), cellomusicmaker_two],
         [(167, 4), (169, 4), cellomusicmaker_two],
         [(171, 4), (172, 4), cellomusicmaker_three],
