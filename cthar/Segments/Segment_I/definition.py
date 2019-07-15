@@ -3,11 +3,14 @@ import itertools
 import os
 import pathlib
 import time
+import datetime
 import abjadext.rmakers
-from MusicMaker import MusicMaker
-from AttachmentHandler import AttachmentHandler
+from cthar.tools.MusicMaker import MusicMaker
+from cthar.tools.AttachmentHandler import AttachmentHandler
 from random import random
 from random import seed
+
+time_1 = time.time()
 
 print('Interpreting file ...')
 
@@ -626,7 +629,7 @@ def make_container(music_maker, durations):
     # phrase_last_leaf = abjad.select(container).leaves()[-1]
     # abjad.attach(start_indicator, phrase_first_leaf)
     # abjad.attach(stop_indicator, phrase_last_leaf)
-    return container
+    return container[:]
 
 # Loop over the timespan list dictionaries, spitting out pairs of voice
 # names and per-voice timespan lists. Group timespans into phrases, with
@@ -680,46 +683,12 @@ for voice in abjad.iterate(score['Staff Group 2']).components(abjad.Voice):
         time_signature = time_signatures[i]
         abjad.mutate(shard).rewrite_meter(time_signature)
 
-print('Beaming runs ...')
-
+print("Beaming runs ...")
 for voice in abjad.select(score).components(abjad.Voice):
     for run in abjad.select(voice).runs():
-        if 1 < len(run):
-            # use a beam_specifier to remove beam indicators from run
-            specifier = abjadext.rmakers.BeamSpecifier(
-                beam_each_division=True,
-                )
-            specifier(abjad.select(run))
-            # then attach new indicators at the 0 and -1 of run
-            abjad.attach(abjad.StartBeam(), run[0])
-            abjad.attach(abjad.StopBeam(), run[-1])
-            # for leaf in run:
-            #     # continue if leaf can't be beamed
-            #     if abjad.Duration(1, 4) <= leaf.written_duration:
-            #         continue
-            #     previous_leaf = abjad.inspect(leaf).leaf(-1)
-            #     next_leaf = abjad.inspect(leaf).leaf(1)
-            #     # if next leaf is quarter note (or greater) ...
-            #     if (isinstance(next_leaf, (abjad.Chord, abjad.Note)) and
-            #         abjad.Duration(1, 4) <= next_leaf.written_duration):
-            #         left = previous_leaf.written_duration.flag_count
-            #         right = leaf.written_duration.flag_count # right-pointing nib
-            #         beam_count = abjad.BeamCount(
-            #             left=left,
-            #             right=right,
-            #             )
-            #         abjad.attach(beam_count, leaf)
-            #         continue
-            #     # if previous leaf is quarter note (or greater) ...
-            #     if (isinstance(previous_leaf, (abjad.Chord, abjad.Note)) and
-            #         abjad.Duration(1, 4) <= previous_leaf.written_duration):
-            #         left = leaf.written_duration.flag_count # left-pointing nib
-            #         right = next_leaf.written_duration.flag_count
-            #         beam_count = abjad.BeamCount(
-            #             left=left,
-            #             right=right,
-            #             )
-            #         abjad.attach(beam_count, leaf)
+        specifier = abjadext.rmakers.BeamSpecifier(beam_each_division=False)
+        specifier(run)
+    abjad.beam(voice[:], beam_lone_notes=False, beam_rests=False)
 
 print('Stopping Hairpins ...')
 for staff in abjad.iterate(score['Staff Group 1']).components(abjad.Staff):
@@ -943,37 +912,84 @@ for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
 
 # Make a lilypond file and show it:
 
+abjad_stylesheet_path = os.path.join(
+    os.environ.get("HOME"), "abjad/docs/source/_stylesheets/abjad.ily"
+)
+current_directory = pathlib.Path(__file__).parent
+stylesheet_path = (current_directory / ".." / ".." / "Build").resolve()
 score_file = abjad.LilyPondFile.new(
-    score,
-    includes=['first_stylesheet.ily', '/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily'],
-    )
+    score, includes=[abjad_stylesheet_path, f"{stylesheet_path}/first_stylesheet.ily"]
+)
 
 abjad.SegmentMaker.comment_measure_numbers(score)
+time_2 = time.time()
 ###################
-
-directory = '/Users/evansdsg2/Scores/cthar/cthar/Segments/Segment_I'
-pdf_path = f'{directory}/Segment_I.pdf'
-path = pathlib.Path('Segment_I.pdf')
+directory = pathlib.Path(__file__).parent
+print("directory")
+print(directory)
+pdf_path = f"{directory}/illustration.pdf"
+print("path")
+print(pdf_path)
+path = pathlib.Path("illustration.pdf")
 if path.exists():
-    print(f'Removing {pdf_path} ...')
+    print(f"Removing {pdf_path} ...")
     path.unlink()
-time_1 = time.time()
-print(f'Persisting {pdf_path} ...')
-result = abjad.persist(score_file).as_pdf(pdf_path)
+time_3 = time.time()
+print(f"Persisting {pdf_path} ...")
+result = abjad.persist(score_file).as_pdf(pdf_path)  # or ly
 print(result[0])
 print(result[1])
 print(result[2])
 success = result[3]
 if success is False:
-        print('LilyPond failed!')
-time_2 = time.time()
-total_time = time_2 - time_1
-print(f'Total time: {total_time} seconds')
+    print("LilyPond failed!")
+time_4 = time.time()
+abjad_time = time_4 - time_3
+print(f"Total time: {abjad_time} seconds")
 if path.exists():
-    print(f'Opening {pdf_path} ...')
-    os.system(f'open {pdf_path}')
+    print(f"Opening {pdf_path} ...")
+    os.system(f"open {pdf_path}")
+score_lines = open(f"{directory}/illustration.ly").readlines()
+build_path = (directory / ".." / ".." / "Build/Score").resolve()
+open(f"{build_path}/Segment_I.ly", "w").writelines(score_lines[15:-1])
 
-# for staff in abjad.iterate(score['Staff Group']).components(abjad.Staff):
-#     abjad.show(staff)
-# abjad.show(score)
-# abjad.play(score)
+segment_time = time_2 - time_1
+open(f"{directory}/.optimization", "a").writelines(
+    f"{datetime.datetime.now()}\nSegment runtime: {int(round(segment_time))} seconds \nAbjad/Lilypond runtime: {int(round(abjad_time))} seconds \n\n"
+)
+
+
+# for staff in abjad.iterate(score['Staff 1']).components(abjad.Staff):
+#     signatures = abjad.select(score['Global Context']).components(abjad.Staff)
+#     signature_copy = abjad.mutate(signatures).copy()
+#     staff_copy = abjad.mutate(staff).copy()
+#     part = abjad.Score()
+#     part.insert(0, staff)
+#     part.insert(0, signature_copy)
+#     part_file = abjad.LilyPondFile.new(
+#         part,
+#         includes=['first_stylesheet.ily', '/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily'],
+#         )
+#     directory = '/Users/evansdsg2/Scores/guerrero/Build/parts/1.)sopranino'
+#     pdf_path = f'{directory}/Section_B.pdf'
+#     path = pathlib.Path('Section_B.pdf')
+#     if path.exists():
+#         print(f'Removing {pdf_path} ...')
+#         path.unlink()
+#     time_1 = time.time()
+#     print(f'Persisting {pdf_path} ...')
+#     result = abjad.persist(part_file).as_pdf(pdf_path)
+#     print(result[0])
+#     print(result[1])
+#     print(result[2])
+#     success = result[3]
+#     if success is False:
+#         print('LilyPond failed!')
+#     time_2 = time.time()
+#     total_time = time_2 - time_1
+#     print(f'Total time: {total_time} seconds')
+#     if path.exists():
+#         print(f'Opening {pdf_path} ...')
+#         os.system(f'open {pdf_path}')
+#     part_lines = open('/Users/evansdsg2/Scores/guerrero/Build/parts/1.)sopranino/Section_B.ly').readlines()
+#     open('/Users/evansdsg2/Scores/guerrero/Build/parts/1.)sopranino/Section_B.ly', 'w').writelines(part_lines[15:-1])

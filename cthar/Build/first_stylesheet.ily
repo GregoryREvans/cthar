@@ -2,7 +2,7 @@
 
 \version "2.19.82"
 \language "english"
-#(set-default-paper-size "letterportrait")
+#(set-default-paper-size "letterlandscape")
 #(set-global-staff-size 10)
 \include "ekmel.ily"
 \ekmelicStyle evans
@@ -78,23 +78,27 @@ bowtab = {
         \remove Bar_number_engraver
 		\remove Mark_engraver
         \accepts TimeSignatureContext
-		\accepts LipStaff
+		%{ \accepts LipStaff %}
 		\override BarLine.bar-extent = #'(-2 . 2)
         \override Beam.breakable = ##t
 		\override Beam.concaveness = #10000
+		\override Beam.beam-thickness = #0.8
+        \override Beam.length-fraction = #1.5
+        \override DynamicText.font-size = #-2
 		\override Glissando.breakable = ##t
 		\override MetronomeMark.font-size = 5
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 6) (padding . 2))
+		\override Stem.thickness = #0.75
         \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #2
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		\override TextSpanner.Y-offset = 1
-		proportionalNotationDuration = #(ly:make-moment 1 37)
+		proportionalNotationDuration = #(ly:make-moment 1 50)
         autoBeaming = ##f
         tupletFullLength = ##t
     }

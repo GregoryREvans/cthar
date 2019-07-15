@@ -1,21 +1,22 @@
 \documentclass[10pt]{article}
 \usepackage{fontspec}
-\setmainfont[Ligatures=TeX]{Didot}
-\usepackage[utf8]{inputenc}
-\usepackage[papersize={17in, 11in}]{geometry}
-\usepackage[absolute]{textpos}
-\TPGrid[0.5in, 0.25in]{23}{24}
-\usepackage{palatino}
+\usepackage[T1]{fontenc}
+\usepackage[papersize={11in, 8.5in}, margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xltxtra,fontspec,xunicode}
+\usetikzlibrary{calc}
+\defaultfontfeatures{Scale=MatchLowercase}
+\newlength{\drop}
+\pagenumbering{gobble}
 \parindent=0pt
-\parskip=12pt
-\usepackage{nopageno}
+\setmainfont{Didot}
+\usepackage{microtype}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage{lilyglyphs}
 \usepackage{amsmath}
 \begin{document}
 
-\vspace*{0.5\baselineskip}
 
 \begin{center}
 \huge FOREWORD
@@ -26,7 +27,7 @@ Cthar is an Aramaic word, pronounced ''seth-ar" meaning ''to hide" or ''to disas
 \phantom{text} \hfill (G.R.E.)
   \end{center}
   
-\vspace*{3\baselineskip}
+\vspace*{0.5\baselineskip}
 
 \begin{center}
 \huge PERFORMANCE NOTES
@@ -44,13 +45,13 @@ Cthar is an Aramaic word, pronounced ''seth-ar" meaning ''to hide" or ''to disas
 Accidentals apply only to the pitch which they immediately precede.
 \end{center}
 
-\pmb{Bow Position Staff} \includegraphics[height=0.025\textheight]{bow_position_tablature.eps}: The middle staff for each instrument notates the horizontal contact point at which the bow touches the string. These positions are written as fractions where \( \frac{0}{1} \) represents $au \ talon$ and \( \frac{1}{1} \) represents $punta \ d'arco$. Dashed lines denote ricochet, wavy lines denote a gentle vertical motion along the length of the string.
+\pmb{Bow Position Staff} \includegraphics[height=0.025\textheight]{bow_position_tablature.eps}: The upper staff for each instrument notates the horizontal contact point at which the bow touches the string. These positions are written as fractions where \( \frac{0}{1} \) represents $au \ talon$ and \( \frac{1}{1} \) represents $punta \ d'arco$.
 
 \pmb{String Positions}: "ord." stands for ordinario, "st." stands for sul tasto, "sp." stands for sul ponticello, and "msp." stands for molto sul ponticello. An attempt should be made to smoothly transition from one to the next as indicated by the dashed line connecting the two positions.
 
 \pmb{Dynamics}: The dynamics indicated should be considered "effort dynamics." As such, the combination of bow speed and effort will often make the cello produce both "flautando" and "scratch" tones. These are the effects desired.
 
-\vspace*{6\baselineskip}
+\vspace*{1.7\baselineskip}
 
 \begin{center}
 c.6'20''

@@ -1,5 +1,5 @@
 import abjad
-from AttachmentHandler import AttachmentHandler
+from .AttachmentHandler import AttachmentHandler
 
 class MusicMaker:
     def __init__(

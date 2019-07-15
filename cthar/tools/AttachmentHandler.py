@@ -30,14 +30,14 @@ class AttachmentHandler:
             if len(run) > 1:
                 leaves = abjad.select(run).leaves()
                 abjad.attach(abjad.Dynamic(self.starting_dynamic), leaves[0])
-                abjad.attach(abjad.HairpinIndicator(self.hairpin_indicator), leaves[0])
+                abjad.attach(abjad.StartHairpin(self.hairpin_indicator), leaves[0])
                 abjad.attach(abjad.Dynamic(self.ending_dynamic), leaves[-1])
-                abjad.attach(abjad.HairpinIndicator('--'), leaves[-1])
+                abjad.attach(abjad.StartHairpin('--'), leaves[-1])
             else:
                 leaves = abjad.select(run).leaves()
                 dynamic = next(self._cyc_dynamics)
                 abjad.attach(abjad.Dynamic(dynamic), leaves[0])
-                abjad.attach(abjad.HairpinIndicator('--'), leaves[0])
+                abjad.attach(abjad.StartHairpin('--'), leaves[0])
         for tie in ties:
             if len(tie) == 1:
                 abjad.attach(abjad.Articulation(self.articulation), tie[0])
