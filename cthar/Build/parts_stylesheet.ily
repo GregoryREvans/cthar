@@ -2,7 +2,7 @@
 
 \version "2.19.83"
 \language "english"
-#(set-default-paper-size "letterlandscape")
+#(set-default-paper-size "legalportrait")
 #(set-global-staff-size 10)
 \include "ekmel.ily"
 \ekmelicStyle evans
