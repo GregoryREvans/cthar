@@ -1077,13 +1077,12 @@ for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
 
 # Make a lilypond file and show it:
 
-abjad_stylesheet_path = os.path.join(
-    os.environ.get("HOME"), "abjad/docs/source/_stylesheets/abjad.ily"
-)
-current_directory = pathlib.Path(__file__).parent
-stylesheet_path = (current_directory / ".." / ".." / "Build").resolve()
 score_file = abjad.LilyPondFile.new(
-    score, includes=[abjad_stylesheet_path, f"{stylesheet_path}/first_stylesheet.ily"]
+    score,
+    includes=[
+        "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+        "/Users/evansdsg2/Scores/cthar/cthar/Build/first_stylesheet.ily",
+    ],
 )
 
 abjad.SegmentMaker.comment_measure_numbers(score)
@@ -1165,5 +1164,5 @@ segment_time = time_2 - time_1
 # time_6 = time.time()
 # parts_time = time_6 - time_5
 open(f"{directory}/.optimization", "a").writelines(
-    f"{datetime.datetime.now()}\nSegment runtime: {int(round(segment_time))} seconds \nAbjad/Lilypond runtime: {int(round(abjad_time))} seconds \n\n" #\nParts extract time: {int(round(parts_time))} seconds \n\n"
+    f"{datetime.datetime.now()}\nSegment runtime: {int(round(segment_time))} seconds \nAbjad/Lilypond runtime: {int(round(abjad_time))} seconds \n\n"  # \nParts extract time: {int(round(parts_time))} seconds \n\n"
 )
