@@ -7,6 +7,7 @@ import datetime
 import abjadext.rmakers
 from cthar.tools.MusicMaker import MusicMaker
 from cthar.tools.AttachmentHandler import AttachmentHandler
+from evans.AttachmentHandlers.ClefHandler import ClefHandler
 from random import random
 from random import seed
 
@@ -201,7 +202,7 @@ cello_chord_two = [
     0,
 ]
 cello_notes_two_walk = [cello_chord_two[x] for x in reduceMod17(cello_random_walk_two)]
-map_1 = [1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1]
+map_1 = [1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1,]
 cello_notes_two = grouper(cello_notes_two_walk, map_1)
 
 seed(3)
@@ -247,7 +248,7 @@ for i in range(1, 2000):
     cello_random_walk_four.append(value)
 cello_random_walk_four = [abs(x) for x in cello_random_walk_four]
 cello_chord_four = [-17, -8, -13, -5, 5, -5, -13, -8]
-map_2 = [2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1]
+map_2 = [2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, ]
 cello_notes_four_walk = [
     cello_chord_four[x] for x in reduceMod7(cello_random_walk_four)
 ]
@@ -256,7 +257,7 @@ cello_notes_four = grouper(cello_notes_four_walk, map_2)
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
 rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[7, 4, 6, 3, 5, 3, 5, 3, 6, 4], denominator=32),
+    talea=abjadext.rmakers.Talea(counts=[7, 2, 4, 6, 3, 5, 3, 5, 3, 6, 4], denominator=16),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
@@ -271,7 +272,7 @@ rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
 )
 
 rmaker_two = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[1, 1, 1, 2, 1, 3, 1, 2, 3], denominator=16),
+    talea=abjadext.rmakers.Talea(counts=[1, 1, 1, 1, 2, 1, 3, 1, 2, 3], denominator=8),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
@@ -286,7 +287,7 @@ rmaker_two = abjadext.rmakers.TaleaRhythmMaker(
 )
 
 rmaker_three = abjadext.rmakers.EvenDivisionRhythmMaker(
-    denominators=[8, 8, 16, 8, 8, 16],
+    denominators=[8, 8, 16, 8, 16, 8],
     extra_counts_per_division=[0, 1, 0, 0, -1, 0, 1, -1],
     # burnish_specifier=abjadext.rmakers.BurnishSpecifier(
     #     left_classes=[abjad.Rest],
@@ -716,7 +717,8 @@ score = abjad.Score(
             ],
             name="Staff Group 2",
         ),
-    ]
+    ],
+    name="Cthar Score",
 )
 
 # Teach each of the staves how to draw analysis brackets
@@ -841,6 +843,13 @@ for staff in abjad.iterate(score["Staff Group 2"]).components(abjad.Staff):
             pass
 
 # attach instruments and clefs
+
+literal = abjad.LilyPondLiteral(r"\tweak Dots.transparent ##t")
+for rest in abjad.select(score["Voice 5"]).components(abjad.Rest):
+    abjad.attach(literal, rest)
+
+for rest in abjad.select(score["Voice 6"]).components(abjad.Rest):
+    abjad.attach(literal, rest)
 
 print("Adding attachments ...")
 bar_line = abjad.BarLine("|.")
@@ -1020,14 +1029,20 @@ for staff in abjad.iterate(score["Staff Group 1"]).components(abjad.Staff):
     abjad.attach(next(instruments1), leaf1)
     abjad.attach(next(abbreviations1), leaf1)
     abjad.attach(next(names1), leaf1)
-    abjad.attach(next(clefs1), leaf1)
 
 for staff in abjad.iterate(score["Staff Group 2"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     abjad.attach(next(instruments2), leaf1)
     abjad.attach(next(abbreviations2), leaf1)
     abjad.attach(next(names2), leaf1)
-    abjad.attach(next(clefs2), leaf1)
+
+cello_clef_handler = ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
+abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 1"]).leaves()[0])
+cello_clef_handler(abjad.select(score["Voice 2"]).components(abjad.Voice))
+abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 3"]).leaves()[0])
+cello_clef_handler(abjad.select(score["Voice 4"]).components(abjad.Voice))
+abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 5"]).leaves()[0])
+abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 6"]).leaves()[0])
 
 for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff)[0]:
     leaf1 = abjad.select(staff).leaves()[0]
@@ -1115,54 +1130,57 @@ if path.exists():
     os.system(f"open {pdf_path}")
 score_lines = open(f"{directory}/illustration.ly").readlines()
 build_path = (directory / ".." / ".." / "Build/score").resolve()
-open(f"{build_path}/Segment_I.ly", "w").writelines(score_lines[15:-1])
+open(f"{build_path}/Segment_II.ly", "w").writelines(score_lines[15:-1])
 
 segment_time = time_2 - time_1
 
-# time_5 = time.time()
-# ###make parts###
-# for count, staff_group in enumerate(abjad.iterate(score).components(abjad.StaffGroup)):
-#     signatures = abjad.select(score["Global Context"]).components(abjad.Staff)
-#     signature_copy = abjad.mutate(signatures).copy()
-#     copied_group = abjad.mutate(staff_group).copy()
-#     if count == 0:
-#         for voice in abjad.select(score["Voice 1"]).components(abjad.Voice):
-#             pos_list_1 = ["st.", "ord.", "sp.", "msp.", "ord."]
-#             _apply_position_and_span(staff=voice, poses=pos_list_1)
-#     if count == 1:
-#         for voice in abjad.select(score["Voice 3"]).components(abjad.Voice):
-#             pos_list_2 = ["sp.", "msp.", "ord.", "st.", "ord."]
-#             _apply_position_and_span(staff=voice, poses=pos_list_2)
-#     part = abjad.Score()
-#     part.insert(0, copied_group)
-#     part.insert(0, signature_copy)
-#     part_file = abjad.LilyPondFile.new(
-#         part,
-#         includes=[abjad_stylesheet_path, f"{stylesheet_path}/parts_stylesheet.ily"],
-#     )
-#     pdf_path = f"{directory}/part_illustration{count + 1}.pdf"
-#     path = pathlib.Path(f"part_illustration{count + 1}.pdf")
-#     if path.exists():
-#         print(f"Removing {pdf_path} ...")
-#         path.unlink()
-#     print(f"Persisting {pdf_path} ...")
-#     result = abjad.persist(part_file).as_pdf(pdf_path)
-#     print(result[0])
-#     print(result[1])
-#     print(result[2])
-#     success = result[3]
-#     if success is False:
-#         print("LilyPond failed!")
-#     if path.exists():
-#         print(f"Opening {pdf_path} ...")
-#         os.system(f"open {pdf_path}")
-#     build_path = (directory / ".." / ".." / f"Build/parts/cello_{count + 1}").resolve()
-#     part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
-#     open(f"{build_path}/Segment_I.ly", "w").writelines(
-#         part_lines[15:-1]
-#     )
-# time_6 = time.time()
-# parts_time = time_6 - time_5
+time_5 = time.time()
+###make parts###
+for count, staff_group in enumerate(abjad.iterate(score).components(abjad.StaffGroup)):
+    signatures = abjad.select(score["Global Context"]).components(abjad.Staff)
+    signature_copy = abjad.mutate(signatures).copy()
+    copied_group = abjad.mutate(staff_group).copy()
+    # if count == 0:
+    #     for voice in abjad.select(score["Voice 1"]).components(abjad.Voice):
+    #         pos_list_1 = ["st.", "ord.", "sp.", "msp.", "ord."]
+    #         _apply_position_and_span(staff=voice, poses=pos_list_1)
+    # if count == 1:
+    #     for voice in abjad.select(score["Voice 3"]).components(abjad.Voice):
+    #         pos_list_2 = ["sp.", "msp.", "ord.", "st.", "ord."]
+    #         _apply_position_and_span(staff=voice, poses=pos_list_2)
+    part = abjad.Score()
+    part.insert(0, copied_group)
+    part.insert(0, signature_copy)
+    part_file = abjad.LilyPondFile.new(
+        part,
+        includes=[
+            "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily",
+            "/Users/evansdsg2/Scores/cthar/cthar/Build/parts_stylesheet.ily",
+        ],
+    )
+    pdf_path = f"{directory}/part_illustration{count + 1}.pdf"
+    path = pathlib.Path(f"part_illustration{count + 1}.pdf")
+    if path.exists():
+        print(f"Removing {pdf_path} ...")
+        path.unlink()
+    print(f"Persisting {pdf_path} ...")
+    result = abjad.persist(part_file).as_pdf(pdf_path)
+    print(result[0])
+    print(result[1])
+    print(result[2])
+    success = result[3]
+    if success is False:
+        print("LilyPond failed!")
+    if path.exists():
+        print(f"Opening {pdf_path} ...")
+        os.system(f"open {pdf_path}")
+    build_path = (directory / ".." / ".." / f"Build/parts/cello_{count + 1}").resolve()
+    part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
+    open(f"{build_path}/Segment_II.ly", "w").writelines(
+        part_lines[15:-1]
+    )
+time_6 = time.time()
+parts_time = time_6 - time_5
 open(f"{directory}/.optimization", "a").writelines(
-    f"{datetime.datetime.now()}\nSegment runtime: {int(round(segment_time))} seconds \nAbjad/Lilypond runtime: {int(round(abjad_time))} seconds \n\n"  # \nParts extract time: {int(round(parts_time))} seconds \n\n"
+    f"{datetime.datetime.now()}\nSegment runtime: {int(round(segment_time))} seconds \nAbjad/Lilypond runtime: {int(round(abjad_time))} seconds \nParts extraction runtime: {int(round(parts_time))} seconds \n\n"
 )

@@ -2,17 +2,17 @@
 
 \version "2.19.83"
 \language "english"
-#(set-default-paper-size "letterlandscape")
-#(set-global-staff-size 10)
+#(set-default-paper-size "11x17portrait")
+#(set-global-staff-size 11)
 \include "ekmel.ily"
 \ekmelicStyle evans
 
 \header {
 	tagline = ##f
 	breakbefore = ##t
-	title = \markup \override #'(font-name . "Didot") \fontsize #15 \bold \center-column {"Cthar"}
-	subtitle = \markup \override #'(font-name . "Didot") \fontsize #4 \center-column {"for two cellos"}
-	arranger = \markup \override #'(font-name . "Didot") \fontsize #2.5 {"Gregory Rowland Evans"}
+	title = \markup \override #'(font-name . "Didot") \fontsize #20 \bold \center-column {"C t h a r"}
+	subtitle = \markup \override #'(font-name . "Didot") \fontsize #4 \center-column { \line{ \fontsize #25 ".                                   ."} \line{ \fontsize #5 "f o r   t w o   c e l l o s"} \line{ \fontsize #25 ".                                   ."} }
+	composer = \markup \override #'(font-name . "Didot") \fontsize #2.5 {"Gregory Rowland Evans"}
 }
 
 bowtab = {
@@ -84,21 +84,24 @@ bowtab = {
 		\override Beam.concaveness = #10000
 		\override Beam.beam-thickness = #0.8
         \override Beam.length-fraction = #1.5
-        \override DynamicText.font-size = #-2
+		\override DynamicText.font-size = #-2
+		\override DynamicLineSpanner.staff-padding = 7
 		\override Glissando.breakable = ##t
 		\override MetronomeMark.font-size = 5
         \override SpacingSpanner.strict-grace-spacing = ##t
         \override SpacingSpanner.strict-note-spacing = ##t
         \override SpacingSpanner.uniform-stretching = ##t
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 6) (padding . 2))
+		\override StaffGrouper.staffgroup-staff-spacing.basic-distance = #15
 		\override Stem.thickness = #0.75
         \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #2
         \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+		\override TupletNumber.font-size = 0.5
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
 		\override TextSpanner.Y-offset = 1
-		proportionalNotationDuration = #(ly:make-moment 1 50)
+		proportionalNotationDuration = #(ly:make-moment 1 40)
         autoBeaming = ##f
         tupletFullLength = ##t
     }
@@ -109,6 +112,7 @@ bowtab = {
     \context {
         \Staff
         \remove Time_signature_engraver
+		fontSize = #-1
     }
 	\context {
         \Staff
@@ -146,15 +150,15 @@ bowtab = {
         \override Beam.positions = #'(5 . 5)
         \override Clef.stencil = ##f
         \override Dots.staff-position = #-2
-        \override Flag.Y-offset = #2.93
+        \override Flag.Y-offset = #5
         \override NoteHead.no-ledgers = ##t
         \override NoteHead.stencil = ##f
 		\override Rest.transparent = ##t
         \override Script.staff-padding = #3
         \override StaffSymbol.transparent = ##t
         \override Stem.direction = #down
-        \override Stem.length = #0.5
-        \override Stem.stem-begin-position = #15.975
+        \override Stem.length = #9
+        \override Stem.stem-begin-position = #19
         \override TimeSignature.stencil = ##f
 		\override Tie.stencil = ##f
         \override TupletBracket.positions = #'(3 . 3)
@@ -174,25 +178,38 @@ bowtab = {
 
 \paper {
 
-	top-margin = 1.5\cm
-	bottom-margin = 1.5\cm
+	system-separator-markup = \markup { \fill-line { \slashSeparator \slashSeparator } }
+	system-system-spacing = #'((basic-distance . 15) (minimum-distance . 15) (padding . 5))
 
-	%top-margin = .90\in
+	indent = 12\mm
+	short-indent = 12\mm
+	bottom-margin = 10\mm
+	left-margin = 10\mm
+	right-margin = 10\mm
+	top-margin = 10\mm
+
 	oddHeaderMarkup = \markup ""
 	evenHeaderMarkup = \markup ""
-	oddFooterMarkup = \markup \fill-line {
-    ""
-    \concat {
-      "Cthar   ~"
-	  \fontsize #2
-	  \fromproperty #'page:page-number-string "~   Evans"
-     }
-    ""
-  }
-  evenFooterMarkup = \markup \fill-line {
-    ""
-	\concat { "Cthar   ~" \fontsize #2
-	\fromproperty #'page:page-number-string "~   Evans"
-    } ""
-  }
+	oddFooterMarkup = \markup
+        \fill-line {
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "Cthar - Evans"
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        %{ \on-the-fly #print-page-number-check-first %}
+                        \fromproperty #'page:page-number-string
+                }
+            }
+    evenFooterMarkup = \markup
+        \fill-line {
+            \concat {
+                \override #'(font-name . "Didot")
+                    \bold \fontsize #3
+                        %{ \on-the-fly #print-page-number-check-first %}
+                        \fromproperty #'page:page-number-string
+                }
+            \override #'(font-name . "Didot")
+                \bold \fontsize #3 "Cthar - Evans"
+            }
 }

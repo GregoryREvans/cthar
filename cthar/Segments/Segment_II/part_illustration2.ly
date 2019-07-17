@@ -1,3 +1,18 @@
+\version "2.19.83"  %! abjad.LilyPondFile
+\language "english" %! abjad.LilyPondFile
+
+\include "/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily"      %! abjad.LilyPondFile
+\include "/Users/evansdsg2/Scores/cthar/cthar/Build/parts_stylesheet.ily" %! abjad.LilyPondFile
+
+\header { %! abjad.LilyPondFile
+    tagline = ##f
+} %! abjad.LilyPondFile
+
+\layout {}
+
+\paper {}
+
+\score { %! abjad.LilyPondFile
     \new Score
     <<
         \context TimeSignatureContext = "Global Context"
@@ -186,7 +201,7 @@
                 \context Voice = "Voice 3"
                 {
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 3 measure 1] %! COMMENT_MEASURE_NUMBERS
                         \set Staff.shortInstrumentName =
                         \markup { B.H. }
@@ -194,64 +209,39 @@
                         \markup { "Bow Hand" }
                         \tempo 8=60
                         \clef "percussion"
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                    }
-                    a'''8.
-                    - \tweak style #'dotted-line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 4/3 {
-                        % [Voice 3 measure 2] %! COMMENT_MEASURE_NUMBERS
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        a'''16
+                        ^ \downbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        a'''8
+                        ~
+                        - \tweak style #'line
+                        \glissando
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \downbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        a'''4
+                        ~
+                        - \tweak style #'zigzag
+                        \glissando
                     }
+                    a'''8
+                    - \tweak style #'zigzag
+                    \glissando
+                    ^ \parenthesize \upbow
+                    a'''8
+                    - \tweak style #'zigzag
+                    \glissando
+                    ^ \downbow
+                    % [Voice 3 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    a'''4
                     r2
                     \!
                     r4
@@ -259,86 +249,56 @@
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''16
+                    a'''8
+                    ~
                     - \tweak style #'line
                     \glissando
-                    ^ \upbow
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \downbow
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 3 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''4
+                        - \tweak style #'line
                         \glissando
-                        ^ \upbow
+                        ^ \parenthesize \upbow
                         a'''8
                         - \tweak style #'dotted-line
                         \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''8.
+                        a'''8
                         - \tweak style #'line
                         \glissando
-                        a'''16
+                        ^ \downbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
                         ~
                         - \tweak style #'line
                         \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
                     }
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 3 measure 4] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        a'''16
+                        ^ \parenthesize \downbow
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''8.
+                        a'''4.
                         - \tweak style #'dotted-line
                         \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
                         ^ \downbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
+                        a'''8
+                        - \tweak style #'dotted-line
                         \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
+                        ^ \upbow
+                        a'''8
                     }
                     % [Voice 3 measure 5] %! COMMENT_MEASURE_NUMBERS
                     r2.
@@ -346,212 +306,116 @@
                     r2
                     % [Voice 3 measure 6] %! COMMENT_MEASURE_NUMBERS
                     a'''8
-                    - \tweak style #'line
+                    - \tweak style #'dotted-line
                     \glissando
                     ^ \downbow
-                    a'''16
+                    a'''4.
                     - \tweak style #'line
                     \glissando
-                    a'''16
-                    - \tweak style #'dotted-line
+                    a'''8
+                    - \tweak style #'line
                     \glissando
                     ^ \upbow
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \downbow
-                    a'''16
-                    ~
-                    - \tweak style #'dotted-line
-                    \glissando
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
-                    a'''8.
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
+                    a'''8
                     % [Voice 3 measure 7] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
+                        ^ \upbow
+                        a'''8
                         - \tweak style #'zigzag
                         \glissando
-                        a'''16
+                        ^ \downbow
+                        a'''8
+                        ~
                         - \tweak style #'zigzag
                         \glissando
                     }
                     % [Voice 3 measure 8] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
+                    a'''8
+                    - \tweak style #'zigzag
                     \glissando
                     ^ \parenthesize \upbow
-                    a'''16
+                    a'''8
                     - \tweak style #'line
                     \glissando
-                    ^ \downbow
-                    a'''8.
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \upbow
-                    a'''16
+                    a'''4
                     r2
                     \!
                     % [Voice 3 measure 9] %! COMMENT_MEASURE_NUMBERS
                     r2.
-                    \times 8/9 {
+                    \times 4/5 {
                         a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
+                        - \tweak style #'dotted-line
+                        \glissando
+                        a'''8
                         ~
                         - \tweak style #'line
                         \glissando
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
+                        ^ \parenthesize \downbow
+                        a'''8
                         ~
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
                     }
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 3 measure 10] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''4
+                        - \tweak style #'line
                         \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                        ^ \parenthesize \downbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        a'''8
+                        - \tweak style #'line
                         \glissando
                         ^ \downbow
-                        a'''8.
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        a'''8
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
-                        a'''16
-                        - \tweak style #'line
+                        a'''4
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \downbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'zigzag
+                        a'''8
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
                     }
                     % [Voice 3 measure 11] %! COMMENT_MEASURE_NUMBERS
-                    a'''8.
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
+                    a'''4.
                     - \tweak style #'dotted-line
                     \glissando
                     a'''8
                     - \tweak style #'line
                     \glissando
-                    ^ \downbow
-                    a'''8
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
+                    a'''4
                     r4
                     \!
                     % [Voice 3 measure 12] %! COMMENT_MEASURE_NUMBERS
                     r1
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/11 {
+                    \times 6/5 {
                         % [Voice 3 measure 13] %! COMMENT_MEASURE_NUMBERS
-                        a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''4.
+                        - \tweak style #'line
                         \glissando
                         ^ \downbow
                         a'''8
@@ -562,666 +426,395 @@
                     % [Voice 3 measure 14] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
-                    a'''16
-                    - \tweak style #'line
+                    a'''8
+                    - \tweak style #'zigzag
                     \glissando
                     ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \upbow
                     a'''8
                     - \tweak style #'line
                     \glissando
-                    ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
                     ^ \upbow
-                    a'''16
-                    ~
+                    a'''4
                     - \tweak style #'line
                     \glissando
                     a'''8
                     - \tweak style #'line
                     \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
                     ^ \downbow
-                    a'''16
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''8.
+                    a'''4.
                     % [Voice 3 measure 15] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \!
-                    \times 8/9 {
-                        a'''16
+                    \times 4/5 {
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
+                        a'''4
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''8.
-                        - \tweak style #'dotted-line
+                        a'''4
+                        ~
+                        - \tweak style #'line
                         \glissando
                     }
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 3 measure 16] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \upbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        a'''8
                         - \tweak style #'dotted-line
                         \glissando
                         a'''8
-                        - \tweak style #'line
+                        - \tweak style #'dotted-line
                         \glissando
-                        ^ \downbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
                         a'''8
-                        - \tweak style #'zigzag
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
                         ~
                         - \tweak style #'dotted-line
                         \glissando
+                        a'''8
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \parenthesize \downbow
+                        a'''8
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \upbow
+                        a'''8
+                        ~
+                        - \tweak style #'line
+                        \glissando
                     }
                     % [Voice 3 measure 17] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'dotted-line
+                    a'''4
+                    - \tweak style #'line
                     \glissando
                     ^ \parenthesize \downbow
-                    a'''8.
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
+                    a'''8
                     r2
                     \!
                     % [Voice 3 measure 18] %! COMMENT_MEASURE_NUMBERS
                     r1
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
+                    \times 8/7 {
                         % [Voice 3 measure 19] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''8
+                        - \tweak style #'line
                         \glissando
                         ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''4
+                        ~
+                        - \tweak style #'zigzag
                         \glissando
-                        ^ \upbow
-                        a'''8.
-                        - \tweak style #'dotted-line
+                        a'''8
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \parenthesize \upbow
+                        a'''8
+                        - \tweak style #'zigzag
                         \glissando
                         ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''8
+                        - \tweak style #'line
                         \glissando
                         ^ \upbow
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        a'''8
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        a'''16
-                        ~
-                        - \tweak style #'zigzag
-                        \glissando
+                        ^ \downbow
                     }
                     % [Voice 3 measure 20] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \upbow
                     a'''8
                     ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
-                    - \tweak style #'line
+                    - \tweak style #'dotted-line
                     \glissando
                     a'''8
                     - \tweak style #'dotted-line
                     \glissando
-                    ^ \upbow
-                    a'''8.
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
+                    ^ \parenthesize \upbow
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    \times 8/9 {
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
+                    a'''4
+                    ~
+                    - \tweak style #'line
+                    \glissando
+                    \times 4/5 {
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''8
+                        - \tweak style #'line
                         \glissando
                         ^ \downbow
-                        a'''16
+                        a'''8
                         ~
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
                         a'''8
-                        - \tweak style #'dotted-line
+                        - \tweak style #'line
                         \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                        ^ \parenthesize \upbow
+                        a'''8
+                        ~
+                        - \tweak style #'line
                         \glissando
                     }
-                    \times 4/5 {
+                    \times 2/3 {
                         % [Voice 3 measure 21] %! COMMENT_MEASURE_NUMBERS
-                        a'''8
-                        - \tweak style #'dotted-line
+                        a'''4
+                        - \tweak style #'line
                         \glissando
-                        a'''8.
+                        ^ \parenthesize \downbow
+                        a'''8
                     }
                     r4
                     \!
-                    a'''16
-                    - \tweak style #'line
+                    a'''8
+                    - \tweak style #'dotted-line
                     \glissando
                     ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    ~
-                    - \tweak style #'zigzag
+                    a'''8
+                    - \tweak style #'dotted-line
                     \glissando
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
+                    \times 8/7 {
                         % [Voice 3 measure 22] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'zigzag
+                        a'''8
+                        - \tweak style #'dotted-line
                         \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        a'''8.
+                        ^ \downbow
+                        a'''4
                         - \tweak style #'line
                         \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        a'''8
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
                         ^ \upbow
-                        a'''16
+                        a'''4.
                         - \tweak style #'line
                         \glissando
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
+                        ^ \downbow
                     }
                     % [Voice 3 measure 23] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     a'''8
                     r4
                     \!
-                    \times 4/5 {
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                    \times 2/3 {
+                        a'''8
+                        - \tweak style #'zigzag
                         \glissando
                         ^ \upbow
-                        a'''16
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
+                        a'''4
                         ~
                         - \tweak style #'line
                         \glissando
                     }
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 3 measure 24] %! COMMENT_MEASURE_NUMBERS
                         a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \parenthesize \downbow
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
-                        a'''16
-                        - \tweak style #'line
+                        a'''8
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \downbow
                         a'''8
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
-                        a'''8.
                         - \tweak style #'line
                         \glissando
-                        a'''16
+                        a'''4
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
                     }
                     % [Voice 3 measure 25] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''8.
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \upbow
-                    a'''16
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
-                    a'''16
+                    a'''4.
                     r4
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
-                        a'''16
+                    \times 4/3 {
+                        a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
                         ^ \upbow
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        ~
+                        a'''4
                         - \tweak style #'dotted-line
                         \glissando
                     }
                     % [Voice 3 measure 26] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
+                    a'''4.
                     - \tweak style #'dotted-line
                     \glissando
-                    ^ \parenthesize \upbow
-                    a'''8.
+                    a'''8
+                    - \tweak style #'dotted-line
+                    \glissando
+                    a'''8
+                    - \tweak style #'dotted-line
+                    \glissando
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    ~
-                    - \tweak style #'zigzag
-                    \glissando
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
                     a'''8
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
                     - \tweak style #'line
                     \glissando
                     a'''8
                     % [Voice 3 measure 27] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
-                    \times 8/9 {
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
+                    \times 4/5 {
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \downbow
+                        a'''4.
+                        - \tweak style #'zigzag
+                        \glissando
+                    }
+                    \times 8/9 {
+                        % [Voice 3 measure 28] %! COMMENT_MEASURE_NUMBERS
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        a'''4
+                        - \tweak style #'line
+                        \glissando
+                        a'''4.
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
                         a'''8
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                    }
-                    \times 16/17 {
-                        % [Voice 3 measure 28] %! COMMENT_MEASURE_NUMBERS
-                        a'''8.
                         - \tweak style #'dotted-line
                         \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''8.
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
                         a'''8
                     }
                     % [Voice 3 measure 29] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
-                    a'''16
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''16
+                    a'''8
+                    ~
                     - \tweak style #'line
                     \glissando
                     a'''8
                     - \tweak style #'line
                     \glissando
-                    ^ \upbow
-                    a'''8.
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
+                    ^ \parenthesize \upbow
                     a'''8
+                    - \tweak style #'line
+                    \glissando
+                    ^ \downbow
+                    a'''4
                     % [Voice 3 measure 30] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
+                    \times 4/3 {
                         a'''8
-                        ~
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
+                        a'''8
+                        - \tweak style #'dotted-line
+                        \glissando
+                        ^ \downbow
                         a'''8
                     }
                     r2
                     \!
                     % [Voice 3 measure 31] %! COMMENT_MEASURE_NUMBERS
-                    a'''8.
-                    - \tweak style #'dotted-line
+                    a'''8
+                    - \tweak style #'line
                     \glissando
                     ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
+                    a'''4.
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
                     a'''8
                     - \tweak style #'line
                     \glissando
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \upbow
-                    a'''8.
+                    a'''8
                     % [Voice 3 measure 32] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     \!
-                    \times 8/9 {
-                        a'''16
-                        - \tweak style #'line
+                    \times 4/5 {
+                        a'''8
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \upbow
+                        a'''8
+                        - \tweak style #'zigzag
                         \glissando
                         ^ \downbow
                         a'''8
+                        ~
                         - \tweak style #'line
                         \glissando
-                        ^ \upbow
-                        a'''8.
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        ^ \parenthesize \upbow
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
                     }
-                    \times 8/9 {
+                    \times 4/5 {
                         % [Voice 3 measure 33] %! COMMENT_MEASURE_NUMBERS
+                        a'''4.
+                        - \tweak style #'line
+                        \glissando
                         a'''8
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
@@ -1231,19 +824,15 @@
                     \!
                     % [Voice 3 measure 34] %! COMMENT_MEASURE_NUMBERS
                     r4
-                    a'''8.
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    - \tweak style #'dotted-line
+                    a'''8
+                    - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''16
+                    a'''4.
                     - \tweak style #'line
                     \glissando
                     ^ \upbow
-                    a'''16
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
@@ -1251,28 +840,17 @@
                     - \tweak style #'line
                     \glissando
                     ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''8.
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \downbow
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         % [Voice 3 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
                         a'''8
-                        - \tweak style #'line
-                        \glissando
-                        a'''8.
-                        - \tweak style #'line
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \downbow
-                        a'''16
+                        a'''8
+                        - \tweak style #'dotted-line
+                        \glissando
+                        a'''8
                     }
                     r4
                     \!
@@ -1280,275 +858,140 @@
                     r2.
                     % [Voice 3 measure 37] %! COMMENT_MEASURE_NUMBERS
                     r4
-                    a'''16
+                    a'''8
                     - \tweak style #'dotted-line
                     \glissando
-                    ^ \upbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
+                    ^ \downbow
                     a'''8
                     - \tweak style #'line
                     \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''8.
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
-                    a'''16
+                    a'''4.
                     - \tweak style #'line
                     \glissando
                     ^ \upbow
-                    a'''16
-                    ~
-                    - \tweak style #'dotted-line
+                    a'''8
+                    - \tweak style #'line
                     \glissando
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
-                    ~
-                    - \tweak style #'dotted-line
-                    \glissando
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 3 measure 38] %! COMMENT_MEASURE_NUMBERS
+                        a'''4
+                        - \tweak style #'line
+                        \glissando
                         a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \upbow
-                        a'''16
                         ~
                         - \tweak style #'zigzag
                         \glissando
-                        a'''16
+                        a'''4
                         - \tweak style #'zigzag
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                    }
-                    \times 16/17 {
-                        % [Voice 3 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
                         \glissando
                         ^ \parenthesize \downbow
-                        a'''8.
-                        - \tweak style #'dotted-line
+                        a'''8
+                        - \tweak style #'zigzag
                         \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
+                        a'''8
+                        - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                    }
-                    % [Voice 3 measure 40] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'dotted-line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
-                    r2
-                    \!
-                    a'''4
-                    - \tweak style #'line
-                    \glissando
-                    ^ \downbow
-                    % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    ~
-                    - \tweak style #'zigzag
-                    \glissando
-                    a'''16
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
-                    ~
-                    - \tweak style #'zigzag
-                    \glissando
-                    a'''8
-                    - \tweak style #'zigzag
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    r2.
-                    \!
-                    % [Voice 3 measure 42] %! COMMENT_MEASURE_NUMBERS
-                    r4
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
                         a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''8.
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        ~
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''8.
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
                     }
                     \times 8/9 {
-                        % [Voice 3 measure 43] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        a'''16
+                        % [Voice 3 measure 39] %! COMMENT_MEASURE_NUMBERS
+                        a'''4
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
                         a'''8
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        a'''16
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
-                        a'''8.
+                        a'''4.
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        a'''4
+                        - \tweak style #'line
+                        \glissando
+                    }
+                    % [Voice 3 measure 40] %! COMMENT_MEASURE_NUMBERS
+                    a'''4
+                    r2
+                    \!
+                    a'''4
+                    - \tweak style #'dotted-line
+                    \glissando
+                    ^ \upbow
+                    % [Voice 3 measure 41] %! COMMENT_MEASURE_NUMBERS
+                    a'''8
+                    - \tweak style #'dotted-line
+                    \glissando
+                    ^ \downbow
+                    a'''8
+                    - \tweak style #'dotted-line
+                    \glissando
+                    ^ \upbow
+                    a'''8
+                    - \tweak style #'dotted-line
+                    \glissando
+                    ^ \downbow
+                    a'''8
+                    r2.
+                    \!
+                    % [Voice 3 measure 42] %! COMMENT_MEASURE_NUMBERS
+                    r4
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 6/7 {
+                        a'''4
+                        - \tweak style #'line
+                        \glissando
+                        ^ \upbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
+                        a'''4.
+                        - \tweak style #'line
+                        \glissando
+                        ^ \downbow
+                        a'''8
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \upbow
+                    }
+                    \times 4/5 {
+                        % [Voice 3 measure 43] %! COMMENT_MEASURE_NUMBERS
+                        a'''4
+                        - \tweak style #'zigzag
+                        \glissando
+                        ^ \downbow
+                        a'''4.
                     }
                     r4
                     \!
                     r4
-                    a'''16
+                    a'''8
+                    - \tweak style #'line
+                    \glissando
+                    ^ \upbow
+                    a'''8
                     - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''16
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \upbow
-                    a'''16
-                    ~
-                    - \tweak style #'zigzag
-                    \glissando
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         % [Voice 3 measure 44] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
+                        - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \downbow
@@ -1558,115 +1001,64 @@
                     \!
                     % [Voice 3 measure 45] %! COMMENT_MEASURE_NUMBERS
                     r2
-                    a'''16
-                    - \tweak style #'dotted-line
+                    a'''8
+                    - \tweak style #'line
                     \glissando
                     ^ \downbow
-                    a'''8.
+                    a'''8
                     - \tweak style #'line
                     \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \upbow
-                    a'''16
-                    ~
-                    - \tweak style #'line
-                    \glissando
-                    a'''16
-                    - \tweak style #'line
-                    \glissando
-                    ^ \parenthesize \downbow
-                    a'''16
+                    a'''4
                     ~
                     - \tweak style #'line
                     \glissando
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 3 measure 46] %! COMMENT_MEASURE_NUMBERS
                         a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'dotted-line
-                        \glissando
-                        ^ \downbow
+                        ^ \parenthesize \downbow
                         a'''8
                         - \tweak style #'dotted-line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
+                        ~
                         - \tweak style #'dotted-line
                         \glissando
-                        a'''8.
-                        - \tweak style #'line
+                        a'''8
+                        - \tweak style #'dotted-line
                         \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
+                        ^ \parenthesize \downbow
+                        a'''4.
                     }
                     r2
                     \!
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 3 measure 47] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \downbow
                         a'''8
-                        ~
-                        - \tweak style #'zigzag
-                        \glissando
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \parenthesize \upbow
-                        a'''16
-                        - \tweak style #'zigzag
-                        \glissando
-                        ^ \downbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        ^ \upbow
-                        a'''16
-                        - \tweak style #'line
-                        \glissando
-                        a'''8
-                        - \tweak style #'line
-                        \glissando
-                        a'''16
                         - \tweak style #'dotted-line
                         \glissando
+                        ^ \upbow
+                        a'''8
+                        - \tweak style #'line
+                        \glissando
                         ^ \downbow
-                        a'''8.
+                        a'''8
                         - \tweak style #'line
                         \glissando
                         ^ \upbow
-                        a'''16
+                        a'''8
                         - \tweak style #'line
                         \glissando
-                        ^ \downbow
-                        a'''16
-                        ~
+                        a'''4
                         - \tweak style #'line
                         \glissando
-                        a'''16
-                        - \tweak style #'line
+                        a'''8
+                        - \tweak style #'zigzag
                         \glissando
-                        ^ \parenthesize \downbow
-                        a'''16
+                        a'''4
                     }
                     r4
                     \!
@@ -1682,14 +1074,14 @@
                 }
                 {
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 6 measure 1] %! COMMENT_MEASURE_NUMBERS
                         \set Staff.shortInstrumentName =
                         \markup { vc.II }
                         \set Staff.instrumentName =
                         \markup { "Violoncello II" }
                         \clef "percussion"
-                        a'''16
+                        a'''8
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -1706,31 +1098,26 @@
                                 msp.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
-                    }
-                    a'''8.
-                    a'''16
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 4/3 {
-                        % [Voice 6 measure 2] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        a'''16
-                        \stopTextSpan
+                        a'''8
+                        ~
+                        a'''8
+                        a'''8
                         ]
+                        a'''4
+                        ~
                     }
+                    a'''8
+                    [
+                    a'''8
+                    ]
+                    % [Voice 6 measure 2] %! COMMENT_MEASURE_NUMBERS
+                    a'''4
+                    \stopTextSpan
+                    \tweak Dots.transparent ##t
                     r2
                     \!
+                    \tweak Dots.transparent ##t
                     r4
                     a'''8
                     [
@@ -1749,45 +1136,42 @@
                             st.
                         }
                     \startTextSpan
-                    a'''16
-                    a'''16
+                    a'''8
+                    ~
+                    ]
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 6 measure 3] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
+                        a'''4
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
+                        [
+                        a'''8
+                        a'''8
+                        a'''8
+                        a'''8
                         ~
-                        a'''16
-                        a'''8.
                     }
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 6 measure 4] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''16
-                        a'''16
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
+                        a'''8
+                        ]
+                        a'''4.
+                        a'''8
+                        [
+                        a'''8
                         \stopTextSpan
                         ]
                     }
                     % [Voice 6 measure 5] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2.
                     \!
+                    \tweak Dots.transparent ##t
                     r2
                     % [Voice 6 measure 6] %! COMMENT_MEASURE_NUMBERS
                     a'''8
-                    [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
                         \concat
@@ -1803,22 +1187,18 @@
                             sp.
                         }
                     \startTextSpan
-                    a'''16
-                    a'''16
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
-                    a'''8.
-                    a'''16
+                    a'''4.
+                    a'''8
+                    [
+                    a'''8
                     \stopTextSpan
                     ]
                     % [Voice 6 measure 7] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         a'''8
                         [
                         - \abjad-dashed-line-with-arrow
@@ -1836,25 +1216,23 @@
                                 ord.
                             }
                         \startTextSpan
-                        a'''8.
-                        a'''16
-                        a'''16
+                        a'''8
+                        a'''8
+                        ~
                     }
                     % [Voice 6 measure 8] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
-                    a'''8.
-                    a'''16
-                    \stopTextSpan
+                    a'''8
+                    a'''8
                     ]
+                    a'''4
+                    \stopTextSpan
+                    \tweak Dots.transparent ##t
                     r2
                     \!
                     % [Voice 6 measure 9] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2.
-                    \times 8/9 {
+                    \times 4/5 {
                         a'''8
                         [
                         - \abjad-dashed-line-with-arrow
@@ -1872,54 +1250,41 @@
                                 ord.
                             }
                         \startTextSpan
-                        a'''16
+                        a'''8
+                        a'''8
                         ~
                         a'''8
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
+                        a'''8
                         ~
+                        ]
                     }
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 6 measure 10] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
+                        a'''4
+                        a'''8
+                        [
+                        a'''8
+                        a'''8
+                        a'''8
+                        ]
+                        a'''4
+                        a'''8
                     }
                     % [Voice 6 measure 11] %! COMMENT_MEASURE_NUMBERS
-                    a'''8.
-                    a'''16
+                    a'''4.
                     a'''8
-                    a'''8
-                    ~
-                    a'''16
-                    a'''16
-                    a'''16
-                    a'''16
+                    a'''4
                     \stopTextSpan
-                    ]
+                    \tweak Dots.transparent ##t
                     r4
                     \!
                     % [Voice 6 measure 12] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r1
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/11 {
+                    \times 6/5 {
                         % [Voice 6 measure 13] %! COMMENT_MEASURE_NUMBERS
-                        a'''8
-                        [
+                        a'''4.
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
                             \concat
@@ -1935,18 +1300,17 @@
                                 msp.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''8.
-                        a'''16
                         a'''8
+                        [
                         a'''8
                         \stopTextSpan
                         ]
                     }
                     % [Voice 6 measure 14] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
                     \!
-                    a'''16
+                    a'''8
                     [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
@@ -1963,27 +1327,18 @@
                             st.
                         }
                     \startTextSpan
-                    a'''16
-                    a'''16
-                    a'''16
                     a'''8
-                    a'''16
-                    a'''16
-                    ~
-                    a'''8
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''8.
-                    \stopTextSpan
                     ]
+                    a'''4
+                    a'''8
+                    a'''4.
+                    \stopTextSpan
                     % [Voice 6 measure 15] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2
                     \!
-                    \times 8/9 {
-                        a'''16
-                        [
+                    \times 4/5 {
+                        a'''8
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
                             \concat
@@ -1999,45 +1354,43 @@
                                 sp.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''16
-                        a'''8
-                        a'''16
-                        a'''8.
-                    }
-                    \times 16/17 {
-                        % [Voice 6 measure 16] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''8
-                        a'''8.
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
+                        a'''4
+                        a'''4
                         ~
                     }
+                    \times 8/9 {
+                        % [Voice 6 measure 16] %! COMMENT_MEASURE_NUMBERS
+                        a'''8
+                        [
+                        a'''8
+                        a'''8
+                        a'''8
+                        a'''8
+                        a'''8
+                        ~
+                        a'''8
+                        a'''8
+                        a'''8
+                        ~
+                        ]
+                    }
                     % [Voice 6 measure 17] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''8.
-                    a'''16
-                    a'''16
-                    a'''16
-                    a'''16
+                    a'''4
+                    a'''8
+                    [
+                    a'''8
                     \stopTextSpan
                     ]
+                    \tweak Dots.transparent ##t
                     r2
                     \!
                     % [Voice 6 measure 18] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r1
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
+                    \times 8/7 {
                         % [Voice 6 measure 19] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        [
+                        a'''8
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
                             \concat
@@ -2053,51 +1406,44 @@
                                 ord.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''8.
-                        a'''16
+                        a'''4
+                        ~
+                        a'''8
+                        [
                         a'''8
                         a'''8
-                        ~
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
+                        a'''8
                     }
                     % [Voice 6 measure 20] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''16
+                    a'''8
                     a'''8
                     ~
-                    a'''16
-                    a'''16
                     a'''8
-                    a'''8.
-                    a'''16
-                    \times 8/9 {
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
-                        a'''8
-                        a'''16
-                    }
+                    a'''8
+                    ]
+                    a'''4
+                    ~
                     \times 4/5 {
-                        % [Voice 6 measure 21] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        a'''8.
-                        \stopTextSpan
+                        [
+                        a'''8
+                        a'''8
+                        ~
+                        a'''8
+                        a'''8
+                        ~
                         ]
                     }
+                    \times 2/3 {
+                        % [Voice 6 measure 21] %! COMMENT_MEASURE_NUMBERS
+                        a'''4
+                        a'''8
+                        \stopTextSpan
+                    }
+                    \tweak Dots.transparent ##t
                     r4
                     \!
-                    a'''16
+                    a'''8
                     [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
@@ -2114,38 +1460,27 @@
                             ord.
                         }
                     \startTextSpan
-                    a'''16
-                    a'''16
-                    a'''16
-                    ~
+                    a'''8
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
+                    \times 8/7 {
                         % [Voice 6 measure 22] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''16
-                        a'''8.
-                        a'''16
                         a'''8
+                        ]
+                        a'''4
                         a'''8
-                        ~
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
+                        a'''4.
                     }
                     % [Voice 6 measure 23] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''16
+                    a'''8
+                    [
                     a'''8
                     \stopTextSpan
                     ]
+                    \tweak Dots.transparent ##t
                     r4
                     \!
-                    \times 4/5 {
-                        a'''16
-                        [
+                    \times 2/3 {
+                        a'''8
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
                             \concat
@@ -2161,42 +1496,31 @@
                                 msp.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
+                        a'''4
                         ~
                     }
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 6 measure 24] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        a'''16
-                        a'''16
-                        a'''16
+                        [
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
+                        a'''8
+                        a'''8
+                        a'''8
+                        ]
+                        a'''4
                     }
                     % [Voice 6 measure 25] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''8.
-                    a'''16
-                    a'''16
-                    a'''16
-                    a'''16
+                    a'''8
+                    a'''4.
                     \stopTextSpan
-                    ]
+                    \tweak Dots.transparent ##t
                     r4
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
-                        a'''16
-                        [
+                    \times 4/3 {
+                        a'''8
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
                             \concat
@@ -2212,34 +1536,24 @@
                                 st.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
+                        a'''4
                     }
                     % [Voice 6 measure 26] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''8.
-                    a'''16
-                    a'''16
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
+                    a'''4.
                     a'''8
-                    ~
-                    a'''16
-                    a'''16
+                    [
+                    a'''8
+                    a'''8
+                    a'''8
                     a'''8
                     \stopTextSpan
                     ]
                     % [Voice 6 measure 27] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
                     \!
-                    \times 8/9 {
-                        a'''8.
+                    \times 4/5 {
+                        a'''8
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -2256,35 +1570,27 @@
                                 sp.
                             }
                         \startTextSpan
-                        a'''16
-                        a'''16
-                        a'''16
                         a'''8
-                        a'''16
+                        ]
+                        a'''4.
                     }
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 6 measure 28] %! COMMENT_MEASURE_NUMBERS
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
+                        a'''8
+                        a'''4
+                        a'''4.
+                        a'''8
+                        [
+                        a'''8
                         a'''8
                         \stopTextSpan
                         ]
                     }
                     % [Voice 6 measure 29] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
                     \!
-                    a'''16
+                    a'''8
                     [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
@@ -2301,21 +1607,20 @@
                             ord.
                         }
                     \startTextSpan
-                    a'''16
                     a'''8
-                    a'''8.
-                    a'''16
-                    a'''16
-                    a'''16
+                    ~
                     a'''8
-                    \stopTextSpan
+                    a'''8
                     ]
+                    a'''4
+                    \stopTextSpan
                     % [Voice 6 measure 30] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
-                        a'''16
+                    \times 4/3 {
+                        a'''8
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -2333,18 +1638,15 @@
                             }
                         \startTextSpan
                         a'''8
-                        ~
-                        a'''16
-                        a'''16
                         a'''8
                         \stopTextSpan
                         ]
                     }
+                    \tweak Dots.transparent ##t
                     r2
                     \!
                     % [Voice 6 measure 31] %! COMMENT_MEASURE_NUMBERS
-                    a'''8.
-                    [
+                    a'''8
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
                         \concat
@@ -2360,19 +1662,18 @@
                             msp.
                         }
                     \startTextSpan
-                    a'''16
-                    a'''16
-                    a'''16
+                    a'''4.
                     a'''8
-                    a'''16
-                    a'''8.
+                    [
+                    a'''8
                     \stopTextSpan
                     ]
                     % [Voice 6 measure 32] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2.
                     \!
-                    \times 8/9 {
-                        a'''16
+                    \times 4/5 {
+                        a'''8
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -2390,27 +1691,28 @@
                             }
                         \startTextSpan
                         a'''8
-                        a'''8.
-                        a'''16
-                        a'''16
-                        a'''16
-                    }
-                    \times 8/9 {
-                        % [Voice 6 measure 33] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
+                        ~
+                        a'''8
+                        a'''8
+                        ]
+                    }
+                    \times 4/5 {
+                        % [Voice 6 measure 33] %! COMMENT_MEASURE_NUMBERS
+                        a'''4.
+                        a'''8
+                        [
                         a'''8
                         \stopTextSpan
                         ]
                     }
+                    \tweak Dots.transparent ##t
                     r2.
                     \!
                     % [Voice 6 measure 34] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
-                    a'''8.
-                    [
+                    a'''8
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
                         \concat
@@ -2426,29 +1728,29 @@
                             sp.
                         }
                     \startTextSpan
-                    a'''16
-                    a'''16
-                    a'''16
+                    a'''4.
                     a'''8
-                    a'''16
-                    a'''8.
+                    [
+                    a'''8
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         % [Voice 6 measure 35] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
                         a'''8
-                        a'''8.
-                        a'''16
+                        a'''8
+                        a'''8
                         \stopTextSpan
                         ]
                     }
+                    \tweak Dots.transparent ##t
                     r4
                     \!
                     % [Voice 6 measure 36] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2.
                     % [Voice 6 measure 37] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
-                    a'''16
+                    a'''8
                     [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
@@ -2465,55 +1767,35 @@
                             ord.
                         }
                     \startTextSpan
-                    a'''16
                     a'''8
-                    a'''16
-                    a'''8.
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
-                    ~
-                    \times 16/17 {
+                    ]
+                    a'''4.
+                    a'''8
+                    \times 8/9 {
                         % [Voice 6 measure 38] %! COMMENT_MEASURE_NUMBERS
+                        a'''4
                         a'''8
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
                         ~
-                        a'''16
-                        a'''8.
+                        a'''4
+                        a'''8
+                        [
+                        a'''8
+                        a'''8
+                        a'''8
+                        ]
                     }
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 6 measure 39] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''16
-                        a'''16
+                        a'''4
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
+                        a'''4.
+                        a'''8
+                        a'''4
                     }
                     % [Voice 6 measure 40] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
+                    a'''4
                     \stopTextSpan
-                    ]
+                    \tweak Dots.transparent ##t
                     r2
                     \!
                     a'''4
@@ -2533,26 +1815,22 @@
                         }
                     \startTextSpan
                     % [Voice 6 measure 41] %! COMMENT_MEASURE_NUMBERS
-                    a'''16
-                    [
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
-                    ~
                     a'''8
-                    a'''16
-                    a'''16
+                    [
+                    a'''8
+                    a'''8
+                    a'''8
                     \stopTextSpan
                     ]
+                    \tweak Dots.transparent ##t
                     r2.
                     \!
                     % [Voice 6 measure 42] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r4
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
-                        a'''16
-                        [
+                    \times 6/7 {
+                        a'''4
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
                             \concat
@@ -2569,29 +1847,21 @@
                             }
                         \startTextSpan
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''8.
-                    }
-                    \times 8/9 {
-                        % [Voice 6 measure 43] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
-                        a'''16
-                        a'''16
+                        a'''4.
                         a'''8
-                        a'''16
-                        a'''8.
-                        \stopTextSpan
-                        ]
                     }
+                    \times 4/5 {
+                        % [Voice 6 measure 43] %! COMMENT_MEASURE_NUMBERS
+                        a'''4
+                        a'''4.
+                        \stopTextSpan
+                    }
+                    \tweak Dots.transparent ##t
                     r4
                     \!
+                    \tweak Dots.transparent ##t
                     r4
-                    a'''16
+                    a'''8
                     [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
@@ -2608,27 +1878,23 @@
                             st.
                         }
                     \startTextSpan
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
-                    ~
+                    a'''8
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         % [Voice 6 measure 44] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        a'''16
-                        a'''16
-                        a'''16
+                        a'''8
                         a'''8
                         \stopTextSpan
                         ]
                     }
+                    \tweak Dots.transparent ##t
                     r2
                     \!
                     % [Voice 6 measure 45] %! COMMENT_MEASURE_NUMBERS
+                    \tweak Dots.transparent ##t
                     r2
-                    a'''16
+                    a'''8
                     [
                     - \abjad-dashed-line-with-arrow
                     - \tweak bound-details.left.text \markup {
@@ -2645,33 +1911,29 @@
                             sp.
                         }
                     \startTextSpan
-                    a'''8.
-                    a'''16
-                    a'''16
-                    ~
-                    a'''16
-                    a'''16
+                    a'''8
+                    ]
+                    a'''4
                     ~
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 6 measure 46] %! COMMENT_MEASURE_NUMBERS
                         a'''8
-                        a'''16
-                        a'''16
-                        a'''16
+                        [
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        \stopTextSpan
+                        a'''8
+                        ~
+                        a'''8
                         ]
+                        a'''4.
+                        \stopTextSpan
                     }
+                    \tweak Dots.transparent ##t
                     r2
                     \!
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 6 measure 47] %! COMMENT_MEASURE_NUMBERS
-                        a'''16
+                        a'''8
                         [
                         - \abjad-dashed-line-with-arrow
                         - \tweak bound-details.left.text \markup {
@@ -2689,22 +1951,15 @@
                             }
                         \startTextSpan
                         a'''8
-                        ~
-                        a'''16
-                        a'''16
-                        a'''16
-                        a'''16
                         a'''8
-                        a'''16
-                        a'''8.
-                        a'''16
-                        a'''16
-                        ~
-                        a'''16
-                        a'''16
-                        \stopTextSpan
+                        a'''8
                         ]
+                        a'''4
+                        a'''8
+                        a'''4
+                        \stopTextSpan
                     }
+                    \tweak Dots.transparent ##t
                     r4
                     \!
                 }
@@ -2719,52 +1974,37 @@
                     \set Staff.instrumentName =
                     \markup { "Left Hand" }
                     \clef "bass"
-                    e16.
+                    fqs4
                     \p
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    [
-                    eqf32
-                    ~
-                    eqf8
-                    ef16.
+                    fs4.
                     - \accent
-                    dqs32
-                    - \accent
-                    ~
-                    dqs8
-                    ~
-                    dqs32
-                    d16.
-                    - \accent
-                    ~
-                    d32
-                    dqs16.
+                    gqf8
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    <e, fs>8
+                    [
+                    e,8
                     \fff
                     - \tenuto
                     \>
-                    <c fs>16
-                    - \tenuto
-                    fs16
+                    <c, cs>8
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 8/7 {
+                    \times 4/3 {
                         % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
-                        ef8
+                        g16
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        dqs16.
+                        gqf8
                         \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -2774,63 +2014,81 @@
                     r2
                     \!
                     r4
-                    ef32
+                    \clef "tenorvarC"
+                    fs8.
                     \p
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
                     [
-                    eqf16.
-                    - \accent
-                    ~
-                    eqf16.
-                    ef32
+                    fqs16
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
-                    af8
+                    \ottava 1
+                    d'''16
                     \mp
 
                     - \tweak stencil #abjad-flared-hairpin
                     \<
-                    f'8
+                    \ottava 0
+                    \ottava 1
+                    g''16
 
-                    b'8
+                    \ottava 0
+                    \ottava 1
+                    d'''16
 
-                    f'8
+                    \ottava 0
+                    \ottava 1
+                    g''16
 
-                    b'8
+                    \ottava 0
+                    \ottava 1
+                    b'16
 
-                    g''8
+                    \ottava 0
+                    f'16
+
+                    af16
+
+                    f'16
+
+                    \ottava 1
+                    b'16
+
+                    \ottava 0
+                    f'16
+
+                    \ottava 1
+                    b'16
+
+                    \ottava 0
+                    \ottava 1
+                    g''16
                     \ff
 
                     - \tweak stencil #constante-hairpin
                     \<
+                    \ottava 0
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 24/25 {
+                    \times 12/13 {
                         % [Voice 4 measure 4] %! COMMENT_MEASURE_NUMBERS
-                        dqs16
+                        fs8
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        d16.
+                        fqs16
                         ~
-                        d16
-                        dqs16.
+                        ]
+                        fqs4
+                        f8.
                         - \accent
-                        ef16.
-                        ~
-                        ef16
-                        dqs16.
-                        - \accent
-                        d16
-                        - \accent
-                        ~
-                        d8
-                        dqf32
+                        [
+                        fqs8.
                         \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -2842,178 +2100,121 @@
                     \!
                     r2
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/11 {
+                    \times 6/5 {
                         % [Voice 4 measure 6] %! COMMENT_MEASURE_NUMBERS
-                        c16
+                        \clef "bass"
+                        cs4
                         \fff
                         - \tenuto
                         \>
-                        [
-                        fs8
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        c8.
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c'16
-                        - \tenuto
-                        ~
-                        c'16
-                        fs16
+                        e,4.
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     % [Voice 4 measure 7] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \!
-                    d16.
+                    fs8.
                     \p
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
                     [
-                    dqs32
+                    fqs16
                     - \accent
                     ~
-                    dqs8
+                    fqs8.
+                    f16
                     ~
-                    dqs16
-                    ef16
-                    - \accent
-                    ~
-                    ef16
-                    eqf16
-                    ~
+                    ]
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
+                    \times 8/7 {
                         % [Voice 4 measure 8] %! COMMENT_MEASURE_NUMBERS
-                        eqf8
-                        ef32
-                        - \accent
-                        ~
-                        ef16
-                        dqs16.
-                        ~
-                        dqs16
-                        d16.
+                        f4.
+                        eqs16
                         \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     r2
                     \!
                     % [Voice 4 measure 9] %! COMMENT_MEASURE_NUMBERS
                     r2.
-                    <c fs>8
+                    <e, fs>8
                     \fff
                     - \tenuto
                     \>
                     [
-                    e,16
+                    <c fs>8
                     - \tenuto
-                    cs16
+                    fs8
                     - \tenuto
-                    <c, cs>16
-                    - \tenuto
-                    c,16
-                    - \tenuto
-                    ~
-                    c,16
-                    cs16
+                    c8
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 10] %! COMMENT_MEASURE_NUMBERS
-                    dqs8
+                    f16
                     \p
+                    - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    ~
-                    dqs32
-                    ef16.
-                    - \accent
-                    dqs8.
-                    - \accent
-                    d16
+                    eqs8.
                     - \accent
                     ~
-                    d16
-                    dqf8.
+                    eqs16
+                    e8.
                     - \accent
                     ~
-                    dqf32
-                    cs16.
+                    e8.
+                    eqs16
                     - \accent
                     ~
-                    cs32
-                    cqs16.
+                    eqs8
+                    e8
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
+                    ]
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 4 measure 11] %! COMMENT_MEASURE_NUMBERS
-                        e,8.
+                        fs4
                         \fff
                         - \tenuto
                         \>
-                        <c, cs>16
+                        <e, fs>8
                         - \tenuto
-                        cs16
+                        c4.
                         - \tenuto
-                        ~
-                        cs16
-                        e,8.
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c16
+                        fs8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     r4
                     \!
                     % [Voice 4 measure 12] %! COMMENT_MEASURE_NUMBERS
                     r1
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 4 measure 13] %! COMMENT_MEASURE_NUMBERS
-                        fs16
+                        c'4
                         \fff
                         - \tenuto
                         \>
+                        fs4.
+                        - \tenuto
+                        <c fs>8
+                        - \tenuto
                         [
-                        <e, fs>16
-                        - \tenuto
-                        c8.
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c'16
-                        - \tenuto
-                        ~
-                        c'16
-                        fs8.
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        e,16
+                        e,8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -3023,234 +2224,108 @@
                     % [Voice 4 measure 14] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
-                    cs16
+                    cs8
                     \fff
                     - \tenuto
                     \>
                     [
-                    <c, cs>16
-                    - \tenuto
-                    ~
-                    <c, cs>16
-                    c,16
-                    - \tenuto
-                    cs8.
-                    - \tenuto
-                    e,16
-                    - \tenuto
                     <c, cs>8
+                    - \tenuto
+                    ]
+                    c,4
                     - \tenuto
                     cs8
                     - \tenuto
-                    ~
-                    cs16
-                    e,16
-                    - \tenuto
-                    <e, fs>16
-                    - \tenuto
-                    <c fs>16
+                    e,4.
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
-                    ]
                     % [Voice 4 measure 15] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \!
-                    \times 16/17 {
-                        cs16.
+                    \times 8/9 {
+                        \clef "tenorvarC"
+                        eqf8.
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
                         [
-                        cqs16.
+                        ef8.
                         - \accent
-                        c32
-                        ~
-                        c8
-                        cqs16.
-                        - \accent
-                        c16.
+                        dqs8.
                         ~
                     }
                     % [Voice 4 measure 16] %! COMMENT_MEASURE_NUMBERS
-                    c16
-                    cqs16
+                    dqs8
+                    d8
                     - \accent
                     ~
-                    cqs32
-                    c16.
+                    d16
+                    dqs8.
                     - \accent
                     ~
-                    c16.
-                    cqs32
+                    dqs8.
+                    ef16
                     - \accent
                     ~
-                    cqs16.
-                    c32
-                    - \accent
-                    ~
-                    c8.
-                    cqs16
-                    - \accent
-                    ~
-                    cqs16
-                    cs8.
+                    ef8.
+                    dqs16
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 17] %! COMMENT_MEASURE_NUMBERS
-                    d'''16
-                    \mp
-
-                    - \tweak stencil #abjad-flared-hairpin
-                    \<
-                    g''16
-
-                    d'''16
-
-                    cs''''16
-
-                    d'''16
-
-                    cs''''16
-
-                    d'''16
-
-                    g''16
-                    \ff
-
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    ]
-                    r2
-                    \!
-                    % [Voice 4 measure 18] %! COMMENT_MEASURE_NUMBERS
-                    r1
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
-                        % [Voice 4 measure 19] %! COMMENT_MEASURE_NUMBERS
-                        fs8
-                        \fff
-                        - \tenuto
-                        \>
-                        [
-                        c16
-                        - \tenuto
-                        fs8
-                        - \tenuto
-                        ~
-                        fs16
-                        <e, fs>16
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        ~
-                        c16
-                        fs16
-                        - \tenuto
-                        ~
-                        fs8
-                        c'16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        <c fs>16
-                        \mf
-                        - \tenuto
-                        - \tweak stencil #constante-hairpin
-                        \<
-                    }
-                    \tweak text #tuplet-number::calc-fraction-text
-                    \times 24/23 {
-                        % [Voice 4 measure 20] %! COMMENT_MEASURE_NUMBERS
-                        dqf16.
-                        \p
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        d8
-                        ~
-                        d32
-                        dqs16.
-                        - \accent
-                        ef8
-                        ~
-                        ef32
-                        eqf16.
-                        - \accent
-                        ef8
-                        ~
-                    }
-                    ef16
-                    dqs16
-                    - \accent
-                    ~
-                    dqs16
-                    ef16
-                    - \accent
-                    ~
-                    ef8
-                    ~
-                    ef32
-                    eqf16.
-                    \mp
-                    - \accent
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    % [Voice 4 measure 21] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     d'''8
                     \mp
 
                     - \tweak stencil #abjad-flared-hairpin
                     \<
+                    \ottava 0
+                    \ottava 1
+                    g''8
+
+                    \ottava 0
+                    \ottava 1
+                    d'''8
+
+                    \ottava 0
+                    \ottava 1
                     cs''''8
                     \ff
 
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
-                    r4
+                    \ottava 0
+                    r2
                     \!
-                    e,8
-                    \fff
-                    - \tenuto
-                    \>
-                    [
-                    cs16
-                    - \tenuto
-                    <c, cs>16
-                    ~
-                    \times 16/17 {
-                        % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 18] %! COMMENT_MEASURE_NUMBERS
+                    r1
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 8/7 {
+                        % [Voice 4 measure 19] %! COMMENT_MEASURE_NUMBERS
+                        \clef "bass"
                         <c, cs>8
-                        c,16
+                        \fff
                         - \tenuto
-                        cs8
+                        \>
+                        cs4
                         - \tenuto
-                        e,8.
+                        e,4.
                         - \tenuto
-                        <c, cs>16
-                        - \tenuto
-                        cs16
-                        - \tenuto
-                        e,16
-                        - \tenuto
-                        <e, fs>8
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        fs8.
+                        <c, cs>8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
                     }
-                    \times 8/9 {
-                        % [Voice 4 measure 23] %! COMMENT_MEASURE_NUMBERS
-                        ef32
+                    \tweak text #tuplet-number::calc-fraction-text
+                    \times 12/11 {
+                        % [Voice 4 measure 20] %! COMMENT_MEASURE_NUMBERS
+                        ef4.
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -3258,64 +2333,140 @@
                         eqf16
                         - \accent
                         ~
-                        eqf8
-                        ef16
-                        \mp
-                        - \accent
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        ]
+                        [
+                        eqf16
+                        ef8.
+                        ~
                     }
-                    r4
-                    \!
-                    dqs32
-                    \p
+                    ef16
+                    dqs8.
                     - \accent
-                    - \tweak stencil #constante-hairpin
-                    \<
-                    [
-                    d16.
                     ~
+                    dqs8.
                     d16
-                    dqs16
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
+                    % [Voice 4 measure 21] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     d'''8
                     \mp
 
                     - \tweak stencil #abjad-flared-hairpin
                     \<
-                    g''8
-
-                    b'8
-
-                    f'8
-
-                    af8
-
-                    bf,8
+                    \ottava 0
+                    \ottava 1
+                    cs''''8
                     \ff
 
                     - \tweak stencil #constante-hairpin
                     \<
+                    ]
+                    \ottava 0
+                    r4
+                    \!
+                    <c, cs>8
+                    \fff
+                    - \tenuto
+                    \>
+                    [
+                    cs8
+                    - \tenuto
                     \times 8/9 {
+                        % [Voice 4 measure 22] %! COMMENT_MEASURE_NUMBERS
+                        e,8
+                        - \tenuto
+                        ]
+                        fs4
+                        - \tenuto
+                        <c fs>8
+                        - \tenuto
+                        c'4
+                        - \tenuto
+                        ~
+                        c'8
+                        [
+                        fs8
+                        - \tenuto
+                        c'8
+                        \mf
+                        - \tenuto
+                        - \tweak stencil #constante-hairpin
+                        \<
+                    }
+                    \times 4/5 {
+                        % [Voice 4 measure 23] %! COMMENT_MEASURE_NUMBERS
+                        dqs8
+                        \p
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ef8.
+                        \mp
+                        - \accent
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        ]
+                    }
+                    r4
+                    \!
+                    \clef "tenorvarC"
+                    dqs8
+                    \p
+                    - \accent
+                    - \tweak stencil #constante-hairpin
+                    \<
+                    [
+                    d8
+                    \mp
+                    - \accent
+                    - \tweak stencil #constante-hairpin
+                    \<
+                    % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
+                    d'''8
+                    \mp
+
+                    - \tweak stencil #abjad-flared-hairpin
+                    \<
+                    \ottava 0
+                    \ottava 1
+                    g''8
+
+                    \ottava 0
+                    \ottava 1
+                    d'''8
+
+                    \ottava 0
+                    \ottava 1
+                    cs''''8
+
+                    \ottava 0
+                    \ottava 1
+                    d'''8
+
+                    \ottava 0
+                    \ottava 1
+                    g''8
+                    \ff
+
+                    - \tweak stencil #constante-hairpin
+                    \<
+                    \ottava 0
+                    \times 4/5 {
                         % [Voice 4 measure 25] %! COMMENT_MEASURE_NUMBERS
-                        c16
+                        cs8
                         \fff
                         - \tenuto
                         \>
+                        ]
+                        <cs c'>4
+                        - \tenuto
+                        ~
+                        <cs c'>8
+                        [
                         fs8
-                        - \tenuto
-                        <e, fs>8.
-                        - \tenuto
-                        c16
-                        - \tenuto
-                        fs16
-                        - \tenuto
-                        c'16
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -3324,81 +2475,80 @@
                     }
                     r4
                     \!
-                    fs8
+                    \clef "bass"
+                    cs8
                     \fff
                     - \tenuto
                     \>
                     [
-                    <c fs>16
+                    <cs fs>8
                     - \tenuto
-                    e,16
+                    fs8
                     - \tenuto
-                    ~
-                    e,8
-                    cs16
-                    - \tenuto
-                    <c, cs>16
+                    \ottava 1
+                    e'8
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
                     \<
+                    \ottava 0
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 32/31 {
+                    \times 16/15 {
                         % [Voice 4 measure 26] %! COMMENT_MEASURE_NUMBERS
-                        ef32
+                        dqf16
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        eqf16
+                        ]
+                        d4
                         ~
-                        eqf16.
-                        ef16.
-                        - \accent
-                        dqs8.
-                        - \accent
-                        d8
-                        - \accent
-                        dqf8..
-                        - \accent
-                        d32
+                        d16
+                        [
+                        dqs8
                         - \accent
                         ~
-                        d16.
-                        dqs32
+                        dqs16
+                        ]
+                        ef4.
                         \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     % [Voice 4 measure 27] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \!
-                    ef8
+                    eqf4
                     \p
+                    - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    ~
-                    [
-                    ef32
-                    eqf16.
-                    - \accent
-                    e8
-                    ~
-                    e32
-                    eqf16.
+                    ef4
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
                     \times 16/17 {
                         % [Voice 4 measure 28] %! COMMENT_MEASURE_NUMBERS
-                        a,16
+                        \ottava 1
+                        b'16
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
+                        [
+                        \ottava 0
+                        \ottava 1
+                        f'16
+
+                        \ottava 0
+                        af16
+
+                        bf,16
+
+                        a,16
+
                         bf,16
 
                         a,16
@@ -3422,14 +2572,6 @@
                         bf,16
 
                         a,16
-
-                        e,16
-
-                        a,16
-
-                        e,16
-
-                        a,16
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -3440,32 +2582,24 @@
                     r4
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/11 {
-                        c,16
+                    \times 6/5 {
+                        c'8
                         \fff
                         - \tenuto
                         \>
                         [
-                        cs8
+                        \ottava 1
+                        <c' e'>8
                         - \tenuto
-                        ~
-                        cs16
-                        e,16
-                        - \tenuto
-                        <c, cs>16
-                        - \tenuto
-                        cs16
-                        - \tenuto
-                        e,8
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        <c fs>16
+                        ]
+                        \ottava 0
+                        \ottava 1
+                        fs'4.
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
+                        \ottava 0
                     }
                     % [Voice 4 measure 30] %! COMMENT_MEASURE_NUMBERS
                     r4
@@ -3476,13 +2610,11 @@
                     - \tweak stencil #abjad-flared-hairpin
                     \<
                     [
-                    <g f'>16
-
-                    b,16
+                    <b, e>8
 
                     ~
-                    b,16
-                    <b, e>8.
+                    <b, e>8
+                    b,8
                     \ff
 
                     - \tweak stencil #constante-hairpin
@@ -3491,31 +2623,23 @@
                     r2
                     \!
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 4 measure 31] %! COMMENT_MEASURE_NUMBERS
-                        g16
+                        <b, e>4
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
+                        e8
+
                         [
-                        f'16
+                        <g, e>8
 
-                        g16
+                        g,8
 
-                        <g f'>8
+                        <b, e>8
 
-                        f'16
-
-                        <b, g>8.
-
-                        e16
-
-                        <b, e>16
-
-                        ~
-                        <b, e>16
-                        g16
+                        <b, e>8
                         \ff
 
                         - \tweak stencil #constante-hairpin
@@ -3525,80 +2649,64 @@
                     % [Voice 4 measure 32] %! COMMENT_MEASURE_NUMBERS
                     r2.
                     \!
-                    \times 8/9 {
-                        <g f'>8
+                    \times 4/5 {
+                        g8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        b,16
+                        <b, g>8
 
-                        <g f'>16
+                        ]
+                        b,4.
 
-                        <g f'>16
-
-                        g16
-
-                        ~
-                        g16
-                        <g f'>16
-
-                        b,16
-                        ~
                     }
                     % [Voice 4 measure 33] %! COMMENT_MEASURE_NUMBERS
-                    b,8
-                    <b, e>16
+                    <b, e>8
 
-                    g16
+                    [
+                    g8
 
                     ~
-                    g16
-                    f'8.
+                    g8
+                    \ottava 1
+                    f'8
                     \ff
 
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
+                    \ottava 0
                     r2.
                     \!
                     % [Voice 4 measure 34] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/11 {
-                        g16
+                    \times 6/5 {
+                        g4
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
-                        [
-                        <g f'>16
-
-                        f'16
-
                         <b, g>8
 
-                        e16
+                        [
+                        \ottava 1
+                        f'8
 
-                        <b, e>8.
+                        \ottava 0
+                        <b, g>8
 
-                        g16
-
-                        <g f'>16
-                        ~
                     }
                     % [Voice 4 measure 35] %! COMMENT_MEASURE_NUMBERS
-                    <g f'>16
-                    b,8.
+                    e8
 
-                    <g f'>16
+                    <b, e>8
 
-                    <g f'>16
-
-                    g16
-
-                    <g f'>16
+                    ~
+                    <b, e>8
+                    g8
                     \ff
 
                     - \tweak stencil #constante-hairpin
@@ -3611,95 +2719,76 @@
                     % [Voice 4 measure 37] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
-                        b,16
+                    \times 6/7 {
+                        \ottava 1
+                        <g f'>4.
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
+                        \ottava 0
+                        b,8
+
                         [
-                        <b, e>16
-
-                        g8.
-
-                        f'16
-
-                        g16
+                        \ottava 1
+                        <g f'>8
 
                         ~
-                        g16
-                        <g f'>8.
-
-                        f'16
-
-                        <b, g>16
-
+                        <g f'>8
+                        \ottava 0
+                        \ottava 1
+                        <g f'>8
+                        ~
+                        ]
                     }
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 4 measure 38] %! COMMENT_MEASURE_NUMBERS
-                        e16
+                        <g f'>4
+                        \ottava 0
+                        g8
+
+                        [
+                        \ottava 1
+                        <g f'>8
+
+                        \ottava 0
+                        b,8
 
                         <b, e>8
 
-                        g16
+                        ]
+                        g4
 
-                        <g f'>8.
+                        \ottava 1
+                        f'8
 
-                        b,16
-
-                        <g f'>16
-
-                        ~
-                        <g f'>16
-                        <g f'>8.
-
-                        g16
-
-                        <g f'>16
-
-                        b,16
-
-                        <b, e>16
-                        ~
+                        \ottava 0
                     }
                     % [Voice 4 measure 39] %! COMMENT_MEASURE_NUMBERS
-                    <b, e>16
-                    g16
+                    g4.
 
-                    f'8
-
-                    ~
-                    f'16
-                    g16
-
+                    \ottava 1
                     <g f'>8
 
-                    f'8.
+                    \ottava 0
+                    \ottava 1
+                    f'4
 
-                    <b, g>16
-
-                    e16
-
-                    <b, e>16
-
-                    g8
+                    \ottava 0
+                    <b, g>4
                     \ff
 
                     - \tweak stencil #constante-hairpin
                     \<
-                    \times 8/9 {
+                    \times 4/5 {
                         % [Voice 4 measure 40] %! COMMENT_MEASURE_NUMBERS
-                        e16.
+                        dqs8.
                         \p
-                        ~
-                        e16
+                        - \accent
                         - \tweak stencil #constante-hairpin
                         \<
-                        eqs32
-                        - \accent
-                        ~
-                        eqs16
-                        e32
+                        [
+                        d8
                         \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
@@ -3717,13 +2806,21 @@
                     a,8
 
                     % [Voice 4 measure 41] %! COMMENT_MEASURE_NUMBERS
-                    e,8
+                    e,16
 
-                    c,8
+                    a,16
 
-                    e,8
+                    e,16
 
-                    a,8
+                    a,16
+
+                    e,16
+
+                    c,16
+
+                    e,16
+
+                    a,16
                     \ff
 
                     - \tweak stencil #constante-hairpin
@@ -3734,35 +2831,37 @@
                     % [Voice 4 measure 42] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/11 {
-                        fs16
+                    \times 6/5 {
+                        c'8
                         \fff
                         - \tenuto
                         \>
                         [
-                        c8
+                        \ottava 1
+                        <c' fs'>8
                         - \tenuto
-                        ~
-                        c16
-                        fs16
+                        \ottava 0
+                        <cs c'>8
                         - \tenuto
-                        <e, fs>8
+                        \ottava 1
+                        fs'8
                         - \tenuto
-                        c8.
+                        \ottava 0
+                        c'8
                         - \tenuto
-                        fs16
-                        - \tenuto
+                        ]
                     }
                     % [Voice 4 measure 43] %! COMMENT_MEASURE_NUMBERS
-                    c'16
+                    \ottava 1
+                    fs'4
                     - \tenuto
-                    fs16
+                    \ottava 0
+                    \ottava 1
+                    <c' fs'>8
                     - \tenuto
-                    <c fs>8
-                    - \tenuto
-                    e,16
-                    - \tenuto
-                    cs8.
+                    [
+                    \ottava 0
+                    c'8
                     \mf
                     - \tenuto
                     - \tweak stencil #constante-hairpin
@@ -3771,118 +2870,99 @@
                     r4
                     \!
                     r4
-                    \times 4/5 {
-                        e,16
+                    \times 2/3 {
+                        e,8
                         \mp
 
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         [
-                        c,16
+                        c,8
 
-                        e,16
-
-                        a,16
-
-                        e,16
+                        e,8
                         \ff
 
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
                     }
                     % [Voice 4 measure 44] %! COMMENT_MEASURE_NUMBERS
-                    eqf8
+                    dqs4
                     \p
+                    - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    ~
-                    eqf32
-                    ef16.
-                    - \accent
-                    ~
-                    ef32
-                    eqf8..
+                    ef4
                     \mp
                     - \accent
                     - \tweak stencil #constante-hairpin
                     \<
-                    ]
                     r2
                     \!
                     % [Voice 4 measure 45] %! COMMENT_MEASURE_NUMBERS
                     r2
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 16/15 {
-                        ef8
+                    \times 8/7 {
+                        dqs8
                         \p
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
                         [
-                        dqs8.
+                        d8.
                         - \accent
-                        ef16.
-                        - \accent
-                        dqs16
+                        dqf8
                         \mp
                         - \accent
                         - \tweak stencil #constante-hairpin
                         \<
+                        ]
                     }
                     \tweak text #tuplet-number::calc-fraction-text
-                    \times 12/13 {
+                    \times 6/7 {
                         % [Voice 4 measure 46] %! COMMENT_MEASURE_NUMBERS
-                        <c, cs>16
+                        \ottava 1
+                        fs'4
                         \fff
                         - \tenuto
                         \>
-                        c,8
+                        \ottava 0
+                        c'8
                         - \tenuto
-                        cs8.
+                        \ottava 1
+                        fs'4
                         - \tenuto
-                        e,16
-                        - \tenuto
-                        <c, cs>16
-                        - \tenuto
-                        cs16
-                        - \tenuto
-                        e,8
-                        - \tenuto
-                        <e, fs>16
-                        - \tenuto
-                        <c fs>16
+                        \ottava 0
+                        <cs c'>4
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
                         \<
-                        ]
                     }
                     r2
                     \!
-                    \times 16/17 {
+                    \times 8/9 {
                         % [Voice 4 measure 47] %! COMMENT_MEASURE_NUMBERS
                         fs8
                         \fff
                         - \tenuto
                         \>
                         [
-                        c16
+                        c,8
+                        - \tenuto
+                        <c, e>8
                         - \tenuto
                         fs8
                         - \tenuto
-                        <e, fs>8.
+                        cs8
                         - \tenuto
-                        c16
+                        e,8
                         - \tenuto
-                        fs16
+                        ~
+                        e,8
+                        <c, cs>8
                         - \tenuto
-                        c'16
-                        - \tenuto
-                        fs8
-                        - \tenuto
-                        <c fs>16
-                        - \tenuto
-                        e,8.
+                        cs8
                         \mf
                         - \tenuto
                         - \tweak stencil #constante-hairpin
@@ -3895,3 +2975,4 @@
             }
         >>
     >>
+} %! abjad.LilyPondFile
