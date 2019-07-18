@@ -8,8 +8,10 @@ import abjadext.rmakers
 from cthar.tools.MusicMaker import MusicMaker
 from cthar.tools.AttachmentHandler import AttachmentHandler
 from evans.AttachmentHandlers.ClefHandler import ClefHandler
+from evans.AttachmentHandlers.NoteheadHandler import NoteheadHandler
 from random import random
 from random import seed
+from evans.abjad_functions.talea_timespan import timespan_functions
 
 time_1 = time.time()
 
@@ -20,53 +22,25 @@ print("Interpreting file ...")
 time_signatures = [
     abjad.TimeSignature(pair)
     for pair in [
-        (4, 4),
+        (5, 4),
         (5, 4),
         (3, 4),
-        (3, 4),
-        (5, 4),
-        (3, 4),
-        (4, 4),
+        (7, 4),
         (4, 4),
         (5, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (3, 4),
         (5, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (5, 4),
-        (3, 4),
-        (4, 4),
-        (3, 4),
-        (3, 4),
-        (5, 4),
-        (4, 4),
-        (3, 4),
-        (4, 4),
-        (4, 4),
-        (5, 4),
-        (3, 4),
-        (5, 4),
-        (5, 4),
-        (4, 4),
-        (3, 4),
-        (3, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (4, 4),
-        (5, 4),
+        (6, 4),
+        (6, 4),
+        (6, 4),
+        (6, 4),
         (4, 4),
         (5, 4),
         (4, 4),
         (4, 4),
         (5, 4),
-        (5, 4),
+        (4, 4),
+        (7, 4),
+        (4, 4),
     ]
 ]
 
@@ -113,189 +87,37 @@ def grouper(lst1, lst2):
     return [next(lst1) if i == 1 else [next(lst1) for _ in range(i)] for i in lst2]
 
 
-seed(1)
-cello_random_walk_one = []
-cello_random_walk_one.append(-1 if random() < 0.5 else 1)
-for i in range(1, 1000):
-    movement = -1 if random() < 0.5 else 1
-    value = cello_random_walk_one[i - 1] + movement
-    cello_random_walk_one.append(value)
-cello_random_walk_one = [abs(x) for x in cello_random_walk_one]
-cello_chord_one = [
-    -12,
-    -11.5,
-    -11,
-    -10.5,
-    -10,
-    -9.5,
-    -9,
-    -8.5,
-    -8,
-    -7.5,
-    -7,
-    -6.5,
-    -6,
-    -5.5,
-    -5,
-    -4.5,
-    -4,
-    -3.5,
-    -3,
-    -2.5,
-    -2,
-    -1.5,
-    -1,
-    -0.5,
-    0,
-    -0.5,
-    -1,
-    -1.5,
-    -2,
-    -2.5,
-    -3,
-    -3.5,
-    -4,
-    -4.5,
-    -5,
-    -5.5,
-    -6,
-    -6.5,
-    -7,
-    -7.5,
-    -8,
-    -8.5,
-    -9,
-    -9.5,
-    -10,
-    -10.5,
-    -11,
-    -11.5,
-]
-cello_notes_one = [cello_chord_one[x] for x in reduceMod47(cello_random_walk_one)]
-
-seed(2)
-cello_random_walk_two = []
-cello_random_walk_two.append(-1 if random() < 0.5 else 1)
-for i in range(1, 1000):
-    movement = -1 if random() < 0.5 else 1
-    value = cello_random_walk_two[i - 1] + movement
-    cello_random_walk_two.append(value)
-cello_random_walk_two = [abs(x) for x in cello_random_walk_two]
-cello_chord_two = [
-    -24,
-    -11,
-    -20,
-    -6,
-    -12,
-    -6,
-    0,
-    -11,
-    -6,
-    4,
-    0,
-    6,
-    0,
-    -11,
-    -6,
-    -24,
-    -8,
-    0,
-]
-cello_notes_two_walk = [cello_chord_two[x] for x in reduceMod17(cello_random_walk_two)]
-map_1 = [1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1,]
-cello_notes_two = grouper(cello_notes_two_walk, map_1)
-
-seed(3)
-cello_random_walk_three = []
-cello_random_walk_three.append(-1 if random() < 0.5 else 1)
-for i in range(1, 1000):
-    movement = -1 if random() < 0.5 else 1
-    value = cello_random_walk_three[i - 1] + movement
-    cello_random_walk_three.append(value)
-cello_random_walk_three = [abs(x) for x in cello_random_walk_three]
-cello_chord_three = [
-    -24,
-    -20,
-    -15,
-    -14,
-    -4,
-    5,
-    11,
-    19,
-    26,
-    37,
-    39,
-    42,
-    39,
-    37,
-    26,
-    19,
-    11,
-    5,
-    -4,
-    -14,
-    -15,
-    -20,
-]
-cello_notes_three = [cello_chord_three[x] for x in reduceMod21(cello_random_walk_three)]
-
-seed(4)
-cello_random_walk_four = []
-cello_random_walk_four.append(-1 if random() < 0.5 else 1)
-for i in range(1, 2000):
-    movement = -1 if random() < 0.5 else 1
-    value = cello_random_walk_four[i - 1] + movement
-    cello_random_walk_four.append(value)
-cello_random_walk_four = [abs(x) for x in cello_random_walk_four]
-cello_chord_four = [-17, -8, -13, -5, 5, -5, -13, -8]
-map_2 = [2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, ]
-cello_notes_four_walk = [
-    cello_chord_four[x] for x in reduceMod7(cello_random_walk_four)
-]
-cello_notes_four = grouper(cello_notes_four_walk, map_2)
+cello_notes_one = [0, ]
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
 rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[7, 2, 4, 6, 3, 5, 3, 5, 3, 6, 4], denominator=16),
+    talea=abjadext.rmakers.Talea(counts=[3, -5, 7, 4, -6, 4, -6, 4, 7, -5], denominator=8),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
     extra_counts_per_division=[0, 1, 0, -1],
-    # burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-    #     left_classes=[abjad.Note, abjad.Rest],
-    #     left_counts=[1, 0, 1],
-    #     ),
+    burnish_specifier=abjadext.rmakers.BurnishSpecifier(
+        left_classes=[abjad.Note, abjad.Rest],
+        left_counts=[1, 0, 1],
+        ),
+    # logical_tie_masks=[abjadext.rmakers.silence([2], 5),],
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
         trivialize=True, extract_trivial=True, rewrite_rest_filled=True
     ),
 )
 
 rmaker_two = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[1, 1, 1, 1, 2, 1, 3, 1, 2, 3], denominator=8),
+    talea=abjadext.rmakers.Talea(counts=[3, 3, -3, 3, 5, -3, 7, -3, 5, 7], denominator=8),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
     extra_counts_per_division=[1, 0, -1, 0, 1],
-    # burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-    #     left_classes=[abjad.Note, abjad.Rest],
-    #     left_counts=[1, 0, 1],
-    #     ),
-    tuplet_specifier=abjadext.rmakers.TupletSpecifier(
-        trivialize=True, extract_trivial=True, rewrite_rest_filled=True
-    ),
-)
-
-rmaker_three = abjadext.rmakers.EvenDivisionRhythmMaker(
-    denominators=[8, 8, 16, 8, 16, 8],
-    extra_counts_per_division=[0, 1, 0, 0, -1, 0, 1, -1],
-    # burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-    #     left_classes=[abjad.Rest],
-    #     left_counts=[1],
-    #     right_classes=[abjad.Rest],
-    #     right_counts=[1],
-    #     outer_divisions_only=True,
-    #     ),
+    burnish_specifier=abjadext.rmakers.BurnishSpecifier(
+        left_classes=[abjad.Note, abjad.Rest],
+        left_counts=[1, 0, 1],
+        ),
+    # logical_tie_masks=[abjadext.rmakers.silence([1], 3),],
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
         trivialize=True, extract_trivial=True, rewrite_rest_filled=True
     ),
@@ -304,21 +126,17 @@ rmaker_three = abjadext.rmakers.EvenDivisionRhythmMaker(
 # Initialize AttachmentHandler
 
 attachment_handler_one = AttachmentHandler(
-    starting_dynamic="p",
-    ending_dynamic="mp",
-    hairpin_indicator="--",
-    articulation="accent",
+    starting_dynamic="ppppp",
+    ending_dynamic="pp",
+    hairpin_indicator="<",
+    articulation="",
 )
 
 attachment_handler_two = AttachmentHandler(
-    starting_dynamic="fff",
-    ending_dynamic="mf",
+    starting_dynamic="mp",
+    ending_dynamic="ppp",
     hairpin_indicator=">",
-    articulation="tenuto",
-)
-
-attachment_handler_three = AttachmentHandler(
-    starting_dynamic="mp", ending_dynamic="ff", hairpin_indicator="<|", articulation=""
+    articulation="",
 )
 
 # Initialize MusicMakers with the rhythm-makers.
@@ -332,21 +150,9 @@ cellomusicmaker_one = MusicMaker(
 )
 cellomusicmaker_two = MusicMaker(
     rmaker=rmaker_two,
-    pitches=cello_notes_two,
+    pitches=cello_notes_one,
     continuous=True,
     attachment_handler=attachment_handler_two,
-)
-cellomusicmaker_three = MusicMaker(
-    rmaker=rmaker_three,
-    pitches=cello_notes_three,
-    continuous=True,
-    attachment_handler=attachment_handler_three,
-)
-cellomusicmaker_four = MusicMaker(
-    rmaker=rmaker_two,
-    pitches=cello_notes_four,
-    continuous=True,
-    attachment_handler=attachment_handler_three,
 )
 
 silence_maker = abjadext.rmakers.NoteRhythmMaker(
@@ -381,51 +187,33 @@ voice_1_timespan_list = abjad.TimespanList(
             annotation=MusicSpecifier(music_maker=music_maker, voice_name="Voice 1"),
         )
         for start_offset, stop_offset, music_maker in [
-            [(0, 4), (4, 4), bowmaker],
-            [(4, 4), (7, 4), bowmaker],
-            [(12, 4), (15, 4), bowmaker],
-            [(15, 4), (17, 4), bowmaker],
-            [(17, 4), (20, 4), bowmaker],
-            [(23, 4), (25, 4), bowmaker],
-            [(25, 4), (27, 4), bowmaker],
-            [(27, 4), (30, 4), bowmaker],
-            [(32, 4), (36, 4), bowmaker],
-            [(43, 4), (44, 4), bowmaker],
-            [(44, 4), (48, 4), bowmaker],
-            [(48, 4), (51, 4), bowmaker],
-            [(52, 4), (56, 4), bowmaker],
-            [(56, 4), (58, 4), bowmaker],
-            [(62, 4), (64, 4), bowmaker],
-            [(68, 4), (72, 4), bowmaker],
-            [(72, 4), (76, 4), bowmaker],
-            [(76, 4), (78, 4), bowmaker],
-            [(78, 4), (81, 4), bowmaker],
-            [(82, 4), (84, 4), bowmaker],
-            [(84, 4), (87, 4), bowmaker],
-            [(88, 4), (91, 4), bowmaker],
-            [(91, 4), (93, 4), bowmaker],
-            [(94, 4), (99, 4), bowmaker],
-            [(100, 4), (103, 4), bowmaker],
-            [(103, 4), (105, 4), bowmaker],
-            [(106, 4), (110, 4), bowmaker],
-            [(110, 4), (111, 4), bowmaker],
-            [(112, 4), (114, 4), bowmaker],
-            [(114, 4), (119, 4), bowmaker],
-            [(122, 4), (126, 4), bowmaker],
-            [(128, 4), (131, 4), bowmaker],
-            [(132, 4), (134, 4), bowmaker],
-            [(139, 4), (140, 4), bowmaker],
-            [(144, 4), (146, 4), bowmaker],
-            [(146, 4), (149, 4), bowmaker],
-            [(150, 4), (153, 4), bowmaker],
-            [(157, 4), (158, 4), bowmaker],
-            [(158, 4), (162, 4), bowmaker],
-            [(165, 4), (167, 4), bowmaker],
-            [(167, 4), (169, 4), bowmaker],
-            [(174, 4), (176, 4), bowmaker],
-            [(176, 4), (177, 4), bowmaker],
-            [(181, 4), (185, 4), bowmaker],
-            [(185, 4), (186, 4), bowmaker],
+            [(0, 4), (4, 4), silence_maker],
+            [(4, 4), (8, 4), silence_maker],
+            [(8, 4), (12, 4), silence_maker],
+            [(12, 4), (16, 4), silence_maker],
+            [(16, 4), (20, 4), silence_maker],
+            [(20, 4), (22, 4), silence_maker],
+            [(22, 4), (24, 4), silence_maker],
+            [(24, 4), (28, 4), silence_maker],
+            [(28, 4), (32, 4), silence_maker],
+            [(36, 4), (38, 4), silence_maker],
+            [(38, 4), (42, 4), silence_maker],
+            [(42, 4), (46, 4), silence_maker],
+            [(46, 4), (50, 4), silence_maker],
+            [(50, 4), (52, 4), silence_maker],
+            [(52, 4), (54, 4), silence_maker],
+            [(54, 4), (56, 4), silence_maker],
+            [(56, 4), (58, 4), silence_maker],
+            [(58, 4), (60, 4), silence_maker],
+            [(60, 4), (64, 4), silence_maker],
+            [(64, 4), (68, 4), silence_maker],
+            [(68, 4), (72, 4), silence_maker],
+            [(72, 4), (76, 4), silence_maker],
+            [(76, 4), (80, 4), silence_maker],
+            [(80, 4), (84, 4), silence_maker],
+            [(84, 4), (88, 4), silence_maker],
+            [(88, 4), (92, 4), silence_maker],
+            [(92, 4), (95, 4), silence_maker],
         ]
     ]
 )
@@ -446,43 +234,20 @@ voice_2_timespan_list = abjad.TimespanList(
             [(23, 4), (25, 4), cellomusicmaker_two],
             [(25, 4), (27, 4), cellomusicmaker_one],
             [(27, 4), (30, 4), cellomusicmaker_two],
-            [(32, 4), (36, 4), cellomusicmaker_three],
+            [(32, 4), (36, 4), cellomusicmaker_one],
             [(43, 4), (44, 4), cellomusicmaker_two],
             [(44, 4), (48, 4), cellomusicmaker_two],
             [(48, 4), (51, 4), cellomusicmaker_one],
             [(52, 4), (56, 4), cellomusicmaker_one],
             [(56, 4), (58, 4), cellomusicmaker_two],
             [(62, 4), (64, 4), cellomusicmaker_two],
-            [(68, 4), (72, 4), cellomusicmaker_three],
+            [(68, 4), (72, 4), cellomusicmaker_one],
             [(72, 4), (76, 4), cellomusicmaker_two],
-            [(76, 4), (78, 4), cellomusicmaker_three],
+            [(76, 4), (78, 4), cellomusicmaker_one],
             [(78, 4), (81, 4), cellomusicmaker_two],
             [(82, 4), (84, 4), cellomusicmaker_two],
-            [(84, 4), (87, 4), cellomusicmaker_four],  #
-            [(88, 4), (91, 4), cellomusicmaker_four],
-            [(91, 4), (93, 4), cellomusicmaker_one],
-            [(94, 4), (99, 4), cellomusicmaker_three],
-            [(100, 4), (103, 4), cellomusicmaker_one],
-            [(103, 4), (105, 4), cellomusicmaker_one],
-            [(106, 4), (110, 4), cellomusicmaker_four],
-            [(110, 4), (111, 4), cellomusicmaker_four],
-            [(112, 4), (114, 4), cellomusicmaker_three],
-            [(114, 4), (119, 4), cellomusicmaker_three],
-            [(122, 4), (126, 4), cellomusicmaker_one],
-            [(128, 4), (131, 4), cellomusicmaker_three],
-            [(132, 4), (134, 4), cellomusicmaker_four],
-            [(139, 4), (140, 4), cellomusicmaker_four],
-            [(144, 4), (146, 4), cellomusicmaker_four],
-            [(146, 4), (149, 4), cellomusicmaker_four],
-            [(150, 4), (153, 4), cellomusicmaker_four],  #
-            [(157, 4), (158, 4), cellomusicmaker_two],
-            [(158, 4), (162, 4), cellomusicmaker_three],
-            [(165, 4), (167, 4), cellomusicmaker_two],
-            [(167, 4), (169, 4), cellomusicmaker_two],
-            [(174, 4), (176, 4), cellomusicmaker_three],
-            [(176, 4), (177, 4), cellomusicmaker_one],
-            [(181, 4), (185, 4), cellomusicmaker_two],
-            [(185, 4), (186, 4), cellomusicmaker_three],
+            [(84, 4), (87, 4), cellomusicmaker_two],
+            [(88, 4), (91, 4), cellomusicmaker_two],
         ]
     ]
 )
@@ -496,57 +261,33 @@ voice_3_timespan_list = abjad.TimespanList(
             annotation=MusicSpecifier(music_maker=music_maker, voice_name="Voice 3"),
         )
         for start_offset, stop_offset, music_maker in [
-            [(0, 4), (3, 4), bowmaker],
-            [(3, 4), (4, 4), bowmaker],
-            [(4, 4), (5, 4), bowmaker],
-            [(8, 4), (9, 4), bowmaker],
-            [(9, 4), (12, 4), bowmaker],
-            [(12, 4), (15, 4), bowmaker],
-            [(20, 4), (23, 4), bowmaker],
-            [(25, 4), (27, 4), bowmaker],
-            [(27, 4), (29, 4), bowmaker],
-            [(34, 4), (36, 4), bowmaker],
-            [(36, 4), (40, 4), bowmaker],
-            [(40, 4), (43, 4), bowmaker],
-            [(48, 4), (51, 4), bowmaker],
-            [(52, 4), (56, 4), bowmaker],
-            [(58, 4), (60, 4), bowmaker],
-            [(60, 4), (64, 4), bowmaker],
-            [(64, 4), (66, 4), bowmaker],
-            [(72, 4), (76, 4), bowmaker],
-            [(76, 4), (79, 4), bowmaker],
-            [(79, 4), (81, 4), bowmaker],
-            [(81, 4), (82, 4), bowmaker],
-            [(83, 4), (84, 4), bowmaker],
-            [(84, 4), (88, 4), bowmaker],
-            [(88, 4), (89, 4), bowmaker],
-            [(90, 4), (91, 4), bowmaker],
-            [(91, 4), (94, 4), bowmaker],
-            [(94, 4), (96, 4), bowmaker],
-            [(97, 4), (99, 4), bowmaker],
-            [(99, 4), (103, 4), bowmaker],
-            [(104, 4), (106, 4), bowmaker],
-            [(106, 4), (110, 4), bowmaker],
-            [(111, 4), (114, 4), bowmaker],
-            [(115, 4), (117, 4), bowmaker],
-            [(119, 4), (122, 4), bowmaker],
-            [(125, 4), (127, 4), bowmaker],
-            [(127, 4), (129, 4), bowmaker],
-            [(133, 4), (136, 4), bowmaker],
-            [(136, 4), (138, 4), bowmaker],
-            [(143, 4), (146, 4), bowmaker],
-            [(146, 4), (150, 4), bowmaker],
-            [(150, 4), (154, 4), bowmaker],
-            [(154, 4), (155, 4), bowmaker],
-            [(157, 4), (158, 4), bowmaker],
-            [(158, 4), (160, 4), bowmaker],
-            [(164, 4), (167, 4), bowmaker],
-            [(167, 4), (169, 4), bowmaker],
-            [(171, 4), (172, 4), bowmaker],
-            [(172, 4), (174, 4), bowmaker],
-            [(178, 4), (180, 4), bowmaker],
-            [(180, 4), (183, 4), bowmaker],
-            [(185, 4), (189, 4), bowmaker],
+            [(0, 4), (4, 4), silence_maker],
+            [(4, 4), (8, 4), silence_maker],
+            [(8, 4), (12, 4), silence_maker],
+            [(12, 4), (16, 4), silence_maker],
+            [(16, 4), (20, 4), silence_maker],
+            [(20, 4), (22, 4), silence_maker],
+            [(22, 4), (24, 4), silence_maker],
+            [(24, 4), (28, 4), silence_maker],
+            [(28, 4), (32, 4), silence_maker],
+            [(36, 4), (38, 4), silence_maker],
+            [(38, 4), (42, 4), silence_maker],
+            [(42, 4), (46, 4), silence_maker],
+            [(46, 4), (50, 4), silence_maker],
+            [(50, 4), (52, 4), silence_maker],
+            [(52, 4), (54, 4), silence_maker],
+            [(54, 4), (56, 4), silence_maker],
+            [(56, 4), (58, 4), silence_maker],
+            [(58, 4), (60, 4), silence_maker],
+            [(60, 4), (64, 4), silence_maker],
+            [(64, 4), (68, 4), silence_maker],
+            [(68, 4), (72, 4), silence_maker],
+            [(72, 4), (76, 4), silence_maker],
+            [(76, 4), (80, 4), silence_maker],
+            [(80, 4), (84, 4), silence_maker],
+            [(84, 4), (88, 4), silence_maker],
+            [(88, 4), (92, 4), silence_maker],
+            [(92, 4), (95, 4), silence_maker],
         ]
     ]
 )
@@ -563,7 +304,7 @@ voice_4_timespan_list = abjad.TimespanList(
             [(3, 4), (4, 4), cellomusicmaker_two],
             [(4, 4), (5, 4), cellomusicmaker_one],
             [(8, 4), (9, 4), cellomusicmaker_one],
-            [(9, 4), (12, 4), cellomusicmaker_three],
+            [(9, 4), (12, 4), cellomusicmaker_one],
             [(12, 4), (15, 4), cellomusicmaker_one],
             [(20, 4), (23, 4), cellomusicmaker_two],
             [(25, 4), (27, 4), cellomusicmaker_one],
@@ -575,55 +316,35 @@ voice_4_timespan_list = abjad.TimespanList(
             [(52, 4), (56, 4), cellomusicmaker_two],
             [(58, 4), (60, 4), cellomusicmaker_one],
             [(60, 4), (64, 4), cellomusicmaker_one],
-            [(64, 4), (66, 4), cellomusicmaker_three],
+            [(64, 4), (66, 4), cellomusicmaker_one],
             [(72, 4), (76, 4), cellomusicmaker_two],
             [(76, 4), (79, 4), cellomusicmaker_one],
             [(79, 4), (81, 4), cellomusicmaker_one],
-            [(81, 4), (82, 4), cellomusicmaker_three],
+            [(81, 4), (82, 4), cellomusicmaker_one],
             [(83, 4), (84, 4), cellomusicmaker_two],
             [(84, 4), (88, 4), cellomusicmaker_two],
             [(88, 4), (89, 4), cellomusicmaker_one],
             [(90, 4), (91, 4), cellomusicmaker_one],
-            [(91, 4), (94, 4), cellomusicmaker_three],
-            [(94, 4), (96, 4), cellomusicmaker_two],
-            [(97, 4), (99, 4), cellomusicmaker_two],
-            [(99, 4), (103, 4), cellomusicmaker_one],
-            [(104, 4), (106, 4), cellomusicmaker_one],
-            [(106, 4), (110, 4), cellomusicmaker_three],
-            [(111, 4), (114, 4), cellomusicmaker_two],
-            [(115, 4), (117, 4), cellomusicmaker_four],  #
-            [(119, 4), (122, 4), cellomusicmaker_four],
-            [(125, 4), (127, 4), cellomusicmaker_four],
-            [(127, 4), (129, 4), cellomusicmaker_four],
-            [(133, 4), (136, 4), cellomusicmaker_four],
-            [(136, 4), (138, 4), cellomusicmaker_four],
-            [(143, 4), (146, 4), cellomusicmaker_four],
-            [(146, 4), (150, 4), cellomusicmaker_four],
-            [(150, 4), (154, 4), cellomusicmaker_four],  #
-            [(154, 4), (155, 4), cellomusicmaker_one],
-            [(157, 4), (158, 4), cellomusicmaker_three],
-            [(158, 4), (160, 4), cellomusicmaker_three],
-            [(164, 4), (167, 4), cellomusicmaker_two],
-            [(167, 4), (169, 4), cellomusicmaker_two],
-            [(171, 4), (172, 4), cellomusicmaker_three],
-            [(172, 4), (174, 4), cellomusicmaker_one],
-            [(178, 4), (180, 4), cellomusicmaker_one],
-            [(180, 4), (183, 4), cellomusicmaker_two],
-            [(185, 4), (189, 4), cellomusicmaker_two],
-            [(189, 4), (190, 4), silence_maker],
+            [(91, 4), (94, 4), cellomusicmaker_one],
+            [(94, 4), (95, 4), silence_maker],
         ]
     ]
 )
 
 # Create a dictionary mapping voice names to timespan lists so we can
 # maintain the association in later operations:
+timespan_set = [voice_1_timespan_list, voice_2_timespan_list, voice_3_timespan_list, voice_4_timespan_list,]
+set_timespan_list = [timespan_functions.make_split_list(x, bounds) for x in timespan_set]
 
 all_timespan_lists = {
-    "Voice 1": voice_1_timespan_list,
-    "Voice 2": voice_2_timespan_list,
-    "Voice 3": voice_3_timespan_list,
-    "Voice 4": voice_4_timespan_list,
+    "Voice 1": abjad.TimespanList(),
+    "Voice 2": abjad.TimespanList(),
+    "Voice 3": abjad.TimespanList(),
+    "Voice 4": abjad.TimespanList(),
 }
+for x in set_timespan_list:
+    for y in x:
+        all_timespan_lists[y.annotation.voice_name].append(y)
 
 # Determine the "global" timespan of all voices combined:
 
@@ -844,6 +565,18 @@ for staff in abjad.iterate(score["Staff Group 2"]).components(abjad.Staff):
 
 # attach instruments and clefs
 
+nh_handler = NoteheadHandler(notehead_list=["cross", "diamond", "default", "default", "default", "default", "default", "cross", "default", "slash", "default", "default"], transition=False, continuous=True)
+nh_handler(abjad.select(score["Voice 2"]).logical_ties())
+nh_handler(abjad.select(score["Voice 4"]).logical_ties())
+
+start_command = abjad.LilyPondLiteral(
+    r"\stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff",
+    format_slot="before",
+)
+
+abjad.attach(start_command, abjad.select(score["Voice 2"]).leaves()[0])
+abjad.attach(start_command, abjad.select(score["Voice 4"]).leaves()[0])
+
 literal = abjad.LilyPondLiteral(r"\tweak Dots.transparent ##t")
 for rest in abjad.select(score["Voice 5"]).components(abjad.Rest):
     abjad.attach(literal, rest)
@@ -854,7 +587,7 @@ for rest in abjad.select(score["Voice 6"]).components(abjad.Rest):
 print("Adding attachments ...")
 bar_line = abjad.BarLine("|.")
 section_bar_line = abjad.BarLine("||")
-metro = abjad.MetronomeMark((1, 8), 60)
+metro = abjad.MetronomeMark((1, 8), 80)
 markup1 = abjad.Markup(r"\bold { A }")
 markup2 = abjad.Markup(r"\bold { B }")
 markup3 = abjad.Markup(r"\bold { C }")
@@ -916,7 +649,7 @@ for voice in abjad.select(score["Voice 1"]).components(abjad.Voice):
         "jete",
         "jete",
     ]
-    _apply_numerators_and_tech(staff=voice, nums=num_list, tech=tech_list)
+    # _apply_numerators_and_tech(staff=voice, nums=num_list, tech=tech_list)
 
 for voice in abjad.select(score["Voice 3"]).components(abjad.Voice):
     seed(5)
@@ -950,7 +683,7 @@ for voice in abjad.select(score["Voice 3"]).components(abjad.Voice):
         "jete",
         "jete",
     ]
-    _apply_numerators_and_tech(staff=voice, nums=num_list, tech=tech_list)
+    # _apply_numerators_and_tech(staff=voice, nums=num_list, tech=tech_list)
 
 
 def _apply_position_and_span(staff, poses):
@@ -968,11 +701,11 @@ def _apply_position_and_span(staff, poses):
 
 for voice in abjad.select(score["Voice 5"]).components(abjad.Voice):
     pos_list_1 = ["st.", "ord.", "sp.", "msp.", "ord."]
-    _apply_position_and_span(staff=voice, poses=pos_list_1)
+    # _apply_position_and_span(staff=voice, poses=pos_list_1)
 
 for voice in abjad.select(score["Voice 6"]).components(abjad.Voice):
     pos_list_2 = ["sp.", "msp.", "ord.", "st.", "ord."]
-    _apply_position_and_span(staff=voice, poses=pos_list_2)
+    # _apply_position_and_span(staff=voice, poses=pos_list_2)
 
 for voice in abjad.select(score["Voice 1"]).components(abjad.Voice):
     for run in abjad.select(voice).runs():
@@ -994,17 +727,17 @@ clefs2 = cyc([abjad.Clef("percussion"), abjad.Clef("percussion"), abjad.Clef("ba
 
 abbreviations1 = cyc(
     [
-        abjad.MarginMarkup(markup=abjad.Markup("B.H.")),
+        abjad.MarginMarkup(markup=abjad.Markup("")),
+        abjad.MarginMarkup(markup=abjad.Markup("")),
         abjad.MarginMarkup(markup=abjad.Markup("vc.I")),
-        abjad.MarginMarkup(markup=abjad.Markup("L.H.")),
     ]
 )
 
 abbreviations2 = cyc(
     [
-        abjad.MarginMarkup(markup=abjad.Markup("B.H.")),
+        abjad.MarginMarkup(markup=abjad.Markup("")),
+        abjad.MarginMarkup(markup=abjad.Markup("")),
         abjad.MarginMarkup(markup=abjad.Markup("vc.II")),
-        abjad.MarginMarkup(markup=abjad.Markup("L.H.")),
     ]
 )
 
@@ -1038,9 +771,9 @@ for staff in abjad.iterate(score["Staff Group 2"]).components(abjad.Staff):
 
 cello_clef_handler = ClefHandler(clef="bass", add_extended_clefs=True, add_ottavas=True)
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 1"]).leaves()[0])
-cello_clef_handler(abjad.select(score["Voice 2"]).components(abjad.Voice))
+abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 2"]).leaves()[0])
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 3"]).leaves()[0])
-cello_clef_handler(abjad.select(score["Voice 4"]).components(abjad.Voice))
+abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 4"]).leaves()[0])
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 5"]).leaves()[0])
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 6"]).leaves()[0])
 
@@ -1056,35 +789,35 @@ for staff in abjad.select(score["Staff Group 2"]).components(abjad.Staff)[0]:
     abjad.attach(metro, leaf1)
     abjad.attach(bar_line, last_leaf)
 
-for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
-    leaf1_start = abjad.select(staff).leaves()[7]
-    leaf1 = abjad.select(staff).leaves()[8]
-    abjad.attach(mark1, leaf1)
-    abjad.attach(section_bar_line, leaf1_start)
+# for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
+#     leaf1_start = abjad.select(staff).leaves()[7]
+#     leaf1 = abjad.select(staff).leaves()[8]
+#     abjad.attach(mark1, leaf1)
+#     abjad.attach(section_bar_line, leaf1_start)
 
-for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
-    leaf2_start = abjad.select(staff).leaves()[15]
-    leaf2 = abjad.select(staff).leaves()[16]
-    abjad.attach(mark2, leaf2)
-    abjad.attach(section_bar_line, leaf2_start)
-
-for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
-    leaf3_start = abjad.select(staff).leaves()[23]
-    leaf3 = abjad.select(staff).leaves()[24]
-    abjad.attach(mark3, leaf3)
-    abjad.attach(section_bar_line, leaf3_start)
-
-for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
-    leaf4_start = abjad.select(staff).leaves()[31]
-    leaf4 = abjad.select(staff).leaves()[32]
-    abjad.attach(mark4, leaf4)
-    abjad.attach(section_bar_line, leaf4_start)
-
-for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
-    leaf5_start = abjad.select(staff).leaves()[38]
-    leaf5 = abjad.select(staff).leaves()[39]
-    abjad.attach(mark5, leaf5)
-    abjad.attach(section_bar_line, leaf5_start)
+# for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
+#     leaf2_start = abjad.select(staff).leaves()[15]
+#     leaf2 = abjad.select(staff).leaves()[16]
+#     abjad.attach(mark2, leaf2)
+#     abjad.attach(section_bar_line, leaf2_start)
+#
+# for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
+#     leaf3_start = abjad.select(staff).leaves()[23]
+#     leaf3 = abjad.select(staff).leaves()[24]
+#     abjad.attach(mark3, leaf3)
+#     abjad.attach(section_bar_line, leaf3_start)
+#
+# for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
+#     leaf4_start = abjad.select(staff).leaves()[31]
+#     leaf4 = abjad.select(staff).leaves()[32]
+#     abjad.attach(mark4, leaf4)
+#     abjad.attach(section_bar_line, leaf4_start)
+#
+# for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
+#     leaf5_start = abjad.select(staff).leaves()[38]
+#     leaf5 = abjad.select(staff).leaves()[39]
+#     abjad.attach(mark5, leaf5)
+#     abjad.attach(section_bar_line, leaf5_start)
 
 # for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):
 #     leaf6 = abjad.select(staff).leaves()[39]
@@ -1130,7 +863,7 @@ if path.exists():
     os.system(f"open {pdf_path}")
 score_lines = open(f"{directory}/illustration.ly").readlines()
 build_path = (directory / ".." / ".." / "Build/score").resolve()
-open(f"{build_path}/Segment_II.ly", "w").writelines(score_lines[15:-1])
+open(f"{build_path}/Segment_III.ly", "w").writelines(score_lines[15:-1])
 
 segment_time = time_2 - time_1
 
@@ -1176,7 +909,7 @@ for count, staff_group in enumerate(abjad.iterate(score).components(abjad.StaffG
         os.system(f"open {pdf_path}")
     build_path = (directory / ".." / ".." / f"Build/parts/cello_{count + 1}").resolve()
     part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
-    open(f"{build_path}/Segment_II.ly", "w").writelines(
+    open(f"{build_path}/Segment_III.ly", "w").writelines(
         part_lines[15:-1]
     )
 time_6 = time.time()

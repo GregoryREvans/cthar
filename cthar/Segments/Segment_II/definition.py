@@ -852,7 +852,7 @@ for rest in abjad.select(score["Voice 6"]).components(abjad.Rest):
     abjad.attach(literal, rest)
 
 print("Adding attachments ...")
-bar_line = abjad.BarLine("|.")
+bar_line = abjad.BarLine("||")
 section_bar_line = abjad.BarLine("||")
 metro = abjad.MetronomeMark((1, 8), 60)
 markup1 = abjad.Markup(r"\bold { A }")

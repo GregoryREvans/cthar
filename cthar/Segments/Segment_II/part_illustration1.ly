@@ -1005,7 +1005,7 @@
                     }
                     r1
                     \!
-                    \bar "|."
+                    \bar "||"
                 }
             }
             \context BeamStaff = "Staff 5"

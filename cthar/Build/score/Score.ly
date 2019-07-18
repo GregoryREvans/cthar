@@ -14,6 +14,7 @@
 
 \score{
 	{
-	\include "Segment_II.ly"
+    \include "Segment_II.ly"
+	\include "Segment_III.ly"
 	}
 }

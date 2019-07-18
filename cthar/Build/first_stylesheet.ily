@@ -11,7 +11,7 @@
 	tagline = ##f
 	breakbefore = ##t
 	title = \markup \override #'(font-name . "Didot") \fontsize #20 \bold \center-column {"C t h a r"}
-	subtitle = \markup \override #'(font-name . "Didot") \fontsize #4 \center-column { \line{ \fontsize #25 ".                                   ."} \line{ \fontsize #5 "f o r   t w o   c e l l o s"} \line{ \fontsize #25 ".                                   ."} }
+	subtitle = \markup \override #'(font-name . "Didot") \fontsize #4 \center-column { \line{ \fontsize #25 ".                                   ."} \line{ \fontsize #4 "f o r   t w o   c e l l o s"} \line{ \fontsize #25 ".                                   ."} }
 	composer = \markup \override #'(font-name . "Didot") \fontsize #2.5 {"Gregory Rowland Evans"}
 }
 
@@ -28,8 +28,8 @@ bowtab = {
 	%\accidentalStyle modern-cautionary
 	%\accidentalStyle neo-modern
 	%\accidentalStyle dodecaphonic
-    indent = #5
-	%ragged-last = ##t
+    %{ indent = #5 %}
+	ragged-last = ##t
     ragged-right = ##t
     %left-margin = #15
 	\context {
@@ -52,7 +52,7 @@ bowtab = {
 		\override MetronomeMark.Y-extent = #'(0 . 0)
 		\override MetronomeMark.break-align-symbols = #'(left-edge)
 		\override MetronomeMark.extra-offset = #'(0 . 4)
-		\override MetronomeMark.font-size = 10
+		\override MetronomeMark.font-size = 8
 		\override RehearsalMark.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
 		\override RehearsalMark.X-extent = #'(0 . 0)
 		\override RehearsalMark.X-offset = 6
@@ -69,7 +69,7 @@ bowtab = {
 		\override TimeSignature.Y-offset = 3
         \override TimeSignature.break-align-symbol = ##f
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = #7
+        \override TimeSignature.font-size = #6
         \override TimeSignature.self-alignment-X = #center
         \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 10) (padding . 6) (stretchability . 0))
     }
@@ -138,7 +138,7 @@ bowtab = {
 		\override Tie.stencil = ##f
         \override TupletBracket.stencil = ##f
         \override TupletNumber.stencil = ##f
-		%\RemoveEmptyStaves
+		\RemoveEmptyStaves
     }
 
 	\context {
@@ -162,12 +162,13 @@ bowtab = {
         \override TimeSignature.stencil = ##f
 		\override Tie.stencil = ##f
         \override TupletBracket.positions = #'(3 . 3)
-		%\RemoveEmptyStaves
+		\RemoveEmptyStaves
     }
 
     \context {
         \RhythmicStaff
         \remove Time_signature_engraver
+		\RemoveEmptyStaves
     }
        \context {
         \StaffGroup

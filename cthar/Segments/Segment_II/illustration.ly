@@ -13,7 +13,7 @@
 \paper {}
 
 \score { %! abjad.LilyPondFile
-    \new Score
+    \context Score = "Cthar Score"
     <<
         \context TimeSignatureContext = "Global Context"
         {
@@ -2634,7 +2634,7 @@
                     }
                     r1
                     \!
-                    \bar "|."
+                    \bar "||"
                 }
             }
             \context BeamStaff = "Staff 5"
@@ -7125,7 +7125,7 @@
                     }
                     r4
                     \!
-                    \bar "|."
+                    \bar "||"
                 }
             }
             \context BeamStaff = "Staff 6"
