@@ -1,4 +1,4 @@
-    \new Score
+    \context Score = "Cthar Score"
     <<
         \context TimeSignatureContext = "Global Context"
         {
@@ -128,6 +128,7 @@
                     \markup { [] }
                     \set Staff.instrumentName =
                     \markup { "Violoncello II" }
+                    \tempo 8=80
                     \clef "percussion"
                     \tweak Dots.transparent ##t
                     r2.
@@ -197,6 +198,7 @@
                     % [Voice 6 measure 19] %! COMMENT_MEASURE_NUMBERS
                     \tweak Dots.transparent ##t
                     r1
+                    \bar "|."
                 }
             }
             \context Staff = "Staff 4"
@@ -210,6 +212,7 @@
                         \markup { vc.II }
                         \set Staff.instrumentName =
                         \markup { "Left Hand" }
+                        \tempo 8=80
                         \once \override Staff.NoteHead.style = #'cross
                         \stopStaff \once \override Staff.StaffSymbol.line-count = #1 \startStaff
                         \clef "percussion"
@@ -524,6 +527,7 @@
                         \!
                     }
                     r4
+                    \bar "|."
                 }
             }
         >>

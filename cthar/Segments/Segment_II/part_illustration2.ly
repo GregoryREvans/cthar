@@ -44,12 +44,6 @@
             \bar "||"
             % [Global Context measure 9] %! COMMENT_MEASURE_NUMBERS
             \time 5/4
-            \mark \markup {
-                \bold
-                    {
-                        A
-                    }
-                }
             s1 * 5/4
             % [Global Context measure 10] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
@@ -75,12 +69,6 @@
             \bar "||"
             % [Global Context measure 17] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
-            \mark \markup {
-                \bold
-                    {
-                        B
-                    }
-                }
             s1 * 1
             % [Global Context measure 18] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
@@ -106,12 +94,6 @@
             \bar "||"
             % [Global Context measure 25] %! COMMENT_MEASURE_NUMBERS
             \time 5/4
-            \mark \markup {
-                \bold
-                    {
-                        C
-                    }
-                }
             s1 * 5/4
             % [Global Context measure 26] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
@@ -137,12 +119,6 @@
             \bar "||"
             % [Global Context measure 33] %! COMMENT_MEASURE_NUMBERS
             \time 5/4
-            \mark \markup {
-                \bold
-                    {
-                        D
-                    }
-                }
             s1 * 5/4
             % [Global Context measure 34] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
@@ -165,12 +141,6 @@
             \bar "||"
             % [Global Context measure 40] %! COMMENT_MEASURE_NUMBERS
             \time 4/4
-            \mark \markup {
-                \bold
-                    {
-                        E
-                    }
-                }
             s1 * 1
             % [Global Context measure 41] %! COMMENT_MEASURE_NUMBERS
             \time 5/4
@@ -1080,6 +1050,7 @@
                         \markup { vc.II }
                         \set Staff.instrumentName =
                         \markup { "Violoncello II" }
+                        \tempo 8=60
                         \clef "percussion"
                         a'''8
                         [
@@ -1962,6 +1933,7 @@
                     \tweak Dots.transparent ##t
                     r4
                     \!
+                    \bar "||"
                 }
             }
             \context Staff = "Staff 4"
@@ -1973,6 +1945,7 @@
                     \markup { L.H. }
                     \set Staff.instrumentName =
                     \markup { "Left Hand" }
+                    \tempo 8=60
                     \clef "bass"
                     fqs4
                     \p
@@ -2971,6 +2944,7 @@
                     }
                     r4
                     \!
+                    \bar "||"
                 }
             }
         >>

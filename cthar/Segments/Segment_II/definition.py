@@ -792,7 +792,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
         durations = [timespan.duration for timespan in grouper]
         container = make_container(music_maker, durations)
         voice = score[voice_name]
-        voice.append(container)
+        voice.append(container[:])
 
 print("Adding Beam Staff ...")
 voice_1_copy = abjad.mutate(score["Voice 1"]).copy()
@@ -1044,13 +1044,13 @@ cello_clef_handler(abjad.select(score["Voice 4"]).components(abjad.Voice))
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 5"]).leaves()[0])
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 6"]).leaves()[0])
 
-for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff)[0]:
+for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     last_leaf = abjad.select(staff).leaves()[-1]
     abjad.attach(metro, leaf1)
     abjad.attach(bar_line, last_leaf)
 
-for staff in abjad.select(score["Staff Group 2"]).components(abjad.Staff)[0]:
+for staff in abjad.select(score["Staff Group 2"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     last_leaf = abjad.select(staff).leaves()[-1]
     abjad.attach(metro, leaf1)
@@ -1059,31 +1059,31 @@ for staff in abjad.select(score["Staff Group 2"]).components(abjad.Staff)[0]:
 for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
     leaf1_start = abjad.select(staff).leaves()[7]
     leaf1 = abjad.select(staff).leaves()[8]
-    abjad.attach(mark1, leaf1)
+    # abjad.attach(mark1, leaf1)
     abjad.attach(section_bar_line, leaf1_start)
 
 for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
     leaf2_start = abjad.select(staff).leaves()[15]
     leaf2 = abjad.select(staff).leaves()[16]
-    abjad.attach(mark2, leaf2)
+    # abjad.attach(mark2, leaf2)
     abjad.attach(section_bar_line, leaf2_start)
 
 for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
     leaf3_start = abjad.select(staff).leaves()[23]
     leaf3 = abjad.select(staff).leaves()[24]
-    abjad.attach(mark3, leaf3)
+    # abjad.attach(mark3, leaf3)
     abjad.attach(section_bar_line, leaf3_start)
 
 for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
     leaf4_start = abjad.select(staff).leaves()[31]
     leaf4 = abjad.select(staff).leaves()[32]
-    abjad.attach(mark4, leaf4)
+    # abjad.attach(mark4, leaf4)
     abjad.attach(section_bar_line, leaf4_start)
 
 for staff in abjad.iterate(score["Global Context"]).components(abjad.Staff):
     leaf5_start = abjad.select(staff).leaves()[38]
     leaf5 = abjad.select(staff).leaves()[39]
-    abjad.attach(mark5, leaf5)
+    # abjad.attach(mark5, leaf5)
     abjad.attach(section_bar_line, leaf5_start)
 
 # for staff in abjad.iterate(score['Global Context']).components(abjad.Staff):

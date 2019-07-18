@@ -513,7 +513,7 @@ for voice_name, timespan_list in all_timespan_lists.items():
         durations = [timespan.duration for timespan in grouper]
         container = make_container(music_maker, durations)
         voice = score[voice_name]
-        voice.append(container)
+        voice.append(container[:])
 
 print("Adding Beam Staff ...")
 voice_1_copy = abjad.mutate(score["Voice 1"]).copy()
@@ -777,13 +777,13 @@ abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 4"]).leaves()[0
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 5"]).leaves()[0])
 abjad.attach(abjad.Clef("percussion"), abjad.select(score["Voice 6"]).leaves()[0])
 
-for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff)[0]:
+for staff in abjad.select(score["Staff Group 1"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     last_leaf = abjad.select(staff).leaves()[-1]
     abjad.attach(metro, leaf1)
     abjad.attach(bar_line, last_leaf)
 
-for staff in abjad.select(score["Staff Group 2"]).components(abjad.Staff)[0]:
+for staff in abjad.select(score["Staff Group 2"]).components(abjad.Staff):
     leaf1 = abjad.select(staff).leaves()[0]
     last_leaf = abjad.select(staff).leaves()[-1]
     abjad.attach(metro, leaf1)
