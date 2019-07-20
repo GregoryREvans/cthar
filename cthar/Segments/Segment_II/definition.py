@@ -202,7 +202,68 @@ cello_chord_two = [
     0,
 ]
 cello_notes_two_walk = [cello_chord_two[x] for x in reduceMod17(cello_random_walk_two)]
-map_1 = [1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1,]
+map_1 = [
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    1,
+]
 cello_notes_two = grouper(cello_notes_two_walk, map_1)
 
 seed(3)
@@ -248,7 +309,59 @@ for i in range(1, 2000):
     cello_random_walk_four.append(value)
 cello_random_walk_four = [abs(x) for x in cello_random_walk_four]
 cello_chord_four = [-17, -8, -13, -5, 5, -5, -13, -8]
-map_2 = [2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1, 1, 2, 1, 2, 1, ]
+map_2 = [
+    2,
+    1,
+    2,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+]
 cello_notes_four_walk = [
     cello_chord_four[x] for x in reduceMod7(cello_random_walk_four)
 ]
@@ -257,7 +370,9 @@ cello_notes_four = grouper(cello_notes_four_walk, map_2)
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
 rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[7, 2, 4, 6, 3, 5, 3, 5, 3, 6, 4], denominator=16),
+    talea=abjadext.rmakers.Talea(
+        counts=[7, 2, 4, 6, 3, 5, 3, 5, 3, 6, 4], denominator=16
+    ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
@@ -1176,9 +1291,7 @@ for count, staff_group in enumerate(abjad.iterate(score).components(abjad.StaffG
         os.system(f"open {pdf_path}")
     build_path = (directory / ".." / ".." / f"Build/parts/cello_{count + 1}").resolve()
     part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
-    open(f"{build_path}/Segment_II.ly", "w").writelines(
-        part_lines[15:-1]
-    )
+    open(f"{build_path}/Segment_II.ly", "w").writelines(part_lines[15:-1])
 time_6 = time.time()
 parts_time = time_6 - time_5
 open(f"{directory}/.optimization", "a").writelines(

@@ -21,14 +21,7 @@ print("Interpreting file ...")
 
 time_signatures = [
     abjad.TimeSignature(pair)
-    for pair in [
-        (7, 8),
-        (2, 4),
-        (3, 4),
-        (3, 4),
-        (5, 8),
-        (4, 4),
-    ]
+    for pair in [(7, 8), (2, 4), (3, 4), (3, 4), (5, 8), (4, 4)]
 ]
 
 bounds = abjad.mathtools.cumulative_sums([_.duration for _ in time_signatures])
@@ -74,20 +67,21 @@ def grouper(lst1, lst2):
     return [next(lst1) if i == 1 else [next(lst1) for _ in range(i)] for i in lst2]
 
 
-cello_notes_one = [0, ]
+cello_notes_one = [0]
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
 rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[3, -5, 7, 4, -6, 4, -6, 4, 7, -5], denominator=8),
+    talea=abjadext.rmakers.Talea(
+        counts=[3, -5, 7, 4, -6, 4, -6, 4, 7, -5], denominator=8
+    ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
     extra_counts_per_division=[0, 1, 0, -1],
     burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Note, abjad.Rest],
-        left_counts=[1, 0, 1],
-        ),
+        left_classes=[abjad.Note, abjad.Rest], left_counts=[1, 0, 1]
+    ),
     # logical_tie_masks=[abjadext.rmakers.silence([2], 5),],
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
         trivialize=True, extract_trivial=True, rewrite_rest_filled=True
@@ -95,15 +89,16 @@ rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
 )
 
 rmaker_two = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[3, 3, -3, 3, 5, -3, 7, -3, 5, 7], denominator=8),
+    talea=abjadext.rmakers.Talea(
+        counts=[3, 3, -3, 3, 5, -3, 7, -3, 5, 7], denominator=8
+    ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
     extra_counts_per_division=[1, 0, -1, 0, 1],
     burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Note, abjad.Rest],
-        left_counts=[1, 0, 1],
-        ),
+        left_classes=[abjad.Note, abjad.Rest], left_counts=[1, 0, 1]
+    ),
     # logical_tie_masks=[abjadext.rmakers.silence([1], 3),],
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
         trivialize=True, extract_trivial=True, rewrite_rest_filled=True
@@ -120,10 +115,7 @@ attachment_handler_one = AttachmentHandler(
 )
 
 attachment_handler_two = AttachmentHandler(
-    starting_dynamic="mp",
-    ending_dynamic="ppp",
-    hairpin_indicator=">",
-    articulation="",
+    starting_dynamic="mp", ending_dynamic="ppp", hairpin_indicator=">", articulation=""
 )
 
 # Initialize MusicMakers with the rhythm-makers.
@@ -205,13 +197,12 @@ voice_3_timespan_list = abjad.TimespanList(
 
 # Create a dictionary mapping voice names to timespan lists so we can
 # maintain the association in later operations:
-timespan_set = [voice_1_timespan_list, voice_3_timespan_list, ]
-set_timespan_list = [timespan_functions.make_split_list(x, bounds) for x in timespan_set]
+timespan_set = [voice_1_timespan_list, voice_3_timespan_list]
+set_timespan_list = [
+    timespan_functions.make_split_list(x, bounds) for x in timespan_set
+]
 
-all_timespan_lists = {
-    "Voice 1": abjad.TimespanList(),
-    "Voice 3": abjad.TimespanList(),
-}
+all_timespan_lists = {"Voice 1": abjad.TimespanList(), "Voice 3": abjad.TimespanList()}
 for x in set_timespan_list:
     for y in x:
         all_timespan_lists[y.annotation.voice_name].append(y)
@@ -386,11 +377,13 @@ for voice_name, timespan_list in all_timespan_lists.items():
         voice.append(container[:])
 
 voice_2_notes = abjad.Voice(
-r"cqs'4 \p r4 r4 r8 r2 r4 a'2 \pp r2. r8 \times 3/2 {r8 a8 \mf} r8 r1")
+    r"cqs'4 \p r4 r4 r8 r2 r4 a'2 \pp r2. r8 \times 3/2 {r8 a8 \mf} r8 r1"
+)
 score["Voice 2"].extend(voice_2_notes)
 
 voice_4_notes = abjad.Voice(
-r"aef4 \pp r4 r4 a,8 \mp ~ a,8 r4. c,2. \mf r2. r8 c'4. \f r8 r1")
+    r"aef4 \pp r4 r4 a,8 \mp ~ a,8 r4. c,2. \mf r2. r8 c'4. \f r8 r1"
+)
 score["Voice 4"].extend(voice_4_notes)
 
 
@@ -926,9 +919,7 @@ for count, staff_group in enumerate(abjad.iterate(score).components(abjad.StaffG
         os.system(f"open {pdf_path}")
     build_path = (directory / ".." / ".." / f"Build/parts/cello_{count + 1}").resolve()
     part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
-    open(f"{build_path}/Segment_I.ly", "w").writelines(
-        part_lines[15:-1]
-    )
+    open(f"{build_path}/Segment_I.ly", "w").writelines(part_lines[15:-1])
 time_6 = time.time()
 parts_time = time_6 - time_5
 open(f"{directory}/.optimization", "a").writelines(

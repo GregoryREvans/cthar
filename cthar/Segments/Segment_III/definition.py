@@ -87,20 +87,21 @@ def grouper(lst1, lst2):
     return [next(lst1) if i == 1 else [next(lst1) for _ in range(i)] for i in lst2]
 
 
-cello_notes_one = [0, ]
+cello_notes_one = [0]
 
 # Define rhythm-makers: two to be sued by the MusicMaker, one for silence.
 
 rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[3, -5, 7, 4, -6, 4, -6, 4, 7, -5], denominator=8),
+    talea=abjadext.rmakers.Talea(
+        counts=[3, -5, 7, 4, -6, 4, -6, 4, 7, -5], denominator=8
+    ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
     extra_counts_per_division=[0, 1, 0, -1],
     burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Note, abjad.Rest],
-        left_counts=[1, 0, 1],
-        ),
+        left_classes=[abjad.Note, abjad.Rest], left_counts=[1, 0, 1]
+    ),
     # logical_tie_masks=[abjadext.rmakers.silence([2], 5),],
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
         trivialize=True, extract_trivial=True, rewrite_rest_filled=True
@@ -108,15 +109,16 @@ rmaker_one = abjadext.rmakers.TaleaRhythmMaker(
 )
 
 rmaker_two = abjadext.rmakers.TaleaRhythmMaker(
-    talea=abjadext.rmakers.Talea(counts=[3, 3, -3, 3, 5, -3, 7, -3, 5, 7], denominator=8),
+    talea=abjadext.rmakers.Talea(
+        counts=[3, 3, -3, 3, 5, -3, 7, -3, 5, 7], denominator=8
+    ),
     beam_specifier=abjadext.rmakers.BeamSpecifier(
         beam_divisions_together=True, beam_rests=False
     ),
     extra_counts_per_division=[1, 0, -1, 0, 1],
     burnish_specifier=abjadext.rmakers.BurnishSpecifier(
-        left_classes=[abjad.Note, abjad.Rest],
-        left_counts=[1, 0, 1],
-        ),
+        left_classes=[abjad.Note, abjad.Rest], left_counts=[1, 0, 1]
+    ),
     # logical_tie_masks=[abjadext.rmakers.silence([1], 3),],
     tuplet_specifier=abjadext.rmakers.TupletSpecifier(
         trivialize=True, extract_trivial=True, rewrite_rest_filled=True
@@ -133,10 +135,7 @@ attachment_handler_one = AttachmentHandler(
 )
 
 attachment_handler_two = AttachmentHandler(
-    starting_dynamic="mp",
-    ending_dynamic="ppp",
-    hairpin_indicator=">",
-    articulation="",
+    starting_dynamic="mp", ending_dynamic="ppp", hairpin_indicator=">", articulation=""
 )
 
 # Initialize MusicMakers with the rhythm-makers.
@@ -333,8 +332,15 @@ voice_4_timespan_list = abjad.TimespanList(
 
 # Create a dictionary mapping voice names to timespan lists so we can
 # maintain the association in later operations:
-timespan_set = [voice_1_timespan_list, voice_2_timespan_list, voice_3_timespan_list, voice_4_timespan_list,]
-set_timespan_list = [timespan_functions.make_split_list(x, bounds) for x in timespan_set]
+timespan_set = [
+    voice_1_timespan_list,
+    voice_2_timespan_list,
+    voice_3_timespan_list,
+    voice_4_timespan_list,
+]
+set_timespan_list = [
+    timespan_functions.make_split_list(x, bounds) for x in timespan_set
+]
 
 all_timespan_lists = {
     "Voice 1": abjad.TimespanList(),
@@ -565,7 +571,24 @@ for staff in abjad.iterate(score["Staff Group 2"]).components(abjad.Staff):
 
 # attach instruments and clefs
 
-nh_handler = NoteheadHandler(notehead_list=["cross", "diamond", "default", "default", "default", "default", "default", "cross", "default", "slash", "default", "default"], transition=False, continuous=True)
+nh_handler = NoteheadHandler(
+    notehead_list=[
+        "cross",
+        "diamond",
+        "default",
+        "default",
+        "default",
+        "default",
+        "default",
+        "cross",
+        "default",
+        "slash",
+        "default",
+        "default",
+    ],
+    transition=False,
+    continuous=True,
+)
 nh_handler(abjad.select(score["Voice 2"]).logical_ties())
 nh_handler(abjad.select(score["Voice 4"]).logical_ties())
 
@@ -909,9 +932,7 @@ for count, staff_group in enumerate(abjad.iterate(score).components(abjad.StaffG
         os.system(f"open {pdf_path}")
     build_path = (directory / ".." / ".." / f"Build/parts/cello_{count + 1}").resolve()
     part_lines = open(f"{directory}/part_illustration{count + 1}.ly").readlines()
-    open(f"{build_path}/Segment_III.ly", "w").writelines(
-        part_lines[15:-1]
-    )
+    open(f"{build_path}/Segment_III.ly", "w").writelines(part_lines[15:-1])
 time_6 = time.time()
 parts_time = time_6 - time_5
 open(f"{directory}/.optimization", "a").writelines(
