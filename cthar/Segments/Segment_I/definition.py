@@ -738,7 +738,7 @@ names1 = cyc(
     [
         abjad.StartMarkup(markup=abjad.Markup("_")),
         abjad.StartMarkup(markup=abjad.Markup(" ")),
-        abjad.StartMarkup(markup=abjad.Markup("Violoncello 1")),
+        abjad.StartMarkup(markup=abjad.Markup("Violoncello I")),
     ]
 )
 
@@ -746,7 +746,7 @@ names2 = cyc(
     [
         abjad.StartMarkup(markup=abjad.Markup("_")),
         abjad.StartMarkup(markup=abjad.Markup(" ")),
-        abjad.StartMarkup(markup=abjad.Markup("Violoncello 2")),
+        abjad.StartMarkup(markup=abjad.Markup("Violoncello II")),
     ]
 )
 

@@ -82,7 +82,7 @@
                     \set Staff.shortInstrumentName =
                     \markup { vc.II }
                     \set Staff.instrumentName =
-                    \markup { "Violoncello 2" }
+                    \markup { "Violoncello II" }
                     \tempo 8=40
                     \clef "bass"
                     aef4

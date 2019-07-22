@@ -97,7 +97,7 @@
                     \set Staff.shortInstrumentName =
                     \markup { vc.I }
                     \set Staff.instrumentName =
-                    \markup { "Violoncello 1" }
+                    \markup { "Violoncello I" }
                     \tempo 8=40
                     \clef "bass"
                     cqs'4
@@ -183,7 +183,6 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 3/2 {
                         r8
-                        \clef "bass"
                         a8
                         \mf
                         ^ \markup {
