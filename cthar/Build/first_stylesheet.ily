@@ -94,6 +94,7 @@ bowtab = {
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum-distance . 6) (padding . 2))
 		\override StaffGrouper.staffgroup-staff-spacing.basic-distance = #15
 		\override Stem.thickness = #0.75
+		\override TupletBracket.staff-padding = #4
         \override TupletBracket.bracket-visibility = ##t
         \override TupletBracket.minimum-length = #3
         \override TupletBracket.padding = #2

@@ -68,3 +68,28 @@ Segment runtime: 77 seconds
 Abjad/Lilypond runtime: 6 seconds 
 Parts extraction runtime: 6 seconds 
 
+2019-07-22 18:36:02.039758
+Segment runtime: 77 seconds 
+Abjad/Lilypond runtime: 6 seconds 
+Parts extraction runtime: 6 seconds 
+
+2019-07-22 18:40:11.014966
+Segment runtime: 78 seconds 
+Abjad/Lilypond runtime: 6 seconds 
+Parts extraction runtime: 6 seconds 
+
+2019-07-22 18:51:46.430570
+Segment runtime: 79 seconds 
+Abjad/Lilypond runtime: 6 seconds 
+Parts extraction runtime: 6 seconds 
+
+2019-07-22 19:01:28.270211
+Segment runtime: 79 seconds 
+Abjad/Lilypond runtime: 6 seconds 
+Parts extraction runtime: 7 seconds 
+
+2019-07-22 19:14:52.391039
+Segment runtime: 82 seconds 
+Abjad/Lilypond runtime: 6 seconds 
+Parts extraction runtime: 7 seconds 
+

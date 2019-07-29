@@ -3766,16 +3766,20 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     \clef "treble"
                     d'''16
                     \mp
 
                     - \tweak stencil #abjad-flared-hairpin
                     \<
+                    \ottava 0
                     g''16
 
+                    \ottava 1
                     d'''16
 
+                    \ottava 0
                     g''16
 
                     b'16
@@ -4000,14 +4004,17 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 17] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     \clef "treble"
                     d'''8
                     \mp
 
                     - \tweak stencil #abjad-flared-hairpin
                     \<
+                    \ottava 0
                     g''8
 
+                    \ottava 1
                     d'''8
 
                     cs''''8
@@ -4016,6 +4023,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
+                    \ottava 0
                     r2
                     \!
                     % [Voice 4 measure 18] %! COMMENT_MEASURE_NUMBERS
@@ -4065,6 +4073,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 21] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     \clef "treble"
                     d'''8
                     \mp
@@ -4077,6 +4086,7 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     ]
+                    \ottava 0
                     r4
                     \!
                     \clef "bass"
@@ -4137,20 +4147,24 @@
                     - \tweak stencil #constante-hairpin
                     \<
                     % [Voice 4 measure 24] %! COMMENT_MEASURE_NUMBERS
+                    \ottava 1
                     \clef "treble"
                     d'''8
                     \mp
 
                     - \tweak stencil #abjad-flared-hairpin
                     \<
+                    \ottava 0
                     g''8
 
+                    \ottava 1
                     d'''8
 
                     cs''''8
 
                     d'''8
 
+                    \ottava 0
                     g''8
                     \ff
 
@@ -4231,7 +4245,7 @@
                     \<
                     \times 16/17 {
                         % [Voice 4 measure 28] %! COMMENT_MEASURE_NUMBERS
-                        \clef "treble"
+                        \clef "tenorvarC"
                         b'16
                         \mp
 
