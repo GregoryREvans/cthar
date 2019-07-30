@@ -1,4 +1,4 @@
-    \context Score = "Cthar Score"
+    \new Score
     <<
         \context TimeSignatureContext = "Global Context"
         {
@@ -90,7 +90,7 @@
                     r8
                     \!
                     r4.
-                    ars,8
+                    a,8
                     \mp
                     ^ \markup {
                         \scale #'(0.45 . 0.45)
@@ -158,12 +158,12 @@
                     ~
                     [
                     % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
-                    ars,8
+                    a,8
                     ]
                     r4.
                     \!
                     % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
-                    cs,2.
+                    c,2.
                     \mf
                     ^ \markup {
                         \scale #'(0.45 . 0.45)

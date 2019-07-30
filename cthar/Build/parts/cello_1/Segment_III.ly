@@ -1,4 +1,4 @@
-    \context Score = "Cthar Score"
+    \new Score
     <<
         \context TimeSignatureContext = "Global Context"
         {

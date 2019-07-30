@@ -1,4 +1,4 @@
-    \context Score = "Cthar Score"
+    \new Score
     <<
         \context TimeSignatureContext = "Global Context"
         {
@@ -85,7 +85,7 @@
                     \markup { "Violoncello I" }
                     \tempo 8=40
                     \clef "bass"
-                    ctqs'4
+                    cqs'4
                     \p
                     r8
                     \!
@@ -95,7 +95,7 @@
                     % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \clef "tenorvarC"
-                    axf'2
+                    a'2
                     \pp
                     ^ \markup {
                         \scale #'(0.45 . 0.45)
@@ -168,7 +168,7 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 3/2 {
                         r8
-                        atqf8
+                        a8
                         \mf
                         ^ \markup {
                             \scale #'(0.45 . 0.45)

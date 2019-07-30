@@ -85,7 +85,7 @@
                     \markup { "Violoncello I" }
                     \tempo 8=40
                     \clef "bass"
-                    ctqs'4
+                    cqs'4
                     \p
                     r8
                     \!
@@ -95,7 +95,7 @@
                     % [Voice 2 measure 3] %! COMMENT_MEASURE_NUMBERS
                     r4
                     \clef "tenorvarC"
-                    axf'2
+                    a'2
                     \pp
                     ^ \markup {
                         \scale #'(0.45 . 0.45)
@@ -168,7 +168,7 @@
                     \tweak text #tuplet-number::calc-fraction-text
                     \times 3/2 {
                         r8
-                        atqf8
+                        a8
                         \mf
                         ^ \markup {
                             \scale #'(0.45 . 0.45)
@@ -311,7 +311,7 @@
                     r8
                     \!
                     r4.
-                    ars,8
+                    a,8
                     \mp
                     ^ \markup {
                         \scale #'(0.45 . 0.45)
@@ -379,12 +379,12 @@
                     ~
                     [
                     % [Voice 4 measure 2] %! COMMENT_MEASURE_NUMBERS
-                    ars,8
+                    a,8
                     ]
                     r4.
                     \!
                     % [Voice 4 measure 3] %! COMMENT_MEASURE_NUMBERS
-                    cs,2.
+                    c,2.
                     \mf
                     ^ \markup {
                         \scale #'(0.45 . 0.45)
